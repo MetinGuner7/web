@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gizlilik Politikası - DGS Matik</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #7f8c8d;
+        }
+        .update-date {
+            background: #ecf0f1;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .contact-info {
+            background: #e8f6f3;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #27ae60;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ecf0f1;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔒 Gizlilik Politikası - DGS Matik</h1>
+        
+        <div class="update-date">
+            <strong>Son güncelleme tarihi:</strong> 14 Ağustos 2025
+        </div>
+
+        <h2>1. Genel Bilgiler</h2>
+        <p>DGS Matik uygulaması ("Uygulama"), Metin Güner tarafından geliştirilmiştir. Bu gizlilik politikası, uygulamayı kullanırken kişisel bilgilerinizin nasıl toplandığını, kullanıldığını ve korunduğunu açıklar.</p>
+
+        <h2>2. Toplanan Bilgiler</h2>
+        
+        <h3>2.1 Kişisel Bilgiler</h3>
+        <ul>
+            <li><strong>Hesap Bilgileri:</strong> Email adresi, kullanıcı adı (Firebase Authentication ile)</li>
+            <li><strong>İlerleme Verileri:</strong> Test sonuçları, puan durumları, çalışma istatistikleri</li>
+            <li><strong>Tercihler:</strong> Uygulama ayarları, konu seçimleri</li>
+        </ul>
+
+        <h3>2.2 Otomatik Toplanan Bilgiler</h3>
+        <ul>
+            <li><strong>Uygulama Kullanım Verileri:</strong> Hangi özelliklerin kullanıldığı, oturum süreleri</li>
+            <li><strong>Cihaz Bilgileri:</strong> Cihaz modeli, işletim sistemi versiyonu, uygulama versiyonu</li>
+            <li><strong>Performans Verileri:</strong> Uygulama çökmeleri, hata raporları (Firebase Crashlytics)</li>
+        </ul>
+
+        <h2>3. Bilgilerin Kullanım Amacı</h2>
+        <p>Topladığımız bilgiler şu amaçlarla kullanılır:</p>
+        <ul>
+            <li>Uygulama hizmetini sağlamak ve iyileştirmek</li>
+            <li>Kullanıcı deneyimini kişiselleştirmek</li>
+            <li>İlerleme durumunu kaydetmek ve senkronize etmek</li>
+            <li>Teknik sorunları tespit etmek ve çözmek</li>
+            <li>Uygulama performansını analiz etmek</li>
+        </ul>
+
+        <h2>4. Bilgi Paylaşımı</h2>
+        <p>Kişisel bilgilerinizi üçüncü taraflarla paylaşmayız. Ancak aşağıdaki durumlarda bilgi paylaşımı yapılabilir:</p>
+        <ul>
+            <li><strong>Firebase Services:</strong> Google Firebase altyapısı üzerinden veri depolama ve analiz</li>
+            <li><strong>Yasal Yükümlülükler:</strong> Kanuni zorunluluklar çerçevesinde</li>
+            <li><strong>Güvenlik:</strong> Dolandırıcılık önleme ve güvenlik amaçları</li>
+        </ul>
+
+        <h2>5. Üçüncü Taraf Hizmetler</h2>
+        <p>Uygulama aşağıdaki üçüncü taraf hizmetleri kullanır:</p>
+        <ul>
+            <li><strong>Firebase Authentication:</strong> Kullanıcı kimlik doğrulama</li>
+            <li><strong>Firebase Firestore:</strong> Veri depolama</li>
+            <li><strong>Firebase Analytics:</strong> Uygulama kullanım analizi</li>
+            <li><strong>Firebase Crashlytics:</strong> Hata raporlama</li>
+        </ul>
+        <p>Bu hizmetlerin gizlilik politikaları: <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Gizlilik Politikası</a></p>
+
+        <h2>6. Veri Güvenliği</h2>
+        <p>Kişisel bilgilerinizi korumak için aşağıdaki önlemleri alıyoruz:</p>
+        <ul>
+            <li>Şifreleme ile veri iletimi (HTTPS/TLS)</li>
+            <li>Firebase güvenlik kuralları</li>
+            <li>Düzenli güvenlik güncellemeleri</li>
+            <li>Minimum veri toplama prensibi</li>
+        </ul>
+
+        <h2>7. Veri Saklama Süresi</h2>
+        <ul>
+            <li><strong>Hesap Verileri:</strong> Hesap silinene kadar</li>
+            <li><strong>İlerleme Verileri:</strong> Hesap silinene kadar</li>
+            <li><strong>Analytics Verileri:</strong> 26 ay (Firebase varsayılan)</li>
+            <li><strong>Crash Raporları:</strong> 90 gün</li>
+        </ul>
+
+        <h2>8. Kullanıcı Hakları</h2>
+        <p>Aşağıdaki haklara sahipsiniz:</p>
+        <ul>
+            <li><strong>Erişim Hakkı:</strong> Hangi verilerinizin toplandığını öğrenme</li>
+            <li><strong>Düzeltme Hakkı:</strong> Yanlış bilgileri düzeltme</li>
+            <li><strong>Silme Hakkı:</strong> Verilerinizin silinmesini talep etme</li>
+            <li><strong>Taşınabilirlik:</strong> Verilerinizi farklı formatta alma</li>
+        </ul>
+
+        <h2>9. Çerezler ve Tracking</h2>
+        <p>Uygulama şu teknolojileri kullanır:</p>
+        <ul>
+            <li><strong>Firebase Analytics:</strong> Anonim kullanım istatistikleri</li>
+            <li><strong>Crash Reporting:</strong> Hata analizi için</li>
+            <li><strong>Local Storage:</strong> Uygulama ayarları ve önbellek</li>
+        </ul>
+
+        <h2>10. Çocukların Gizliliği</h2>
+        <p>Uygulama 13 yaş altı çocuklardan bilerek kişisel bilgi toplamaz. Eğer 13 yaş altı bir çocuğun bilgilerini topladığımızı fark edersek, derhal sileriz.</p>
+
+        <h2>11. Uluslararası Veri Transferi</h2>
+        <p>Verileriniz Google Firebase sunucularında saklanır ve işlenir. Firebase, Google Cloud Platform altyapısını kullanır ve uluslararası veri koruma standartlarına uyar.</p>
+
+        <h2>12. Politika Değişiklikleri</h2>
+        <p>Bu gizlilik politikası zaman zaman güncellenebilir. Önemli değişiklikler olduğunda sizi bilgilendireceğiz:</p>
+        <ul>
+            <li>Uygulama içi bildirim</li>
+            <li>Email bildirimi (varsa)</li>
+            <li>Bu sayfanın güncellenmesi</li>
+        </ul>
+
+        <h2>13. İletişim</h2>
+        <div class="contact-info">
+            <p>Gizlilik konularında sorularınız varsa bizimle iletişime geçebilirsiniz:</p>
+            <p><strong>Email:</strong> metinguner7@gmail.com<br>
+            <strong>Geliştirici:</strong> Metin Güner<br>
+            <strong>Ülke:</strong> Türkiye</p>
+        </div>
+
+        <h2>14. KVKK Uyumluluk (Türkiye)</h2>
+        <p>6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında:</p>
+        <ul>
+            <li>Verileriniz rızanız dahilinde işlenir</li>
+            <li>Açık rıza alındığında hassas veriler işlenir</li>
+            <li>Veri işleme amaçları açıkça belirtilir</li>
+            <li>Verilerinizi silme hakkınız bulunur</li>
+        </ul>
+
+        <h2>15. GDPR Uyumluluk (AB)</h2>
+        <p>Avrupa Birliği vatandaşları için:</p>
+        <ul>
+            <li>Lawful basis: Legitimate interest ve consent</li>
+            <li>Data Protection Officer bilgileri talep üzerine</li>
+            <li>Otomatik karar verme: Kullanılmaz</li>
+            <li>Veri ihlali bildirimi: 72 saat içinde</li>
+        </ul>
+
+        <div class="footer">
+            <p><strong>Bu politika Türkçe ve İngilizce olarak mevcuttur. Çelişki durumunda Türkçe metin geçerlidir.</strong></p>
+            <p><em>DGS Matik - Dikey Geçiş Sınavı Hazırlık Uygulaması</em></p>
+            <p>© 2025 Metin Güner. Tüm hakları saklıdır.</p>
+        </div>
+    </div>
+</body>
+</html>
