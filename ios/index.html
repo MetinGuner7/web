@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BettingTips - Expert sports predictions with AI-powered analysis. Join 50K+ winning users!">
+    <title>BettingTips - Expert Sports Predictions & Tips</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1d1d1f;
+            background: white;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #0071e3 0%, #005bb5 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .download-button {
+            display: inline-block;
+            background: white;
+            color: #0071e3;
+            padding: 15px 40px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            margin: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transition: transform 0.2s;
+        }
+
+        .download-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .section {
+            padding: 60px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 50px;
+            color: #1d1d1f;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin: 40px 0;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 30px;
+            border-radius: 16px;
+            background: #f5f5f7;
+        }
+
+        .feature-icon {
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+
+        .feature-title {
+            font-size: 1.5em;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #1d1d1f;
+        }
+
+        .feature-desc {
+            color: #515154;
+            font-size: 1.05em;
+        }
+
+        .stats-section {
+            background: linear-gradient(135deg, #f5f5f7 0%, #e8e8e8 100%);
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .stat-card {
+            padding: 30px;
+        }
+
+        .stat-number {
+            font-size: 3em;
+            font-weight: 700;
+            color: #0071e3;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1.1em;
+            color: #515154;
+        }
+
+        .pricing-section {
+            background: white;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .pricing-card {
+            border: 2px solid #e5e5e7;
+            border-radius: 16px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        }
+
+        .pricing-card.featured {
+            border-color: #0071e3;
+            background: linear-gradient(135deg, #0071e3 0%, #005bb5 100%);
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .pricing-card.featured .price {
+            color: white;
+        }
+
+        .pricing-badge {
+            background: #ff3b30;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .pricing-title {
+            font-size: 1.8em;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #0071e3;
+            margin-bottom: 20px;
+        }
+
+        .price-period {
+            font-size: 0.5em;
+            font-weight: 400;
+            color: #86868b;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        .pricing-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid #e5e5e7;
+        }
+
+        .pricing-features li:before {
+            content: "✓ ";
+            color: #34c759;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #1d1d1f 0%, #000 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        footer {
+            background: #f5f5f7;
+            padding: 40px 20px;
+            text-align: center;
+            color: #86868b;
+        }
+
+        footer a {
+            color: #0071e3;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .app-preview {
+            max-width: 300px;
+            margin: 40px auto;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            .hero p {
+                font-size: 1.1em;
+            }
+
+            .section-title {
+                font-size: 2em;
+            }
+
+            .features-grid,
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>⚽ BettingTips</h1>
+        <p>Expert Sports Predictions with AI-Powered Analysis</p>
+        <p style="font-size: 1em; opacity: 0.8;">Join 50,000+ winning users today!</p>
+        <a href="https://apps.apple.com/app/bettingtips/id0000000000" class="download-button">📱 Download on App Store</a>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2 class="section-title">Why Choose BettingTips?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <div class="feature-title">AI-Powered Predictions</div>
+                    <div class="feature-desc">Advanced algorithms analyze thousands of data points to deliver 85%+ accuracy predictions</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <div class="feature-title">Advanced Statistics</div>
+                    <div class="feature-desc">Team form analysis, head-to-head records, player stats, and injury reports</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💎</div>
+                    <div class="feature-title">Premium Features</div>
+                    <div class="feature-desc">VIP predictions, ready-made combo coupons, and high-odds special selections</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔔</div>
+                    <div class="feature-title">Real-Time Updates</div>
+                    <div class="feature-desc">Live score updates, match start reminders, and instant notifications</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <div class="feature-title">Multi-Sport Coverage</div>
+                    <div class="feature-desc">Football, basketball, tennis predictions with more sports coming soon</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <div class="feature-title">Track Your Success</div>
+                    <div class="feature-desc">Personal betting history, win/loss statistics, and performance analytics</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="stats-section section">
+        <div class="container">
+            <h2 class="section-title">Our Track Record</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">85%+</div>
+                    <div class="stat-label">Success Rate</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">50K+</div>
+                    <div class="stat-label">Active Users</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">1M+</div>
+                    <div class="stat-label">Predictions Made</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">8</div>
+                    <div class="stat-label">Languages</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pricing-section section">
+        <div class="container">
+            <h2 class="section-title">Choose Your Plan</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-title">Weekly</div>
+                    <div class="price">$149.99<span class="price-period">/week</span></div>
+                    <ul class="pricing-features">
+                        <li>All premium predictions</li>
+                        <li>Advanced statistics</li>
+                        <li>Live notifications</li>
+                        <li>Ad-free experience</li>
+                    </ul>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">MOST POPULAR</div>
+                    <div class="pricing-title">Monthly</div>
+                    <div class="price" style="color: white;">$499.99<span class="price-period" style="color: rgba(255,255,255,0.8);">/month</span></div>
+                    <ul class="pricing-features">
+                        <li>Everything in Weekly</li>
+                        <li>Combo coupons 3x, 4x, 5x</li>
+                        <li>Priority support</li>
+                        <li>Best value!</li>
+                    </ul>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-title">Yearly</div>
+                    <div class="price">$4,499.99<span class="price-period">/year</span></div>
+                    <ul class="pricing-features">
+                        <li>Everything in Monthly</li>
+                        <li>Save 25%</li>
+                        <li>VIP analyst support</li>
+                        <li>Exclusive insights</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cta-section">
+        <h2>Start Winning Today! 🏆</h2>
+        <p>Download BettingTips now and get your first week FREE!</p>
+        <a href="https://apps.apple.com/app/bettingtips/id0000000000" class="download-button">Download Now</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Metin Güner. All rights reserved.</p>
+        <p style="margin: 20px 0;">
+            <a href="support.html">Support</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="mailto:mtngnr7@gmail.com">Contact</a>
+        </p>
+        <p style="font-size: 0.9em; margin-top: 20px;">
+            ⚠️ BettingTips provides predictions for entertainment and informational purposes only.<br>
+            Users must be 18+ and comply with local gambling regulations. Gamble responsibly.
+        </p>
+    </footer>
+</body>
+</html>
