@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BettingTips Admin Panel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f7;
+            min-height: 100vh;
+        }
+
+        /* Login Screen */
+        .login-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1d1d1f 0%, #000 100%);
+        }
+
+        .login-box {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .login-box h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #1d1d1f;
+        }
+
+        .login-box input {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 2px solid #e5e5e7;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: border-color 0.2s;
+        }
+
+        .login-box input:focus {
+            outline: none;
+            border-color: #0071e3;
+        }
+
+        .login-box button {
+            width: 100%;
+            padding: 15px;
+            background: #0071e3;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .login-box button:hover {
+            background: #005bb5;
+        }
+
+        .error-message {
+            color: #ff3b30;
+            text-align: center;
+            margin-top: 15px;
+            display: none;
+        }
+
+        /* Dashboard */
+        .dashboard {
+            display: none;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1d1d1f 0%, #000 100%);
+            color: white;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h1 {
+            font-size: 1.5em;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .user-email {
+            opacity: 0.8;
+        }
+
+        .logout-btn {
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .logout-btn:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 30px;
+        }
+
+        /* Stats Cards */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 25px;
+            border-radius: 16px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .stat-card h3 {
+            color: #86868b;
+            font-size: 0.9em;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .stat-card .value {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #1d1d1f;
+        }
+
+        .stat-card .value.premium {
+            color: #0071e3;
+        }
+
+        .stat-card .value.revenue {
+            color: #34c759;
+        }
+
+        .stat-card .subtext {
+            color: #86868b;
+            font-size: 0.85em;
+            margin-top: 5px;
+        }
+
+        /* Tables */
+        .section {
+            background: white;
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .section h2 {
+            font-size: 1.3em;
+            color: #1d1d1f;
+        }
+
+        .refresh-btn {
+            background: #f5f5f7;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            color: #1d1d1f;
+        }
+
+        .refresh-btn:hover {
+            background: #e5e5e7;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #e5e5e7;
+        }
+
+        th {
+            color: #86868b;
+            font-weight: 500;
+            font-size: 0.85em;
+            text-transform: uppercase;
+        }
+
+        td {
+            color: #1d1d1f;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: 600;
+        }
+
+        .badge.premium {
+            background: #e3f2fd;
+            color: #0071e3;
+        }
+
+        .badge.free {
+            background: #f5f5f7;
+            color: #86868b;
+        }
+
+        .badge.weekly {
+            background: #fff3e0;
+            color: #ff9500;
+        }
+
+        .badge.monthly {
+            background: #e8f5e9;
+            color: #34c759;
+        }
+
+        .badge.yearly {
+            background: #fce4ec;
+            color: #ff2d55;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #86868b;
+        }
+
+        .loading::after {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #e5e5e7;
+            border-top-color: #0071e3;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 40px;
+            color: #86868b;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            .header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            table {
+                font-size: 0.9em;
+            }
+
+            th, td {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Login Screen -->
+    <div id="loginScreen" class="login-container">
+        <div class="login-box">
+            <h1>Admin Panel</h1>
+            <input type="email" id="email" placeholder="Email" />
+            <input type="password" id="password" placeholder="Sifre" />
+            <button onclick="login()">Giris Yap</button>
+            <p id="loginError" class="error-message"></p>
+        </div>
+    </div>
+
+    <!-- Dashboard -->
+    <div id="dashboard" class="dashboard">
+        <div class="header">
+            <h1>BettingTips Admin Panel</h1>
+            <div class="header-right">
+                <span id="userEmail" class="user-email"></span>
+                <button onclick="logout()" class="logout-btn">Cikis Yap</button>
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Stats -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>TOPLAM KULLANICI</h3>
+                    <div id="totalUsers" class="value">-</div>
+                </div>
+                <div class="stat-card">
+                    <h3>PREMIUM KULLANICI</h3>
+                    <div id="premiumUsers" class="value premium">-</div>
+                    <div id="premiumPercent" class="subtext"></div>
+                </div>
+                <div class="stat-card">
+                    <h3>UCRETSIZ KULLANICI</h3>
+                    <div id="freeUsers" class="value">-</div>
+                </div>
+                <div class="stat-card">
+                    <h3>SON 7 GUN KAYIT</h3>
+                    <div id="recentUsers" class="value">-</div>
+                </div>
+            </div>
+
+            <!-- Premium Users Table -->
+            <div class="section">
+                <div class="section-header">
+                    <h2>Premium Kullanicilar</h2>
+                    <button onclick="loadData()" class="refresh-btn">Yenile</button>
+                </div>
+                <div id="premiumTable">
+                    <div class="loading">Yukleniyor</div>
+                </div>
+            </div>
+
+            <!-- Recent Users Table -->
+            <div class="section">
+                <div class="section-header">
+                    <h2>Son Kayit Olan Kullanicilar</h2>
+                </div>
+                <div id="recentTable">
+                    <div class="loading">Yukleniyor</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
+        import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js';
+        import { getFirestore, collection, getDocs, query, where, orderBy, limit } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js';
+
+        // Firebase config
+        const firebaseConfig = {
+            apiKey: "AIzaSyDUkEt9NTcnltKRTvvVJ_l6OWcIE_IkPt4",
+            authDomain: "betshoot-dc156.firebaseapp.com",
+            projectId: "betshoot-dc156",
+            storageBucket: "betshoot-dc156.firebasestorage.app",
+            messagingSenderId: "1053889761093",
+            appId: "1:1053889761093:web:admin"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+
+        // Admin emails (sadece bu emailler girebilir)
+        const ADMIN_EMAILS = ['mtngnr7@gmail.com', 'admin@betshoot.com'];
+
+        // Auth state listener
+        onAuthStateChanged(auth, (user) => {
+            if (user && ADMIN_EMAILS.includes(user.email)) {
+                showDashboard(user);
+                loadData();
+            } else {
+                showLogin();
+                if (user) {
+                    signOut(auth); // Admin degilse cikis yap
+                }
+            }
+        });
+
+        // Login function
+        window.login = async function() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const errorEl = document.getElementById('loginError');
+
+            try {
+                errorEl.style.display = 'none';
+                const userCredential = await signInWithEmailAndPassword(auth, email, password);
+
+                if (!ADMIN_EMAILS.includes(userCredential.user.email)) {
+                    await signOut(auth);
+                    errorEl.textContent = 'Admin yetkisi yok!';
+                    errorEl.style.display = 'block';
+                }
+            } catch (error) {
+                errorEl.textContent = 'Giris hatasi: ' + error.message;
+                errorEl.style.display = 'block';
+            }
+        };
+
+        // Logout function
+        window.logout = function() {
+            signOut(auth);
+        };
+
+        // Show/Hide screens
+        function showLogin() {
+            document.getElementById('loginScreen').style.display = 'flex';
+            document.getElementById('dashboard').style.display = 'none';
+        }
+
+        function showDashboard(user) {
+            document.getElementById('loginScreen').style.display = 'none';
+            document.getElementById('dashboard').style.display = 'block';
+            document.getElementById('userEmail').textContent = user.email;
+        }
+
+        // Load data from Firestore
+        window.loadData = async function() {
+            try {
+                // Get all users
+                const usersRef = collection(db, 'users');
+                const usersSnapshot = await getDocs(usersRef);
+
+                const allUsers = [];
+                const premiumUsersList = [];
+                const now = Date.now();
+                const sevenDaysAgo = now - (7 * 24 * 60 * 60 * 1000);
+                let recentCount = 0;
+
+                usersSnapshot.forEach((doc) => {
+                    const user = { id: doc.id, ...doc.data() };
+                    allUsers.push(user);
+
+                    if (user.isPremium === true) {
+                        premiumUsersList.push(user);
+                    }
+
+                    // Check if registered in last 7 days
+                    if (user.createdAt) {
+                        const createdTime = user.createdAt.toDate ? user.createdAt.toDate().getTime() : user.createdAt;
+                        if (createdTime > sevenDaysAgo) {
+                            recentCount++;
+                        }
+                    }
+                });
+
+                // Update stats
+                const totalCount = allUsers.length;
+                const premiumCount = premiumUsersList.length;
+                const freeCount = totalCount - premiumCount;
+                const premiumPercent = totalCount > 0 ? ((premiumCount / totalCount) * 100).toFixed(1) : 0;
+
+                document.getElementById('totalUsers').textContent = totalCount;
+                document.getElementById('premiumUsers').textContent = premiumCount;
+                document.getElementById('freeUsers').textContent = freeCount;
+                document.getElementById('recentUsers').textContent = recentCount;
+                document.getElementById('premiumPercent').textContent = `%${premiumPercent} donusum orani`;
+
+                // Render premium users table
+                renderPremiumTable(premiumUsersList);
+
+                // Render recent users table
+                const recentUsers = allUsers
+                    .filter(u => u.createdAt)
+                    .sort((a, b) => {
+                        const aTime = a.createdAt.toDate ? a.createdAt.toDate().getTime() : a.createdAt;
+                        const bTime = b.createdAt.toDate ? b.createdAt.toDate().getTime() : b.createdAt;
+                        return bTime - aTime;
+                    })
+                    .slice(0, 10);
+                renderRecentTable(recentUsers);
+
+            } catch (error) {
+                console.error('Veri yuklenirken hata:', error);
+                document.getElementById('premiumTable').innerHTML = '<div class="empty-state">Hata: ' + error.message + '</div>';
+            }
+        };
+
+        function renderPremiumTable(users) {
+            const container = document.getElementById('premiumTable');
+
+            if (users.length === 0) {
+                container.innerHTML = '<div class="empty-state">Premium kullanici bulunamadi</div>';
+                return;
+            }
+
+            let html = `
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Email</th>
+                            <th>Isim</th>
+                            <th>Premium Tipi</th>
+                            <th>Bitis Tarihi</th>
+                            <th>Kayit Tarihi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            `;
+
+            users.forEach(user => {
+                const premiumType = user.premiumType || 'Premium';
+                const badgeClass = premiumType.toLowerCase().includes('weekly') ? 'weekly' :
+                                   premiumType.toLowerCase().includes('monthly') ? 'monthly' :
+                                   premiumType.toLowerCase().includes('yearly') ? 'yearly' : 'premium';
+
+                const premiumExpiry = user.premiumExpiryDate ? formatDate(user.premiumExpiryDate) : '-';
+                const createdAt = user.createdAt ? formatDate(user.createdAt) : '-';
+
+                html += `
+                    <tr>
+                        <td>${user.email || '-'}</td>
+                        <td>${user.displayName || user.name || '-'}</td>
+                        <td><span class="badge ${badgeClass}">${premiumType}</span></td>
+                        <td>${premiumExpiry}</td>
+                        <td>${createdAt}</td>
+                    </tr>
+                `;
+            });
+
+            html += '</tbody></table>';
+            container.innerHTML = html;
+        }
+
+        function renderRecentTable(users) {
+            const container = document.getElementById('recentTable');
+
+            if (users.length === 0) {
+                container.innerHTML = '<div class="empty-state">Kullanici bulunamadi</div>';
+                return;
+            }
+
+            let html = `
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Email</th>
+                            <th>Isim</th>
+                            <th>Durum</th>
+                            <th>Kayit Tarihi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            `;
+
+            users.forEach(user => {
+                const status = user.isPremium ? 'premium' : 'free';
+                const statusText = user.isPremium ? 'Premium' : 'Ucretsiz';
+                const createdAt = user.createdAt ? formatDate(user.createdAt) : '-';
+
+                html += `
+                    <tr>
+                        <td>${user.email || '-'}</td>
+                        <td>${user.displayName || user.name || '-'}</td>
+                        <td><span class="badge ${status}">${statusText}</span></td>
+                        <td>${createdAt}</td>
+                    </tr>
+                `;
+            });
+
+            html += '</tbody></table>';
+            container.innerHTML = html;
+        }
+
+        function formatDate(timestamp) {
+            try {
+                let date;
+                if (timestamp.toDate) {
+                    date = timestamp.toDate();
+                } else if (typeof timestamp === 'number') {
+                    date = new Date(timestamp);
+                } else {
+                    date = new Date(timestamp);
+                }
+                return date.toLocaleDateString('tr-TR', {
+                    year: 'numeric',
+                    month: 'short',
+                    day: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit'
+                });
+            } catch (e) {
+                return '-';
+            }
+        }
+
+        // Enter key to login
+        document.getElementById('password').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') login();
+        });
+    </script>
+</body>
+</html>
