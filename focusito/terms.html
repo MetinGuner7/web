@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focusito - Terms of Service</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .logo h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .logo p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .lang-switch {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .lang-btn {
+            padding: 8px 20px;
+            border: 2px solid #667eea;
+            background: white;
+            color: #667eea;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-color: transparent;
+        }
+
+        .lang-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .content {
+            display: none;
+        }
+
+        .content.active {
+            display: block;
+        }
+
+        h2 {
+            color: #667eea;
+            margin: 30px 0 15px 0;
+            font-size: 1.4rem;
+        }
+
+        h2:first-of-type {
+            margin-top: 0;
+        }
+
+        p, li {
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 4px solid #667eea;
+            margin: 20px 0;
+        }
+
+        .last-updated {
+            text-align: center;
+            color: #999;
+            font-size: 0.9rem;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="logo">
+                <h1>Focusito</h1>
+                <p>Terms of Service</p>
+            </div>
+
+            <div class="lang-switch">
+                <button class="lang-btn active" onclick="switchLang('en')">English</button>
+                <button class="lang-btn" onclick="switchLang('tr')">Turkce</button>
+            </div>
+
+            <!-- English Content -->
+            <div id="en" class="content active">
+                <div class="highlight">
+                    <p><strong>By using Focusito, you agree to these Terms of Service.</strong> Please read them carefully before using the app.</p>
+                </div>
+
+                <h2>1. Acceptance of Terms</h2>
+                <p>By downloading, installing, or using Focusito ("the App"), you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use the App.</p>
+
+                <h2>2. Description of Service</h2>
+                <p>Focusito is a productivity application that helps you focus using the Pomodoro technique. The App provides:</p>
+                <ul>
+                    <li>Customizable focus timer sessions</li>
+                    <li>Break reminders</li>
+                    <li>Session statistics and tracking</li>
+                    <li>Optional premium features</li>
+                </ul>
+
+                <h2>3. License to Use</h2>
+                <p>We grant you a limited, non-exclusive, non-transferable, revocable license to use the App for your personal, non-commercial purposes. You may not:</p>
+                <ul>
+                    <li>Copy, modify, or distribute the App</li>
+                    <li>Reverse engineer, decompile, or disassemble the App</li>
+                    <li>Rent, lease, or lend the App to third parties</li>
+                    <li>Use the App for any illegal purpose</li>
+                    <li>Remove any copyright or proprietary notices</li>
+                </ul>
+
+                <h2>4. Premium Subscription</h2>
+                <p>Focusito offers optional premium features through in-app purchases:</p>
+                <ul>
+                    <li><strong>Payment:</strong> Payments are processed through Apple App Store or Google Play Store</li>
+                    <li><strong>Renewal:</strong> Subscriptions automatically renew unless cancelled at least 24 hours before the end of the current period</li>
+                    <li><strong>Cancellation:</strong> You can cancel your subscription anytime through your App Store or Play Store account settings</li>
+                    <li><strong>Refunds:</strong> Refund requests are handled by Apple or Google according to their respective policies</li>
+                </ul>
+
+                <h2>5. User Responsibilities</h2>
+                <p>You are responsible for:</p>
+                <ul>
+                    <li>Maintaining the security of your device</li>
+                    <li>All activity that occurs under your account</li>
+                    <li>Ensuring your use complies with applicable laws</li>
+                </ul>
+
+                <h2>6. Intellectual Property</h2>
+                <p>All content, features, and functionality of Focusito, including but not limited to text, graphics, logos, and software, are owned by Focusito and are protected by international copyright, trademark, and other intellectual property laws.</p>
+
+                <h2>7. Disclaimer of Warranties</h2>
+                <p>The App is provided "AS IS" and "AS AVAILABLE" without warranties of any kind. We do not guarantee that:</p>
+                <ul>
+                    <li>The App will be uninterrupted or error-free</li>
+                    <li>The App will meet your specific requirements</li>
+                    <li>Any errors in the App will be corrected</li>
+                </ul>
+
+                <h2>8. Limitation of Liability</h2>
+                <p>To the maximum extent permitted by law, Focusito shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of or inability to use the App.</p>
+
+                <h2>9. Changes to Terms</h2>
+                <p>We reserve the right to modify these Terms at any time. We will notify users of significant changes through the App or via email. Your continued use of the App after changes constitutes acceptance of the new Terms.</p>
+
+                <h2>10. Termination</h2>
+                <p>We may terminate or suspend your access to the App immediately, without prior notice, for any reason, including breach of these Terms. Upon termination, your right to use the App will cease immediately.</p>
+
+                <h2>11. Governing Law</h2>
+                <p>These Terms shall be governed by and construed in accordance with the laws of Turkey, without regard to its conflict of law provisions.</p>
+
+                <h2>12. Contact Us</h2>
+                <p>If you have any questions about these Terms, please contact us at:</p>
+                <p><strong>Email:</strong> <a href="mailto:metinguler7@gmail.com">metinguler7@gmail.com</a></p>
+            </div>
+
+            <!-- Turkish Content -->
+            <div id="tr" class="content">
+                <div class="highlight">
+                    <p><strong>Focusito'yu kullanarak bu Kullanim Sartlarini kabul etmis olursunuz.</strong> Lutfen uygulamayi kullanmadan once dikkatlice okuyunuz.</p>
+                </div>
+
+                <h2>1. Sartlarin Kabulu</h2>
+                <p>Focusito'yu ("Uygulama") indirerek, yukleyerek veya kullanarak bu Kullanim Sartlarina bagli olmayi kabul edersiniz. Bu sartlari kabul etmiyorsaniz, lutfen Uygulamayi kullanmayiniz.</p>
+
+                <h2>2. Hizmet Tanimi</h2>
+                <p>Focusito, Pomodoro teknigini kullanarak odaklanmaniza yardimci olan bir verimlilik uygulamasidir. Uygulama sunlar saglar:</p>
+                <ul>
+                    <li>Ozellestirilebilir odaklanma zamanlayici seanslar</li>
+                    <li>Mola hatirlaticilari</li>
+                    <li>Seans istatistikleri ve takibi</li>
+                    <li>Opsiyonel premium ozellikler</li>
+                </ul>
+
+                <h2>3. Kullanim Lisansi</h2>
+                <p>Size Uygulamayi kisisel, ticari olmayan amaclarla kullanmaniz icin sinirli, munhasir olmayan, devredilemez, geri alinabilir bir lisans veriyoruz. Asagidakileri yapamazsiniz:</p>
+                <ul>
+                    <li>Uygulamayi kopyalamak, degistirmek veya dagitmak</li>
+                    <li>Uygulamayi tersine muhendislik, kaynak koduna donusturme veya parcalarina ayirma</li>
+                    <li>Uygulamayi ucuncu taraflara kiralamak veya odunc vermek</li>
+                    <li>Uygulamayi yasadisi herhangi bir amac icin kullanmak</li>
+                    <li>Telif hakki veya mulkiyet bildirimlerini kaldirmak</li>
+                </ul>
+
+                <h2>4. Premium Abonelik</h2>
+                <p>Focusito, uygulama ici satin almalar araciligiyla opsiyonel premium ozellikler sunar:</p>
+                <ul>
+                    <li><strong>Odeme:</strong> Odemeler Apple App Store veya Google Play Store uzerinden islenir</li>
+                    <li><strong>Yenileme:</strong> Abonelikler, mevcut donem sona ermeden en az 24 saat once iptal edilmedikce otomatik olarak yenilenir</li>
+                    <li><strong>Iptal:</strong> Aboneliginizi istediginiz zaman App Store veya Play Store hesap ayarlarinizdan iptal edebilirsiniz</li>
+                    <li><strong>Iade:</strong> Iade talepleri Apple veya Google tarafindan kendi politikalarina gore islenir</li>
+                </ul>
+
+                <h2>5. Kullanici Sorumluluklari</h2>
+                <p>Asagidakilerden siz sorumlusunuz:</p>
+                <ul>
+                    <li>Cihazinizin guvenligini saglamak</li>
+                    <li>Hesabiniz altinda gerceklesen tum faaliyetler</li>
+                    <li>Kullaniminizin yururlukteki yasalara uygun olmasini saglamak</li>
+                </ul>
+
+                <h2>6. Fikri Mulkiyet</h2>
+                <p>Focusito'nun tum icerigi, ozellikleri ve islevselligi, metin, grafik, logolar ve yazilim dahil ancak bunlarla sinirli olmamak uzere, Focusito'ya aittir ve uluslararasi telif hakki, ticari marka ve diger fikri mulkiyet yasalariyla korunmaktadir.</p>
+
+                <h2>7. Garanti Reddi</h2>
+                <p>Uygulama herhangi bir garanti olmaksizin "OLDUGU GIBI" ve "MEVCUT OLDUGU SEKILDE" sunulmaktadir. Asagidakileri garanti etmiyoruz:</p>
+                <ul>
+                    <li>Uygulamanin kesintisiz veya hatasiz olacagi</li>
+                    <li>Uygulamanin ozel gereksinimlerinizi karsilayacagi</li>
+                    <li>Uygulamadaki hatalarin duzeltilecegi</li>
+                </ul>
+
+                <h2>8. Sorumluluk Sinirlamasi</h2>
+                <p>Yasalarin izin verdigi azami olcude, Focusito, Uygulamayi kullaniminizdan veya kullanamamanizdan kaynaklanan dolayli, arizi, ozel, sonuc olarak ortaya cikan veya cezai zararlardan sorumlu olmayacaktir.</p>
+
+                <h2>9. Sartlardaki Degisiklikler</h2>
+                <p>Bu Sartlari istedigimiz zaman degistirme hakkini sakli tutariz. Onemli degisiklikleri Uygulama araciligiyla veya e-posta yoluyla kullanicilara bildiririz. Degisikliklerden sonra Uygulamayi kullanmaya devam etmeniz, yeni Sartlari kabul ettiginiz anlamina gelir.</p>
+
+                <h2>10. Fesih</h2>
+                <p>Bu Sartlarin ihlali de dahil olmak uzere herhangi bir nedenle, onceden haber vermeksizin Uygulamaya erisinizi derhal sonlandirabiliriz veya askiya alabiliriz. Fesih uzerine, Uygulamayi kullanma hakkiniz derhal sona erecektir.</p>
+
+                <h2>11. Uygulanacak Hukuk</h2>
+                <p>Bu Sartlar, kanunlar ihtilafi hukumleri dikkate alinmaksizin Turkiye yasalarina gore yorumlanacak ve yonetilecektir.</p>
+
+                <h2>12. Iletisim</h2>
+                <p>Bu Sartlar hakkinda sorulariniz varsa, lutfen bizimle iletisime gecin:</p>
+                <p><strong>E-posta:</strong> <a href="mailto:metinguler7@gmail.com">metinguler7@gmail.com</a></p>
+            </div>
+
+            <div class="last-updated">
+                Last updated: January 2025
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            document.querySelectorAll('.content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+            document.getElementById(lang).classList.add('active');
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
