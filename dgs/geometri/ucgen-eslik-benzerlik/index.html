@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Ucgende Eslik ve Benzerlik - DGS Hazirlik</title>
+    <link rel="stylesheet" href="../../shared/style.css">
+    <!-- KaTeX for math formulas -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero-section hero-green">
+        <div class="hero-icon">📐</div>
+        <h1>Ucgende Eslik ve Benzerlik</h1>
+        <p class="hero-subtitle">Eslik ve Benzerlik Kriterleri</p>
+        <div class="hero-meta">
+            <span class="meta-item">📚 Geometri</span>
+            <span class="meta-item">⏱️ 20 dk okuma</span>
+        </div>
+    </div>
+
+    <!-- Quick Summary Card -->
+    <div class="summary-card">
+        <div class="summary-title">📌 Bu Konuda Ogreneceklerin</div>
+        <div class="summary-items">
+            <div class="summary-item">✓ Esit ucgenler ve eslik kriterleri</div>
+            <div class="summary-item">✓ Benzer ucgenler ve benzerlik orani</div>
+            <div class="summary-item">✓ K-K-K, K-A-K, A-K-A kriterleri</div>
+            <div class="summary-item">✓ Alan ve cevre iliskileri</div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <section class="content-section">
+        <h2>📖 Esit Ucgenler</h2>
+
+        <p>
+            Iki ucgen <span class="highlight">esit</span> ise, karsilikli tum kenarlari ve acilari
+            birbirine esittir. Esit ucgenler aslinda <strong>ayni ucgenin kopyasidir</strong>.
+        </p>
+
+        <div class="formula-card">
+            <div class="formula-label">Esitlik Gosterimi</div>
+            <div class="formula-content">
+                $$\triangle ABC \cong \triangle DEF$$
+            </div>
+        </div>
+
+        <div class="tip-box">
+            <div class="tip-icon">💡</div>
+            <div class="tip-content">
+                <strong>Onemli!</strong> Esit ucgenlerde hem kenarlar hem acilar ayni oldugundan,
+                alanlari ve cevreleri de esittir.
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>📐 Esitlik Kriterleri</h2>
+
+        <div class="card-grid">
+            <div class="info-card card-green">
+                <div class="card-icon">K-K-K</div>
+                <div class="card-title">Kenar-Kenar-Kenar</div>
+                <div class="card-desc">Uc kenari esit olan ucgenler esittir</div>
+                <div class="card-example">a=a', b=b', c=c'</div>
+            </div>
+
+            <div class="info-card card-blue">
+                <div class="card-icon">K-A-K</div>
+                <div class="card-title">Kenar-Aci-Kenar</div>
+                <div class="card-desc">Iki kenari ve arasindaki acisi esit</div>
+                <div class="card-example">a=a', B=B', c=c'</div>
+            </div>
+
+            <div class="info-card card-purple">
+                <div class="card-icon">A-K-A</div>
+                <div class="card-title">Aci-Kenar-Aci</div>
+                <div class="card-desc">Iki acisi ve arasindaki kenari esit</div>
+                <div class="card-example">A=A', c=c', B=B'</div>
+            </div>
+        </div>
+
+        <div class="warning-box">
+            <div class="warning-icon">⚠️</div>
+            <div class="warning-content">
+                <strong>Dikkat!</strong> A-A-K (Aci-Aci-Kenar) kriteri de gecerlidir ama karsilikli
+                kenarlar ayni acinin karsisinda olmalidir.
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>🔺 Benzer Ucgenler</h2>
+
+        <p>
+            Karsilikli acilari esit ve karsilikli kenarlari <span class="highlight">orantili</span>
+            olan ucgenlere <strong>benzer ucgenler</strong> denir.
+        </p>
+
+        <div class="formula-card">
+            <div class="formula-label">Benzerlik Gosterimi ve Orani</div>
+            <div class="formula-content">
+                $$\triangle ABC \sim \triangle DEF \quad \Rightarrow \quad \frac{a}{d} = \frac{b}{e} = \frac{c}{f} = k$$
+            </div>
+        </div>
+
+        <div class="visual-box">
+            <div class="visual-title">📊 Benzerlik Orani (k)</div>
+            <div class="priority-list">
+                <div class="priority-item">
+                    <div class="priority-rank">k</div>
+                    <div class="priority-text">Karsilikli kenarlarin orani sabittir ve buna benzerlik orani denir</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>📊 Benzerlik Kriterleri</h2>
+
+        <div class="steps-container">
+            <div class="step-card">
+                <div class="step-number">A-A</div>
+                <div class="step-content">
+                    <div class="step-title">Aci-Aci Kriteri</div>
+                    <div class="step-desc">Iki acisi esit olan ucgenler benzerdir. (Ucuncu aci zaten esit olur)</div>
+                    <div class="step-example">
+                        <code>A = D ve B = E ise ucgenler benzer</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">K-K-K</div>
+                <div class="step-content">
+                    <div class="step-title">Kenar-Kenar-Kenar Kriteri</div>
+                    <div class="step-desc">Karsilikli kenarlari orantili olan ucgenler benzerdir.</div>
+                    <div class="step-example">
+                        <code>a/d = b/e = c/f ise benzer</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">K-A-K</div>
+                <div class="step-content">
+                    <div class="step-title">Kenar-Aci-Kenar Kriteri</div>
+                    <div class="step-desc">Iki kenari orantili ve arasindaki acilari esit olan ucgenler benzerdir.</div>
+                    <div class="step-example">
+                        <code>a/d = c/f ve B = E ise benzer</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>📏 Benzerlikte Oranlar</h2>
+
+        <div class="formula-card">
+            <div class="formula-label">Cevre Orani</div>
+            <div class="formula-content">
+                $$\frac{C_1}{C_2} = k$$
+            </div>
+        </div>
+
+        <div class="formula-card">
+            <div class="formula-label">Alan Orani</div>
+            <div class="formula-content">
+                $$\frac{A_1}{A_2} = k^2$$
+            </div>
+        </div>
+
+        <div class="memorize-box">
+            <div class="memorize-title">🧠 Ezberle!</div>
+            <div class="memorize-content">
+                <div class="memorize-rule">
+                    <span class="rule-same">Kenar/Cevre orani</span> → <span class="result-positive">k</span>
+                </div>
+                <div class="memorize-rule">
+                    <span class="rule-diff">Alan orani</span> → <span class="result-negative">k²</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="tip-box">
+            <div class="tip-icon">💡</div>
+            <div class="tip-content">
+                <strong>Ornek:</strong> Benzerlik orani k=3 ise, cevrelerin orani 3, alanlarin orani 9'dur.
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>🎯 Ornek Sorular</h2>
+
+        <!-- Example 1 -->
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Ornek 1</span>
+                <span class="example-difficulty easy">Kolay</span>
+            </div>
+            <div class="example-question">
+                Iki ucgenin acilari sirasiyla 40°, 60°, 80° ve 40°, 80°, 60° dir. Bu ucgenler benzer midir?
+            </div>
+
+            <details class="solution-toggle">
+                <summary>Cozumu Goster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Adim 1:</span>
+                        Acilari karsilastiralim:
+                        <div class="step-math">
+                            1. Ucgen: 40°, 60°, 80°<br>
+                            2. Ucgen: 40°, 60°, 80° (siralayinca)
+                        </div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Adim 2:</span>
+                        Her iki ucgenin de ayni acilara sahip oldugunu goruyoruz.
+                        <div class="step-math">A-A kriterine gore benzerdir.</div>
+                    </div>
+                    <div class="answer-highlight">
+                        Cevap: <strong>Evet, benzerdir</strong>
+                    </div>
+                </div>
+            </details>
+        </div>
+
+        <!-- Example 2 -->
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Ornek 2</span>
+                <span class="example-difficulty medium">Orta</span>
+            </div>
+            <div class="example-question">
+                Benzer iki ucgenin kenarlarinin orani 2:3'tur. Buyuk ucgenin cevresi 36 cm ise kucuk ucgenin cevresi kac cm'dir?
+            </div>
+
+            <details class="solution-toggle">
+                <summary>Cozumu Goster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Adim 1:</span>
+                        Cevre orani kenar oranina esittir:
+                        <div class="step-math">$\frac{C_1}{C_2} = \frac{2}{3}$</div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Adim 2:</span>
+                        Buyuk ucgenin cevresi 36 cm:
+                        <div class="step-math">
+                            $\frac{C_1}{36} = \frac{2}{3}$<br>
+                            $C_1 = \frac{2 \times 36}{3} = 24$
+                        </div>
+                    </div>
+                    <div class="answer-highlight">
+                        Cevap: <strong>24 cm</strong>
+                    </div>
+                </div>
+            </details>
+        </div>
+
+        <!-- Example 3 -->
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Ornek 3</span>
+                <span class="example-difficulty hard">Zor</span>
+            </div>
+            <div class="example-question">
+                Benzer iki ucgenin alanlari orani 4:25'tir. Kucuk ucgenin bir kenari 6 cm ise buyuk ucgenin karsilik gelen kenari kac cm'dir?
+            </div>
+
+            <details class="solution-toggle">
+                <summary>Cozumu Goster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Adim 1:</span>
+                        Alan orani $k^2$ olduguna gore kenar oranini bulalim:
+                        <div class="step-math">
+                            $\frac{A_1}{A_2} = k^2 = \frac{4}{25}$<br>
+                            $k = \frac{2}{5}$
+                        </div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Adim 2:</span>
+                        Kenar oranini uygulayalim:
+                        <div class="step-math">
+                            $\frac{a_1}{a_2} = \frac{2}{5}$<br>
+                            $\frac{6}{a_2} = \frac{2}{5}$
+                        </div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Adim 3:</span>
+                        Hesaplayalim:
+                        <div class="step-math">$a_2 = \frac{6 \times 5}{2} = 15$</div>
+                    </div>
+                    <div class="answer-highlight">
+                        Cevap: <strong>15 cm</strong>
+                    </div>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- Key Points Summary -->
+    <section class="content-section">
+        <div class="key-points-box">
+            <div class="key-points-title">🔑 Anahtar Noktalar</div>
+            <ul class="key-points-list">
+                <li>Esit ucgenler: Tum kenar ve acilari ayni</li>
+                <li>Esitlik kriterleri: K-K-K, K-A-K, A-K-A</li>
+                <li>Benzer ucgenler: Acilar esit, kenarlar orantili</li>
+                <li>Benzerlik kriterleri: A-A, K-K-K, K-A-K</li>
+                <li>Cevre orani: $k$, Alan orani: $k^2$</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Navigation -->
+    <div class="nav-buttons">
+        <a href="../ucgen-alan/" class="nav-btn nav-prev">
+            <span class="nav-arrow">←</span>
+            <span class="nav-text">Ucgende Alan</span>
+        </a>
+        <a href="../dortgenler/" class="nav-btn nav-next">
+            <span class="nav-text">Dortgenler</span>
+            <span class="nav-arrow">→</span>
+        </a>
+    </div>
+
+    <script>
+        // Dark mode detection
+        function checkDarkMode() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('theme') === 'dark') {
+                document.body.classList.add('dark');
+            }
+        }
+        checkDarkMode();
+
+        window.addEventListener('message', function(event) {
+            if (event.data && event.data.theme === 'dark') {
+                document.body.classList.add('dark');
+            } else if (event.data && event.data.theme === 'light') {
+                document.body.classList.remove('dark');
+            }
+        });
+    </script>
+</body>
+</html>

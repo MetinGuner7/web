@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Koklu Sayilar - DGS Hazirlik</title>
+    <link rel="stylesheet" href="../../shared/style.css">
+    <!-- KaTeX for math formulas -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero-section hero-green">
+        <div class="hero-icon">√</div>
+        <h1>Koklu Sayilar</h1>
+        <p class="hero-subtitle">Karekokler, Sadele stirme ve Islemler</p>
+        <div class="hero-meta">
+            <span class="meta-item">📚 Temel Kavramlar</span>
+            <span class="meta-item">⏱️ 18 dk okuma</span>
+        </div>
+    </div>
+
+    <!-- Quick Summary Card -->
+    <div class="summary-card">
+        <div class="summary-title">📌 Bu Konuda Ogreneceklerin</div>
+        <div class="summary-items">
+            <div class="summary-item">✓ Karekok ve n. dereceden kok</div>
+            <div class="summary-item">✓ Kok sadele stirme</div>
+            <div class="summary-item">✓ Koklu ifadelerle islemler</div>
+            <div class="summary-item">✓ Eslenikle carpma</div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <section class="content-section">
+        <h2>📖 Karekok Nedir?</h2>
+
+        <p>
+            Bir sayinin <span class="highlight">karekok</span>u, karesi o sayiya esit olan pozitif sayidir.
+            $\sqrt{a}$ seklinde gosterilir ve $(\sqrt{a})^2 = a$ sartini saglar.
+        </p>
+
+        <div class="formula-card">
+            <div class="formula-label">Karekok Tanimi</div>
+            <div class="formula-content">
+                $$\sqrt{a} = b \Leftrightarrow b^2 = a \text{ ve } b \geq 0$$
+            </div>
+        </div>
+
+        <div class="example-grid">
+            <div class="mini-example">
+                <div class="mini-calc">$\sqrt{4} = 2$</div>
+            </div>
+            <div class="mini-example">
+                <div class="mini-calc">$\sqrt{9} = 3$</div>
+            </div>
+            <div class="mini-example">
+                <div class="mini-calc">$\sqrt{16} = 4$</div>
+            </div>
+            <div class="mini-example">
+                <div class="mini-calc">$\sqrt{25} = 5$</div>
+            </div>
+        </div>
+
+        <div class="tip-box">
+            <div class="tip-icon">💡</div>
+            <div class="tip-content">
+                <strong>Onemli!</strong> Negatif sayilarin karekoku reel sayilarda tanimli degildir.
+                $\sqrt{-4}$ reel sayilarda yoktur.
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>📊 Tam Kareler</h2>
+
+        <div class="visual-box">
+            <div class="visual-title">📊 Ilk 20 Tam Kare Sayinin Karekoku</div>
+            <div class="number-line">
+                <div class="number-line-track" style="flex-wrap: wrap; justify-content: flex-start;">
+                    <span class="nl-number positive" style="margin: 4px;">$\sqrt{1}=1$</span>
+                    <span class="nl-number positive" style="margin: 4px;">$\sqrt{4}=2$</span>
+                    <span class="nl-number positive" style="margin: 4px;">$\sqrt{9}=3$</span>
+                    <span class="nl-number positive" style="margin: 4px;">$\sqrt{16}=4$</span>
+                    <span class="nl-number positive" style="margin: 4px;">$\sqrt{25}=5$</span>
+                    <span class="nl-number positive" style="margin: 4px;">$\sqrt{36}=6$</span>
+                    <span class="nl-number positive" style="margin: 4px;">$\sqrt{49}=7$</span>
+                    <span class="nl-number positive" style="margin: 4px;">$\sqrt{64}=8$</span>
+                    <span class="nl-number positive" style="margin: 4px;">$\sqrt{81}=9$</span>
+                    <span class="nl-number positive" style="margin: 4px;">$\sqrt{100}=10$</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>📐 Kok Kurallari</h2>
+
+        <div class="steps-container">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <div class="step-title">Carpimin Koku</div>
+                    <div class="step-desc">Koklerin carpimina esittir.</div>
+                    <div class="step-example">
+                        <code>$\sqrt{a \times b} = \sqrt{a} \times \sqrt{b}$</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <div class="step-title">Bolumun Koku</div>
+                    <div class="step-desc">Koklerin bolumune esittir.</div>
+                    <div class="step-example">
+                        <code>$\sqrt{\frac{a}{b}} = \frac{\sqrt{a}}{\sqrt{b}}$</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <div class="step-title">Kok Icindeki Us</div>
+                    <div class="step-desc">Us kok derecesine bolunur.</div>
+                    <div class="step-example">
+                        <code>$\sqrt{a^2} = |a|$ ve $\sqrt[n]{a^n} = |a|$ (n cift)</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <div class="step-title">Kok Us Iliskisi</div>
+                    <div class="step-desc">Kok kesirli us olarak yazilir.</div>
+                    <div class="step-example">
+                        <code>$\sqrt[n]{a} = a^{\frac{1}{n}}$</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>🔧 Kok Sadele stirme</h2>
+
+        <p>
+            Koklu ifadeleri <span class="highlight">sadele stirmek</span> icin kok icindeki sayiyi
+            asal carpanlarina ayirip, tam karelerini kok disina cikartiriz.
+        </p>
+
+        <div class="formula-card">
+            <div class="formula-label">Sadele stirme Yontemi</div>
+            <div class="formula-content">
+                $$\sqrt{a^2 \cdot b} = a\sqrt{b}$$
+            </div>
+        </div>
+
+        <div class="example-grid">
+            <div class="mini-example">
+                <div class="mini-calc">$\sqrt{12} = \sqrt{4 \cdot 3} = 2\sqrt{3}$</div>
+            </div>
+            <div class="mini-example">
+                <div class="mini-calc">$\sqrt{50} = \sqrt{25 \cdot 2} = 5\sqrt{2}$</div>
+            </div>
+            <div class="mini-example">
+                <div class="mini-calc">$\sqrt{72} = \sqrt{36 \cdot 2} = 6\sqrt{2}$</div>
+            </div>
+            <div class="mini-example">
+                <div class="mini-calc">$\sqrt{48} = \sqrt{16 \cdot 3} = 4\sqrt{3}$</div>
+            </div>
+        </div>
+
+        <div class="memorize-box">
+            <div class="memorize-title">🧠 Ezberle!</div>
+            <div class="memorize-content">
+                <div class="memorize-rule">
+                    <span class="rule-same">Tam kare carpani bul → Kok disina cikar</span>
+                </div>
+                <div class="memorize-rule">
+                    <span class="rule-diff">$\sqrt{a^2 \cdot b} = a\sqrt{b}$</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2">➕ Koklu Ifadelerle Toplama ve Cikarma</h2>
+
+        <p>
+            <span class="highlight">Benzer koklu ifadeler</span> (kok icindeki sayilar ayni olanlar)
+            toplanip cikartilabilir. Katsayilar toplanir, kok ayni kalir.
+        </p>
+
+        <div class="steps-container">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <div class="step-title">Benzer Ifadeler</div>
+                    <div class="step-desc">Kok icindeki sayilar ayniysa toplanabilir.</div>
+                    <div class="step-example">
+                        <code>$3\sqrt{2} + 5\sqrt{2} = 8\sqrt{2}$</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <div class="step-title">Farkli Ifadeler</div>
+                    <div class="step-desc">Once sadele stir, sonra topla.</div>
+                    <div class="step-example">
+                        <code>$\sqrt{8} + \sqrt{18} = 2\sqrt{2} + 3\sqrt{2} = 5\sqrt{2}$</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="warning-box">
+            <div class="warning-icon">⚠️</div>
+            <div class="warning-content">
+                <strong>Dikkat!</strong> $\sqrt{a} + \sqrt{b} \neq \sqrt{a+b}$
+                <br>Ornek: $\sqrt{9} + \sqrt{16} = 3 + 4 = 7 \neq \sqrt{25} = 5$
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>🔄 Paydayi Rasyonelle stirme</h2>
+
+        <p>
+            Paydadaki kok ifadesini yok etmek icin <span class="highlight">eslenikle carpma</span>
+            yontemini kullaniriz.
+        </p>
+
+        <div class="formula-card">
+            <div class="formula-label">Tek Terimli Payda</div>
+            <div class="formula-content">
+                $$\frac{a}{\sqrt{b}} = \frac{a \cdot \sqrt{b}}{\sqrt{b} \cdot \sqrt{b}} = \frac{a\sqrt{b}}{b}$$
+            </div>
+        </div>
+
+        <div class="formula-card">
+            <div class="formula-label">Iki Terimli Payda (Eslenik)</div>
+            <div class="formula-content">
+                $$\frac{1}{\sqrt{a} + \sqrt{b}} = \frac{\sqrt{a} - \sqrt{b}}{(\sqrt{a})^2 - (\sqrt{b})^2} = \frac{\sqrt{a} - \sqrt{b}}{a - b}$$
+            </div>
+        </div>
+
+        <div class="tip-box">
+            <div class="tip-icon">💡</div>
+            <div class="tip-content">
+                <strong>Eslenik nedir?</strong> $(\sqrt{a} + \sqrt{b})$ ifadesinin eslenigi $(\sqrt{a} - \sqrt{b})$'dir.
+                Carpildiklnda: $(\sqrt{a} + \sqrt{b})(\sqrt{a} - \sqrt{b}) = a - b$
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>🎯 Ornek Sorular</h2>
+
+        <!-- Example 1 -->
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Ornek 1</span>
+                <span class="example-difficulty easy">Kolay</span>
+            </div>
+            <div class="example-question">
+                $\sqrt{75} + \sqrt{48} - \sqrt{27}$ isleminin sonucu kactir?
+            </div>
+
+            <details class="solution-toggle">
+                <summary>Cozumu Goster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Adim 1:</span>
+                        Kokleri sadele stirelim:
+                        <div class="step-math">
+                            $\sqrt{75} = \sqrt{25 \cdot 3} = 5\sqrt{3}$<br>
+                            $\sqrt{48} = \sqrt{16 \cdot 3} = 4\sqrt{3}$<br>
+                            $\sqrt{27} = \sqrt{9 \cdot 3} = 3\sqrt{3}$
+                        </div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Adim 2:</span>
+                        Benzer terimleri toplayalim:
+                        <div class="step-math">$5\sqrt{3} + 4\sqrt{3} - 3\sqrt{3} = 6\sqrt{3}$</div>
+                    </div>
+                    <div class="answer-highlight">
+                        Cevap: <strong>$6\sqrt{3}$</strong>
+                    </div>
+                </div>
+            </details>
+        </div>
+
+        <!-- Example 2 -->
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Ornek 2</span>
+                <span class="example-difficulty medium">Orta</span>
+            </div>
+            <div class="example-question">
+                $\frac{6}{\sqrt{3}}$ ifadesinin paydasi rasyonelle stirilmis hali nedir?
+            </div>
+
+            <details class="solution-toggle">
+                <summary>Cozumu Goster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Adim 1:</span>
+                        Pay ve paydayi $\sqrt{3}$ ile carpalim:
+                        <div class="step-math">$\frac{6}{\sqrt{3}} = \frac{6 \cdot \sqrt{3}}{\sqrt{3} \cdot \sqrt{3}}$</div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Adim 2:</span>
+                        Sadele stirelim:
+                        <div class="step-math">$= \frac{6\sqrt{3}}{3} = 2\sqrt{3}$</div>
+                    </div>
+                    <div class="answer-highlight">
+                        Cevap: <strong>$2\sqrt{3}$</strong>
+                    </div>
+                </div>
+            </details>
+        </div>
+
+        <!-- Example 3 -->
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Ornek 3</span>
+                <span class="example-difficulty hard">Zor</span>
+            </div>
+            <div class="example-question">
+                $\frac{1}{\sqrt{5} - \sqrt{3}} + \frac{1}{\sqrt{5} + \sqrt{3}}$ isleminin sonucu kactir?
+            </div>
+
+            <details class="solution-toggle">
+                <summary>Cozumu Goster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Adim 1:</span>
+                        Her iki kesiri eslenikleriyle carpalim:
+                        <div class="step-math">
+                            $\frac{1}{\sqrt{5} - \sqrt{3}} = \frac{\sqrt{5} + \sqrt{3}}{(\sqrt{5})^2 - (\sqrt{3})^2} = \frac{\sqrt{5} + \sqrt{3}}{2}$
+                        </div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Adim 2:</span>
+                        Ikinci kesir:
+                        <div class="step-math">
+                            $\frac{1}{\sqrt{5} + \sqrt{3}} = \frac{\sqrt{5} - \sqrt{3}}{(\sqrt{5})^2 - (\sqrt{3})^2} = \frac{\sqrt{5} - \sqrt{3}}{2}$
+                        </div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Adim 3:</span>
+                        Toplayalim:
+                        <div class="step-math">$= \frac{\sqrt{5} + \sqrt{3} + \sqrt{5} - \sqrt{3}}{2} = \frac{2\sqrt{5}}{2} = \sqrt{5}$</div>
+                    </div>
+                    <div class="answer-highlight">
+                        Cevap: <strong>$\sqrt{5}$</strong>
+                    </div>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- Key Points Summary -->
+    <section class="content-section">
+        <div class="key-points-box">
+            <div class="key-points-title">🔑 Anahtar Noktalar</div>
+            <ul class="key-points-list">
+                <li>$\sqrt{a \cdot b} = \sqrt{a} \cdot \sqrt{b}$ (carpimin koku)</li>
+                <li>$\sqrt{a^2} = |a|$ (mutlak deger)</li>
+                <li>Benzer kokler toplanabilir: $a\sqrt{x} + b\sqrt{x} = (a+b)\sqrt{x}$</li>
+                <li>Rasyonelle stirme: $\frac{1}{\sqrt{a}} = \frac{\sqrt{a}}{a}$</li>
+                <li>Eslenik carpim: $(\sqrt{a}+\sqrt{b})(\sqrt{a}-\sqrt{b}) = a - b$</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Navigation -->
+    <div class="nav-buttons">
+        <a href="../uslu-sayilar/" class="nav-btn nav-prev">
+            <span class="nav-arrow">←</span>
+            <span class="nav-text">Uslu Sayilar</span>
+        </a>
+        <a href="../carpanlar-katlar/" class="nav-btn nav-next">
+            <span class="nav-text">Carpanlar ve Katlar</span>
+            <span class="nav-arrow">→</span>
+        </a>
+    </div>
+
+    <script>
+        // Dark mode detection
+        function checkDarkMode() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('theme') === 'dark') {
+                document.body.classList.add('dark');
+            }
+        }
+        checkDarkMode();
+
+        window.addEventListener('message', function(event) {
+            if (event.data && event.data.theme === 'dark') {
+                document.body.classList.add('dark');
+            } else if (event.data && event.data.theme === 'light') {
+                document.body.classList.remove('dark');
+            }
+        });
+    </script>
+</body>
+</html>

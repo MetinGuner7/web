@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Tam Sayılar - DGS Hazırlık</title>
+    <link rel="stylesheet" href="../../shared/style.css">
+    <!-- KaTeX for math formulas -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero-section hero-blue">
+        <div class="hero-icon">🔢</div>
+        <h1>Tam Sayılar</h1>
+        <p class="hero-subtitle">Pozitif, Negatif ve Sıfır</p>
+        <div class="hero-meta">
+            <span class="meta-item">📚 Temel Kavramlar</span>
+            <span class="meta-item">⏱️ 15 dk okuma</span>
+        </div>
+    </div>
+
+    <!-- Quick Summary Card -->
+    <div class="summary-card">
+        <div class="summary-title">📌 Bu Konuda Öğreneceklerin</div>
+        <div class="summary-items">
+            <div class="summary-item">✓ Tam sayı kümesi ve gösterimi</div>
+            <div class="summary-item">✓ İşaret kuralları</div>
+            <div class="summary-item">✓ Dört işlem ve öncelik sırası</div>
+            <div class="summary-item">✓ Mutlak değer kavramı</div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <section class="content-section">
+        <h2>📖 Tam Sayı Nedir?</h2>
+
+        <p>
+            Tam sayılar, <span class="highlight">pozitif tam sayılar</span>,
+            <span class="highlight">negatif tam sayılar</span> ve
+            <span class="highlight">sıfırdan</span> oluşan sayı kümesidir.
+            <strong>Z</strong> harfi ile gösterilir.
+        </p>
+
+        <div class="formula-card">
+            <div class="formula-label">Tam Sayılar Kümesi</div>
+            <div class="formula-content">
+                $$\mathbb{Z} = \{..., -3, -2, -1, 0, 1, 2, 3, ...\}$$
+            </div>
+        </div>
+
+        <!-- Visual Number Line -->
+        <div class="visual-box">
+            <div class="visual-title">📊 Sayı Doğrusu</div>
+            <div class="number-line">
+                <div class="number-line-track">
+                    <span class="nl-number negative">-4</span>
+                    <span class="nl-number negative">-3</span>
+                    <span class="nl-number negative">-2</span>
+                    <span class="nl-number negative">-1</span>
+                    <span class="nl-number zero">0</span>
+                    <span class="nl-number positive">1</span>
+                    <span class="nl-number positive">2</span>
+                    <span class="nl-number positive">3</span>
+                    <span class="nl-number positive">4</span>
+                </div>
+                <div class="nl-labels">
+                    <span class="nl-label-left">← Negatif Sayılar</span>
+                    <span class="nl-label-right">Pozitif Sayılar →</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>📂 Tam Sayı Türleri</h2>
+
+        <div class="card-grid">
+            <div class="info-card card-green">
+                <div class="card-icon">➕</div>
+                <div class="card-title">Pozitif Tam Sayılar (Z⁺)</div>
+                <div class="card-desc">Sıfırdan büyük tam sayılar</div>
+                <div class="card-example">{1, 2, 3, 4, 5, ...}</div>
+            </div>
+
+            <div class="info-card card-red">
+                <div class="card-icon">➖</div>
+                <div class="card-title">Negatif Tam Sayılar (Z⁻)</div>
+                <div class="card-desc">Sıfırdan küçük tam sayılar</div>
+                <div class="card-example">{..., -5, -4, -3, -2, -1}</div>
+            </div>
+
+            <div class="info-card card-gray">
+                <div class="card-icon">⭕</div>
+                <div class="card-title">Sıfır (0)</div>
+                <div class="card-desc">Ne pozitif ne negatif</div>
+                <div class="card-example">Nötr eleman</div>
+            </div>
+        </div>
+
+        <div class="tip-box">
+            <div class="tip-icon">💡</div>
+            <div class="tip-content">
+                <strong>Önemli!</strong> Sıfır ne pozitif ne de negatif tam sayıdır.
+                Ancak sıfır, negatif olmayan ve pozitif olmayan tam sayılar kümesinin elemanıdır.
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>✖️ İşaret Kuralları</h2>
+
+        <h3>Çarpma ve Bölme</h3>
+
+        <div class="rule-grid">
+            <div class="rule-item rule-positive">
+                <div class="rule-operation">(+) × (+)</div>
+                <div class="rule-result">= +</div>
+                <div class="rule-example">3 × 4 = 12</div>
+            </div>
+            <div class="rule-item rule-positive">
+                <div class="rule-operation">(−) × (−)</div>
+                <div class="rule-result">= +</div>
+                <div class="rule-example">(−3) × (−4) = 12</div>
+            </div>
+            <div class="rule-item rule-negative">
+                <div class="rule-operation">(+) × (−)</div>
+                <div class="rule-result">= −</div>
+                <div class="rule-example">3 × (−4) = −12</div>
+            </div>
+            <div class="rule-item rule-negative">
+                <div class="rule-operation">(−) × (+)</div>
+                <div class="rule-result">= −</div>
+                <div class="rule-example">(−3) × 4 = −12</div>
+            </div>
+        </div>
+
+        <div class="memorize-box">
+            <div class="memorize-title">🧠 Ezberle!</div>
+            <div class="memorize-content">
+                <div class="memorize-rule">
+                    <span class="rule-same">Aynı işaret</span> → <span class="result-positive">Pozitif (+)</span>
+                </div>
+                <div class="memorize-rule">
+                    <span class="rule-diff">Farklı işaret</span> → <span class="result-negative">Negatif (−)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>➕ Toplama ve Çıkarma</h2>
+
+        <div class="steps-container">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <div class="step-title">Aynı İşaretli Sayılar</div>
+                    <div class="step-desc">Mutlak değerler toplanır, ortak işaret yazılır.</div>
+                    <div class="step-example">
+                        <code>(−5) + (−3) = −8</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <div class="step-title">Farklı İşaretli Sayılar</div>
+                    <div class="step-desc">Mutlak değerlerin farkı alınır, büyük olanın işareti yazılır.</div>
+                    <div class="step-example">
+                        <code>(−7) + 4 = −3</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <div class="step-title">Çıkarma İşlemi</div>
+                    <div class="step-desc">Çıkanın zıt işaretlisi ile toplama yapılır.</div>
+                    <div class="step-example">
+                        <code>5 − (−3) = 5 + 3 = 8</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>📐 Mutlak Değer</h2>
+
+        <p>
+            Bir sayının <span class="highlight">mutlak değeri</span>, o sayının sayı doğrusu üzerinde
+            <strong>sıfıra olan uzaklığıdır</strong>. Mutlak değer her zaman sıfır veya pozitiftir.
+        </p>
+
+        <div class="formula-card">
+            <div class="formula-label">Mutlak Değer Tanımı</div>
+            <div class="formula-content">
+                $$|a| = \begin{cases} a & \text{eğer } a \geq 0 \\ -a & \text{eğer } a < 0 \end{cases}$$
+            </div>
+        </div>
+
+        <div class="example-grid">
+            <div class="mini-example">
+                <div class="mini-calc">|−7| = 7</div>
+            </div>
+            <div class="mini-example">
+                <div class="mini-calc">|5| = 5</div>
+            </div>
+            <div class="mini-example">
+                <div class="mini-calc">|0| = 0</div>
+            </div>
+            <div class="mini-example">
+                <div class="mini-calc">|−12| = 12</div>
+            </div>
+        </div>
+
+        <div class="warning-box">
+            <div class="warning-icon">⚠️</div>
+            <div class="warning-content">
+                <strong>Dikkat!</strong> Mutlak değer işareti içindeki eksi, sayının negatif olduğunu gösterir.
+                Mutlak değer aldığımızda bu eksi kaybolur.
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>🎯 Örnek Sorular</h2>
+
+        <!-- Example 1 -->
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Örnek 1</span>
+                <span class="example-difficulty easy">Kolay</span>
+            </div>
+            <div class="example-question">
+                $(−15) + 8 − (−7) + (−3)$ işleminin sonucu kaçtır?
+            </div>
+
+            <details class="solution-toggle">
+                <summary>Çözümü Göster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Adım 1:</span>
+                        Çıkarma işlemini toplama şekline çevirelim:
+                        <div class="step-math">$(−15) + 8 + 7 + (−3)$</div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Adım 2:</span>
+                        Pozitif ve negatifleri gruplayalım:
+                        <div class="step-math">
+                            Pozitif: $8 + 7 = 15$<br>
+                            Negatif: $(−15) + (−3) = −18$
+                        </div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Adım 3:</span>
+                        Sonuçları toplayalım:
+                        <div class="step-math">$15 + (−18) = −3$</div>
+                    </div>
+                    <div class="answer-highlight">
+                        Cevap: <strong>−3</strong>
+                    </div>
+                </div>
+            </details>
+        </div>
+
+        <!-- Example 2 -->
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Örnek 2</span>
+                <span class="example-difficulty medium">Orta</span>
+            </div>
+            <div class="example-question">
+                $|−7| + |3| − |−2|$ işleminin sonucu kaçtır?
+            </div>
+
+            <details class="solution-toggle">
+                <summary>Çözümü Göster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Adım 1:</span>
+                        Mutlak değerleri bulalım:
+                        <div class="step-math">
+                            $|−7| = 7$<br>
+                            $|3| = 3$<br>
+                            $|−2| = 2$
+                        </div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Adım 2:</span>
+                        İşlemi yapalım:
+                        <div class="step-math">$7 + 3 − 2 = 8$</div>
+                    </div>
+                    <div class="answer-highlight">
+                        Cevap: <strong>8</strong>
+                    </div>
+                </div>
+            </details>
+        </div>
+
+        <!-- Example 3 -->
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Örnek 3</span>
+                <span class="example-difficulty hard">Zor</span>
+            </div>
+            <div class="example-question">
+                $a$ ve $b$ birbirinden farklı negatif tam sayılardır. Buna göre, $a + b$ toplamının alabileceği en büyük değer kaçtır?
+            </div>
+
+            <details class="solution-toggle">
+                <summary>Çözümü Göster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Analiz:</span>
+                        En büyük toplam için negatif sayıları sıfıra en yakın seçmeliyiz.
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Seçim:</span>
+                        Birbirinden farklı olmalı:
+                        <div class="step-math">
+                            $a = −1$ (sıfıra en yakın negatif)<br>
+                            $b = −2$ (ikinci en yakın)
+                        </div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Hesap:</span>
+                        <div class="step-math">$a + b = (−1) + (−2) = −3$</div>
+                    </div>
+                    <div class="answer-highlight">
+                        Cevap: <strong>−3</strong>
+                    </div>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>📋 İşlem Önceliği</h2>
+
+        <div class="priority-list">
+            <div class="priority-item">
+                <div class="priority-rank">1</div>
+                <div class="priority-text">Parantez içi işlemler</div>
+                <div class="priority-note">İç içe ise içten dışa</div>
+            </div>
+            <div class="priority-item">
+                <div class="priority-rank">2</div>
+                <div class="priority-text">Üslü ve köklü ifadeler</div>
+                <div class="priority-note">$x^2$, $\sqrt{x}$</div>
+            </div>
+            <div class="priority-item">
+                <div class="priority-rank">3</div>
+                <div class="priority-text">Çarpma ve bölme</div>
+                <div class="priority-note">Soldan sağa</div>
+            </div>
+            <div class="priority-item">
+                <div class="priority-rank">4</div>
+                <div class="priority-text">Toplama ve çıkarma</div>
+                <div class="priority-note">Soldan sağa</div>
+            </div>
+        </div>
+
+        <div class="example-box mini">
+            <div class="example-question">
+                $2 + 3 × 4 − 6 ÷ 2 = ?$
+            </div>
+            <details class="solution-toggle">
+                <summary>Çözümü Göster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        Önce çarpma ve bölme: $3 × 4 = 12$ ve $6 ÷ 2 = 3$
+                    </div>
+                    <div class="solution-step">
+                        Sonra toplama ve çıkarma: $2 + 12 − 3 = 11$
+                    </div>
+                    <div class="answer-highlight">
+                        Cevap: <strong>11</strong>
+                    </div>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- Key Points Summary -->
+    <section class="content-section">
+        <div class="key-points-box">
+            <div class="key-points-title">🔑 Anahtar Noktalar</div>
+            <ul class="key-points-list">
+                <li>Tam sayılar: $\mathbb{Z} = \{..., -2, -1, 0, 1, 2, ...\}$</li>
+                <li>Aynı işaret çarpımı/bölümü → Pozitif</li>
+                <li>Farklı işaret çarpımı/bölümü → Negatif</li>
+                <li>Mutlak değer her zaman ≥ 0</li>
+                <li>İşlem önceliği: Parantez → Üs → Çarpma/Bölme → Toplama/Çıkarma</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Navigation -->
+    <div class="nav-buttons">
+        <a href="../dogal-sayilar/" class="nav-btn nav-prev">
+            <span class="nav-arrow">←</span>
+            <span class="nav-text">Doğal Sayılar</span>
+        </a>
+        <a href="../rasyonel-sayilar/" class="nav-btn nav-next">
+            <span class="nav-text">Rasyonel Sayılar</span>
+            <span class="nav-arrow">→</span>
+        </a>
+    </div>
+
+    <script>
+        // Dark mode detection
+        function checkDarkMode() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('theme') === 'dark') {
+                document.body.classList.add('dark');
+            }
+        }
+        checkDarkMode();
+
+        window.addEventListener('message', function(event) {
+            if (event.data && event.data.theme === 'dark') {
+                document.body.classList.add('dark');
+            } else if (event.data && event.data.theme === 'light') {
+                document.body.classList.remove('dark');
+            }
+        });
+    </script>
+</body>
+</html>

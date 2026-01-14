@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Cember - DGS Hazirlik</title>
+    <link rel="stylesheet" href="../../shared/style.css">
+    <!-- KaTeX for math formulas -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero-section hero-green">
+        <div class="hero-icon">📐</div>
+        <h1>Cember</h1>
+        <p class="hero-subtitle">Yaricap, Cap, Kiriş ve Yay</p>
+        <div class="hero-meta">
+            <span class="meta-item">📚 Geometri</span>
+            <span class="meta-item">⏱️ 18 dk okuma</span>
+        </div>
+    </div>
+
+    <!-- Quick Summary Card -->
+    <div class="summary-card">
+        <div class="summary-title">📌 Bu Konuda Ogreneceklerin</div>
+        <div class="summary-items">
+            <div class="summary-item">✓ Cember ve daire ayrimi</div>
+            <div class="summary-item">✓ Yaricap, cap ve kiris kavramlari</div>
+            <div class="summary-item">✓ Merkez aci ve cevre aci</div>
+            <div class="summary-item">✓ Teget ve sekant dogrular</div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <section class="content-section">
+        <h2>📖 Cember ve Daire</h2>
+
+        <p>
+            <span class="highlight">Cember</span>, bir noktaya esit uzaklikta bulunan noktalarin kumesidir (cizgi).
+            <span class="highlight">Daire</span> ise cemberin ic bolgesini de iceren alandir.
+        </p>
+
+        <div class="card-grid">
+            <div class="info-card card-blue">
+                <div class="card-icon">○</div>
+                <div class="card-title">Cember</div>
+                <div class="card-desc">Sadece cevre cizgisi</div>
+                <div class="card-example">1 boyutlu egri</div>
+            </div>
+
+            <div class="info-card card-green">
+                <div class="card-icon">●</div>
+                <div class="card-title">Daire</div>
+                <div class="card-desc">Cember + ic bolge</div>
+                <div class="card-example">2 boyutlu alan</div>
+            </div>
+        </div>
+
+        <div class="tip-box">
+            <div class="tip-icon">💡</div>
+            <div class="tip-content">
+                <strong>Hatirla!</strong> Cember bir cizgidir ve alani yoktur.
+                Daire ise bir bolgedir ve alani vardir.
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>📐 Temel Kavramlar</h2>
+
+        <div class="card-grid">
+            <div class="info-card card-purple">
+                <div class="card-icon">r</div>
+                <div class="card-title">Yaricap (r)</div>
+                <div class="card-desc">Merkezden cembere olan uzaklik</div>
+                <div class="card-example">Tum yarikaplar esit</div>
+            </div>
+
+            <div class="info-card card-blue">
+                <div class="card-icon">d</div>
+                <div class="card-title">Cap (d)</div>
+                <div class="card-desc">Merkezden gecen kiris</div>
+                <div class="card-example">d = 2r</div>
+            </div>
+
+            <div class="info-card card-green">
+                <div class="card-icon">—</div>
+                <div class="card-title">Kiris</div>
+                <div class="card-desc">Cember uzerinde iki noktayi birlestiren dogru parcasi</div>
+                <div class="card-example">En uzun kiris = cap</div>
+            </div>
+
+            <div class="info-card card-red">
+                <div class="card-icon">⌒</div>
+                <div class="card-title">Yay</div>
+                <div class="card-desc">Cemberin bir parcasi</div>
+                <div class="card-example">Kucuk yay, buyuk yay</div>
+            </div>
+        </div>
+
+        <div class="formula-card">
+            <div class="formula-label">Cap-Yaricap Iliskisi</div>
+            <div class="formula-content">
+                $$d = 2r \quad \text{veya} \quad r = \frac{d}{2}$$
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>🔶 Merkez Aci ve Cevre Aci</h2>
+
+        <div class="steps-container">
+            <div class="step-card">
+                <div class="step-number">M</div>
+                <div class="step-content">
+                    <div class="step-title">Merkez Aci</div>
+                    <div class="step-desc">Kosesi cemberin merkezinde olan aci</div>
+                    <div class="step-example">
+                        <code>Yaya esit olcu sahiptir</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">C</div>
+                <div class="step-content">
+                    <div class="step-title">Cevre Aci</div>
+                    <div class="step-desc">Kosesi cember uzerinde olan aci</div>
+                    <div class="step-example">
+                        <code>Ayni yayi goren merkez acinin yarisi</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="formula-card">
+            <div class="formula-label">Merkez Aci - Cevre Aci Iliskisi</div>
+            <div class="formula-content">
+                $$\text{Merkez aci} = 2 \times \text{Cevre aci}$$
+            </div>
+        </div>
+
+        <div class="memorize-box">
+            <div class="memorize-title">🧠 Ezberle!</div>
+            <div class="memorize-content">
+                <div class="memorize-rule">
+                    <span class="rule-same">Ayni yayi goren cevre acilar</span> → <span class="result-positive">Birbirine esit</span>
+                </div>
+                <div class="memorize-rule">
+                    <span class="rule-diff">Yarim cemberi goren cevre aci</span> → <span class="result-negative">90° (dik aci)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>📏 Teget ve Sekant</h2>
+
+        <div class="card-grid">
+            <div class="info-card card-green">
+                <div class="card-icon">•—</div>
+                <div class="card-title">Teget Dogru</div>
+                <div class="card-desc">Cembere tek noktada deginen dogru</div>
+                <div class="card-example">Yaricapa diktir</div>
+            </div>
+
+            <div class="info-card card-blue">
+                <div class="card-icon">•—•</div>
+                <div class="card-title">Sekant Dogru</div>
+                <div class="card-desc">Cemberi iki noktada kesen dogru</div>
+                <div class="card-example">Kiris icerir</div>
+            </div>
+        </div>
+
+        <div class="formula-card">
+            <div class="formula-label">Teget Ozelligi</div>
+            <div class="formula-content">
+                $$\text{Teget} \perp \text{Yaricap (degme noktasinda)}$$
+            </div>
+        </div>
+
+        <div class="tip-box">
+            <div class="tip-icon">💡</div>
+            <div class="tip-content">
+                <strong>Onemli!</strong> Dis bir noktadan cembere cizilen iki teget parcasi birbirine esittir.
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>⊗ Kiris-Yaricap Iliskisi</h2>
+
+        <p>
+            Bir kirişe merkezden indirilen <span class="highlight">dikme</span>, kirisi <strong>ortalar</strong>.
+        </p>
+
+        <div class="formula-card">
+            <div class="formula-label">Kiris-Yaricap-Dikme Iliskisi (Pisagor)</div>
+            <div class="formula-content">
+                $$r^2 = d^2 + \left(\frac{k}{2}\right)^2$$
+            </div>
+        </div>
+
+        <div class="visual-box">
+            <div class="visual-title">📊 Aciklama</div>
+            <p style="text-align: center; color: var(--text-secondary);">
+                r = yaricap<br>
+                d = merkezden kirise olan dikme uzakligi<br>
+                k = kiris uzunlugu
+            </p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>🎯 Ornek Sorular</h2>
+
+        <!-- Example 1 -->
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Ornek 1</span>
+                <span class="example-difficulty easy">Kolay</span>
+            </div>
+            <div class="example-question">
+                Bir cemberde merkez aci 80° ise ayni yayi goren cevre aci kac derecedir?
+            </div>
+
+            <details class="solution-toggle">
+                <summary>Cozumu Goster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Formul:</span>
+                        <div class="step-math">$\text{Cevre aci} = \frac{\text{Merkez aci}}{2}$</div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Hesap:</span>
+                        <div class="step-math">$\text{Cevre aci} = \frac{80°}{2} = 40°$</div>
+                    </div>
+                    <div class="answer-highlight">
+                        Cevap: <strong>40°</strong>
+                    </div>
+                </div>
+            </details>
+        </div>
+
+        <!-- Example 2 -->
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Ornek 2</span>
+                <span class="example-difficulty medium">Orta</span>
+            </div>
+            <div class="example-question">
+                Yaricapi 10 cm olan bir cemberde, merkezden 6 cm uzakliktaki kirisin uzunlugu kac cm'dir?
+            </div>
+
+            <details class="solution-toggle">
+                <summary>Cozumu Goster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Formul:</span>
+                        <div class="step-math">$r^2 = d^2 + \left(\frac{k}{2}\right)^2$</div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Hesap:</span>
+                        <div class="step-math">
+                            $10^2 = 6^2 + \left(\frac{k}{2}\right)^2$<br>
+                            $100 = 36 + \frac{k^2}{4}$<br>
+                            $\frac{k^2}{4} = 64$<br>
+                            $k^2 = 256$<br>
+                            $k = 16$
+                        </div>
+                    </div>
+                    <div class="answer-highlight">
+                        Cevap: <strong>16 cm</strong>
+                    </div>
+                </div>
+            </details>
+        </div>
+
+        <!-- Example 3 -->
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Ornek 3</span>
+                <span class="example-difficulty hard">Zor</span>
+            </div>
+            <div class="example-question">
+                Dis bir noktadan cembere cizilen teget uzunlugu 12 cm, ayni noktadan cemberin merkezine olan uzaklik 13 cm ise cemberin yaricapi kac cm'dir?
+            </div>
+
+            <details class="solution-toggle">
+                <summary>Cozumu Goster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Analiz:</span>
+                        Teget, yaricapa dik oldugu icin dik ucgen olusur.
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Pisagor:</span>
+                        <div class="step-math">
+                            $d^2 = r^2 + t^2$ (d: merkeze uzaklik, t: teget uzunlugu)<br>
+                            $13^2 = r^2 + 12^2$<br>
+                            $169 = r^2 + 144$<br>
+                            $r^2 = 25$<br>
+                            $r = 5$
+                        </div>
+                    </div>
+                    <div class="answer-highlight">
+                        Cevap: <strong>5 cm</strong>
+                    </div>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- Key Points Summary -->
+    <section class="content-section">
+        <div class="key-points-box">
+            <div class="key-points-title">🔑 Anahtar Noktalar</div>
+            <ul class="key-points-list">
+                <li>Cap = $2 \times$ Yaricap ($d = 2r$)</li>
+                <li>Merkez aci = $2 \times$ Cevre aci</li>
+                <li>Ayni yayi goren cevre acilar esittir</li>
+                <li>Yarim cemberi goren cevre aci = 90°</li>
+                <li>Teget, degme noktasinda yaricapa diktir</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Navigation -->
+    <div class="nav-buttons">
+        <a href="../cokgenler/" class="nav-btn nav-prev">
+            <span class="nav-arrow">←</span>
+            <span class="nav-text">Cokgenler</span>
+        </a>
+        <a href="../cember-alan-cevre/" class="nav-btn nav-next">
+            <span class="nav-text">Cember Alan ve Cevre</span>
+            <span class="nav-arrow">→</span>
+        </a>
+    </div>
+
+    <script>
+        // Dark mode detection
+        function checkDarkMode() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('theme') === 'dark') {
+                document.body.classList.add('dark');
+            }
+        }
+        checkDarkMode();
+
+        window.addEventListener('message', function(event) {
+            if (event.data && event.data.theme === 'dark') {
+                document.body.classList.add('dark');
+            } else if (event.data && event.data.theme === 'light') {
+                document.body.classList.remove('dark');
+            }
+        });
+    </script>
+</body>
+</html>

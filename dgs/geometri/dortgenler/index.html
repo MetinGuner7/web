@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Dortgenler - DGS Hazirlik</title>
+    <link rel="stylesheet" href="../../shared/style.css">
+    <!-- KaTeX for math formulas -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero-section hero-green">
+        <div class="hero-icon">📐</div>
+        <h1>Dortgenler</h1>
+        <p class="hero-subtitle">Paralelkenar, Dikdortgen, Kare, Eskenar Dortgen, Yamuk</p>
+        <div class="hero-meta">
+            <span class="meta-item">📚 Geometri</span>
+            <span class="meta-item">⏱️ 20 dk okuma</span>
+        </div>
+    </div>
+
+    <!-- Quick Summary Card -->
+    <div class="summary-card">
+        <div class="summary-title">📌 Bu Konuda Ogreneceklerin</div>
+        <div class="summary-items">
+            <div class="summary-item">✓ Dortgen turleri ve ozellikleri</div>
+            <div class="summary-item">✓ Alan ve cevre formulleri</div>
+            <div class="summary-item">✓ Kosegen ozellikleri</div>
+            <div class="summary-item">✓ Dortgenler arasi iliskiler</div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <section class="content-section">
+        <h2>📖 Dortgen Nedir?</h2>
+
+        <p>
+            <span class="highlight">Dortgen</span>, dort kenar ve dort kosesi olan cokgendir.
+            Dortgenlerin ic acilarinin toplami daima <strong>360°</strong>'dir.
+        </p>
+
+        <div class="formula-card">
+            <div class="formula-label">Dortgende Ic Acilar Toplami</div>
+            <div class="formula-content">
+                $$\alpha + \beta + \gamma + \delta = 360°$$
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>▰ Paralelkenar</h2>
+
+        <p>
+            Karsi kenarlari <span class="highlight">paralel</span> ve <span class="highlight">esit</span>
+            olan dortgendir.
+        </p>
+
+        <div class="card-grid">
+            <div class="info-card card-blue">
+                <div class="card-icon">▰</div>
+                <div class="card-title">Ozellikler</div>
+                <div class="card-desc">Karsi kenarlar paralel ve esit</div>
+                <div class="card-example">AB ∥ DC, AD ∥ BC</div>
+            </div>
+
+            <div class="info-card card-green">
+                <div class="card-icon">⟋</div>
+                <div class="card-title">Kosegenler</div>
+                <div class="card-desc">Birbirini ortalar</div>
+                <div class="card-example">AO = OC, BO = OD</div>
+            </div>
+        </div>
+
+        <div class="formula-card">
+            <div class="formula-label">Paralelkenar Alani</div>
+            <div class="formula-content">
+                $$A = taban \times yukseklik = a \times h$$
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>▭ Dikdortgen</h2>
+
+        <p>
+            Tum acilari <span class="highlight">90°</span> olan paralelkenara dikdortgen denir.
+        </p>
+
+        <div class="formula-card">
+            <div class="formula-label">Dikdortgen Alan ve Cevre</div>
+            <div class="formula-content">
+                $$A = a \times b \quad , \quad C = 2(a + b)$$
+            </div>
+        </div>
+
+        <div class="formula-card">
+            <div class="formula-label">Dikdortgen Kosegeni</div>
+            <div class="formula-content">
+                $$d = \sqrt{a^2 + b^2}$$
+            </div>
+        </div>
+
+        <div class="tip-box">
+            <div class="tip-icon">💡</div>
+            <div class="tip-content">
+                <strong>Ozellik!</strong> Dikdortgenin kosegenleri birbirine esittir ve birbirini ortalar.
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>▢ Kare</h2>
+
+        <p>
+            Tum kenarlari <span class="highlight">esit</span> ve tum acilari <span class="highlight">90°</span>
+            olan dortgendir. Hem dikdortgen hem de eskenar dortgendir.
+        </p>
+
+        <div class="formula-card">
+            <div class="formula-label">Kare Alan ve Cevre</div>
+            <div class="formula-content">
+                $$A = a^2 \quad , \quad C = 4a$$
+            </div>
+        </div>
+
+        <div class="formula-card">
+            <div class="formula-label">Kare Kosegeni</div>
+            <div class="formula-content">
+                $$d = a\sqrt{2}$$
+            </div>
+        </div>
+
+        <div class="memorize-box">
+            <div class="memorize-title">🧠 Ezberle!</div>
+            <div class="memorize-content">
+                <div class="memorize-rule">
+                    <span class="rule-same">Karenin kosegenleri</span> → <span class="result-positive">Esit, dik ve ortalar</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>◇ Eskenar Dortgen (Baklava Dilimi)</h2>
+
+        <p>
+            Tum kenarlari <span class="highlight">esit</span> olan paralelkenara eskenar dortgen denir.
+        </p>
+
+        <div class="formula-card">
+            <div class="formula-label">Eskenar Dortgen Alani</div>
+            <div class="formula-content">
+                $$A = \frac{d_1 \times d_2}{2}$$
+            </div>
+        </div>
+
+        <div class="tip-box">
+            <div class="tip-icon">💡</div>
+            <div class="tip-content">
+                <strong>Ozellik!</strong> Eskenar dortgenin kosegenleri birbirine dik kesisir ve
+                birbirini ortalar, ancak uzunluklari farkli olabilir.
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>⏢ Yamuk</h2>
+
+        <p>
+            Sadece bir cift karsi kenari <span class="highlight">paralel</span> olan dortgendir.
+            Paralel kenarlara <strong>taban</strong>, diger kenarlara <strong>yan kenar</strong> denir.
+        </p>
+
+        <div class="formula-card">
+            <div class="formula-label">Yamuk Alani</div>
+            <div class="formula-content">
+                $$A = \frac{(a + c) \times h}{2}$$
+            </div>
+        </div>
+
+        <div class="card-grid">
+            <div class="info-card card-purple">
+                <div class="card-icon">⏢</div>
+                <div class="card-title">Ikizkenar Yamuk</div>
+                <div class="card-desc">Yan kenarlari esit</div>
+                <div class="card-example">Kosegenleri esit</div>
+            </div>
+
+            <div class="info-card card-blue">
+                <div class="card-icon">⏢</div>
+                <div class="card-title">Dik Yamuk</div>
+                <div class="card-desc">Bir yan kenari tabanlara dik</div>
+                <div class="card-example">Bir aci 90°</div>
+            </div>
+        </div>
+
+        <div class="formula-card">
+            <div class="formula-label">Yamuk Orta Tabani</div>
+            <div class="formula-content">
+                $$m = \frac{a + c}{2}$$
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>🎯 Ornek Sorular</h2>
+
+        <!-- Example 1 -->
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Ornek 1</span>
+                <span class="example-difficulty easy">Kolay</span>
+            </div>
+            <div class="example-question">
+                Bir karenin bir kenari 6 cm ise alani ve kosegen uzunlugu kac cm'dir?
+            </div>
+
+            <details class="solution-toggle">
+                <summary>Cozumu Goster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Alan:</span>
+                        <div class="step-math">$A = a^2 = 6^2 = 36 \text{ cm}^2$</div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Kosegen:</span>
+                        <div class="step-math">$d = a\sqrt{2} = 6\sqrt{2} \text{ cm}$</div>
+                    </div>
+                    <div class="answer-highlight">
+                        Cevap: <strong>Alan: 36 cm², Kosegen: $6\sqrt{2}$ cm</strong>
+                    </div>
+                </div>
+            </details>
+        </div>
+
+        <!-- Example 2 -->
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Ornek 2</span>
+                <span class="example-difficulty medium">Orta</span>
+            </div>
+            <div class="example-question">
+                Bir eskenar dortgenin kosegenleri 8 cm ve 12 cm'dir. Alani kac cm²'dir?
+            </div>
+
+            <details class="solution-toggle">
+                <summary>Cozumu Goster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Formul:</span>
+                        <div class="step-math">$A = \frac{d_1 \times d_2}{2}$</div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Hesap:</span>
+                        <div class="step-math">$A = \frac{8 \times 12}{2} = \frac{96}{2} = 48$</div>
+                    </div>
+                    <div class="answer-highlight">
+                        Cevap: <strong>48 cm²</strong>
+                    </div>
+                </div>
+            </details>
+        </div>
+
+        <!-- Example 3 -->
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Ornek 3</span>
+                <span class="example-difficulty hard">Zor</span>
+            </div>
+            <div class="example-question">
+                Bir yamugun paralel kenarlari 6 cm ve 14 cm, yuksekligi 8 cm'dir. Bu yamugun alani kac cm²'dir?
+            </div>
+
+            <details class="solution-toggle">
+                <summary>Cozumu Goster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Formul:</span>
+                        <div class="step-math">$A = \frac{(a + c) \times h}{2}$</div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Hesap:</span>
+                        <div class="step-math">
+                            $A = \frac{(6 + 14) \times 8}{2}$<br>
+                            $A = \frac{20 \times 8}{2} = \frac{160}{2} = 80$
+                        </div>
+                    </div>
+                    <div class="answer-highlight">
+                        Cevap: <strong>80 cm²</strong>
+                    </div>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- Key Points Summary -->
+    <section class="content-section">
+        <div class="key-points-box">
+            <div class="key-points-title">🔑 Anahtar Noktalar</div>
+            <ul class="key-points-list">
+                <li>Dortgende ic acilar toplami: $360°$</li>
+                <li>Dikdortgen: $A = a \times b$, $d = \sqrt{a^2+b^2}$</li>
+                <li>Kare: $A = a^2$, $d = a\sqrt{2}$</li>
+                <li>Eskenar dortgen: $A = \frac{d_1 \times d_2}{2}$</li>
+                <li>Yamuk: $A = \frac{(a+c) \times h}{2}$</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Navigation -->
+    <div class="nav-buttons">
+        <a href="../ucgen-eslik-benzerlik/" class="nav-btn nav-prev">
+            <span class="nav-arrow">←</span>
+            <span class="nav-text">Eslik ve Benzerlik</span>
+        </a>
+        <a href="../cokgenler/" class="nav-btn nav-next">
+            <span class="nav-text">Cokgenler</span>
+            <span class="nav-arrow">→</span>
+        </a>
+    </div>
+
+    <script>
+        // Dark mode detection
+        function checkDarkMode() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('theme') === 'dark') {
+                document.body.classList.add('dark');
+            }
+        }
+        checkDarkMode();
+
+        window.addEventListener('message', function(event) {
+            if (event.data && event.data.theme === 'dark') {
+                document.body.classList.add('dark');
+            } else if (event.data && event.data.theme === 'light') {
+                document.body.classList.remove('dark');
+            }
+        });
+    </script>
+</body>
+</html>

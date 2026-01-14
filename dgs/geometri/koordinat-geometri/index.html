@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Koordinat Geometrisi - DGS Hazirlik</title>
+    <link rel="stylesheet" href="../../shared/style.css">
+    <!-- KaTeX for math formulas -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero-section hero-green">
+        <div class="hero-icon">📐</div>
+        <h1>Koordinat Geometrisi</h1>
+        <p class="hero-subtitle">Uzaklik, Orta Nokta ve Egim</p>
+        <div class="hero-meta">
+            <span class="meta-item">📚 Geometri</span>
+            <span class="meta-item">⏱️ 20 dk okuma</span>
+        </div>
+    </div>
+
+    <!-- Quick Summary Card -->
+    <div class="summary-card">
+        <div class="summary-title">📌 Bu Konuda Ogreneceklerin</div>
+        <div class="summary-items">
+            <div class="summary-item">✓ Kartezyen koordinat sistemi</div>
+            <div class="summary-item">✓ Iki nokta arasi uzaklik</div>
+            <div class="summary-item">✓ Orta nokta formulu</div>
+            <div class="summary-item">✓ Dogrunun egimi ve denklemi</div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <section class="content-section">
+        <h2>📖 Koordinat Sistemi</h2>
+
+        <p>
+            <span class="highlight">Kartezyen koordinat sistemi</span>, bir duzlemdeki her noktanin
+            siralanmis bir sayi ciftiyle ($x$, $y$) ifade edildigi sistemdir.
+        </p>
+
+        <div class="visual-box">
+            <div class="visual-title">📊 Koordinat Duzlemi Bolgeleri</div>
+            <div class="card-grid">
+                <div class="info-card card-green">
+                    <div class="card-icon">I</div>
+                    <div class="card-title">1. Bolge</div>
+                    <div class="card-desc">Sag ust</div>
+                    <div class="card-example">$(+, +)$</div>
+                </div>
+
+                <div class="info-card card-blue">
+                    <div class="card-icon">II</div>
+                    <div class="card-title">2. Bolge</div>
+                    <div class="card-desc">Sol ust</div>
+                    <div class="card-example">$(-, +)$</div>
+                </div>
+
+                <div class="info-card card-purple">
+                    <div class="card-icon">III</div>
+                    <div class="card-title">3. Bolge</div>
+                    <div class="card-desc">Sol alt</div>
+                    <div class="card-example">$(-, -)$</div>
+                </div>
+
+                <div class="info-card card-red">
+                    <div class="card-icon">IV</div>
+                    <div class="card-title">4. Bolge</div>
+                    <div class="card-desc">Sag alt</div>
+                    <div class="card-example">$(+, -)$</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2">📏 Iki Nokta Arasi Uzaklik</h2>
+
+        <p>
+            Koordinat duzlemindeki iki nokta arasindaki uzaklik, <span class="highlight">Pisagor teoremi</span>
+            kullanilarak hesaplanir.
+        </p>
+
+        <div class="formula-card">
+            <div class="formula-label">Uzaklik Formulu</div>
+            <div class="formula-content">
+                $$d = |AB| = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$$
+            </div>
+        </div>
+
+        <div class="tip-box">
+            <div class="tip-icon">💡</div>
+            <div class="tip-content">
+                <strong>Pratik!</strong> Koordinat farklari yatay ve dikey kenarlari, uzaklik ise
+                hipotenusu temsil eder.
+            </div>
+        </div>
+
+        <div class="steps-container">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <div class="step-title">x koordinatlarinin farkini al</div>
+                    <div class="step-desc">$\Delta x = x_2 - x_1$</div>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <div class="step-title">y koordinatlarinin farkini al</div>
+                    <div class="step-desc">$\Delta y = y_2 - y_1$</div>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <div class="step-title">Karelerin toplaminin kokunu al</div>
+                    <div class="step-desc">$d = \sqrt{(\Delta x)^2 + (\Delta y)^2}$</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2">📍 Orta Nokta Formulu</h2>
+
+        <p>
+            Bir dogru parcasinin <span class="highlight">orta noktasi</span>, uc koordinatlarin
+            aritmetik ortalamasidir.
+        </p>
+
+        <div class="formula-card">
+            <div class="formula-label">Orta Nokta Formulu</div>
+            <div class="formula-content">
+                $$M = \left(\frac{x_1 + x_2}{2}, \frac{y_1 + y_2}{2}\right)$$
+            </div>
+        </div>
+
+        <div class="memorize-box">
+            <div class="memorize-title">🧠 Ezberle!</div>
+            <div class="memorize-content">
+                <div class="memorize-rule">
+                    <span class="rule-same">Orta nokta</span> → <span class="result-positive">Koordinatlarin ORTALAMASI</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2">📐 Dogrunun Egimi</h2>
+
+        <p>
+            <span class="highlight">Egim (m)</span>, bir dogrunun yatay eksene gore dikligini gosterir.
+            Dikey degisimin yatay degisime orani olarak hesaplanir.
+        </p>
+
+        <div class="formula-card">
+            <div class="formula-label">Egim Formulu</div>
+            <div class="formula-content">
+                $$m = \frac{y_2 - y_1}{x_2 - x_1} = \frac{\Delta y}{\Delta x} = \tan(\alpha)$$
+            </div>
+        </div>
+
+        <div class="card-grid">
+            <div class="info-card card-green">
+                <div class="card-icon">↗</div>
+                <div class="card-title">Pozitif Egim</div>
+                <div class="card-desc">Soldan saga yukselir</div>
+                <div class="card-example">$m > 0$</div>
+            </div>
+
+            <div class="info-card card-red">
+                <div class="card-icon">↘</div>
+                <div class="card-title">Negatif Egim</div>
+                <div class="card-desc">Soldan saga duser</div>
+                <div class="card-example">$m < 0$</div>
+            </div>
+
+            <div class="info-card card-blue">
+                <div class="card-icon">→</div>
+                <div class="card-title">Sifir Egim</div>
+                <div class="card-desc">Yatay dogru</div>
+                <div class="card-example">$m = 0$</div>
+            </div>
+
+            <div class="info-card card-purple">
+                <div class="card-icon">↑</div>
+                <div class="card-title">Tanimsiz Egim</div>
+                <div class="card-desc">Dikey dogru</div>
+                <div class="card-example">$m = \infty$</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2">📝 Dogru Denklemi</h2>
+
+        <div class="formula-card">
+            <div class="formula-label">Egim-Nokta Formu</div>
+            <div class="formula-content">
+                $$y - y_1 = m(x - x_1)$$
+            </div>
+        </div>
+
+        <div class="formula-card">
+            <div class="formula-label">Egim-Kesisim Formu</div>
+            <div class="formula-content">
+                $$y = mx + n$$
+            </div>
+        </div>
+
+        <div class="visual-box">
+            <div class="visual-title">📊 Formul Elemanlari</div>
+            <div class="priority-list">
+                <div class="priority-item">
+                    <div class="priority-rank">m</div>
+                    <div class="priority-text">Egim (dogrunun dikligi)</div>
+                </div>
+                <div class="priority-item">
+                    <div class="priority-rank">n</div>
+                    <div class="priority-text">y-kesisimi (x=0 oldugunda y degeri)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2">∥ Paralel ve Dik Dogrular</h2>
+
+        <div class="formula-card">
+            <div class="formula-label">Paralel Dogrular</div>
+            <div class="formula-content">
+                $$d_1 \parallel d_2 \Rightarrow m_1 = m_2$$
+            </div>
+        </div>
+
+        <div class="formula-card">
+            <div class="formula-label">Dik Dogrular</div>
+            <div class="formula-content">
+                $$d_1 \perp d_2 \Rightarrow m_1 \times m_2 = -1$$
+            </div>
+        </div>
+
+        <div class="memorize-box">
+            <div class="memorize-title">🧠 Ezberle!</div>
+            <div class="memorize-content">
+                <div class="memorize-rule">
+                    <span class="rule-same">Paralel</span> → <span class="result-positive">Egimleri ESIT</span>
+                </div>
+                <div class="memorize-rule">
+                    <span class="rule-diff">Dik</span> → <span class="result-negative">Egimlerin carpimi = -1</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2">🎯 Ornek Sorular</h2>
+
+        <!-- Example 1 -->
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Ornek 1</span>
+                <span class="example-difficulty easy">Kolay</span>
+            </div>
+            <div class="example-question">
+                A(1, 2) ve B(4, 6) noktalari arasindaki uzaklik kac birimdir?
+            </div>
+
+            <details class="solution-toggle">
+                <summary>Cozumu Goster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Formul:</span>
+                        <div class="step-math">$d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$</div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Hesap:</span>
+                        <div class="step-math">
+                            $d = \sqrt{(4-1)^2 + (6-2)^2}$<br>
+                            $d = \sqrt{9 + 16} = \sqrt{25} = 5$
+                        </div>
+                    </div>
+                    <div class="answer-highlight">
+                        Cevap: <strong>5 birim</strong>
+                    </div>
+                </div>
+            </details>
+        </div>
+
+        <!-- Example 2 -->
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Ornek 2</span>
+                <span class="example-difficulty medium">Orta</span>
+            </div>
+            <div class="example-question">
+                A(2, 3) ve B(8, 11) noktalarini birlestiren dogru parcasinin orta noktasi ve egimi nedir?
+            </div>
+
+            <details class="solution-toggle">
+                <summary>Cozumu Goster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Orta Nokta:</span>
+                        <div class="step-math">
+                            $M = \left(\frac{2+8}{2}, \frac{3+11}{2}\right)$<br>
+                            $M = (5, 7)$
+                        </div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Egim:</span>
+                        <div class="step-math">
+                            $m = \frac{11-3}{8-2} = \frac{8}{6} = \frac{4}{3}$
+                        </div>
+                    </div>
+                    <div class="answer-highlight">
+                        Cevap: <strong>Orta nokta: (5, 7), Egim: $\frac{4}{3}$</strong>
+                    </div>
+                </div>
+            </details>
+        </div>
+
+        <!-- Example 3 -->
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Ornek 3</span>
+                <span class="example-difficulty hard">Zor</span>
+            </div>
+            <div class="example-question">
+                Egimi 2 olan ve (3, 5) noktasindan gecen dogrunun denklemi nedir? Bu dogruya dik olan ve ayni noktadan gecen dogrunun denklemi nedir?
+            </div>
+
+            <details class="solution-toggle">
+                <summary>Cozumu Goster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Ilk Dogru:</span>
+                        <div class="step-math">
+                            $y - y_1 = m(x - x_1)$<br>
+                            $y - 5 = 2(x - 3)$<br>
+                            $y = 2x - 6 + 5$<br>
+                            $y = 2x - 1$
+                        </div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Dik Dogru Egimi:</span>
+                        <div class="step-math">
+                            $m_1 \times m_2 = -1$<br>
+                            $2 \times m_2 = -1$<br>
+                            $m_2 = -\frac{1}{2}$
+                        </div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Dik Dogru Denklemi:</span>
+                        <div class="step-math">
+                            $y - 5 = -\frac{1}{2}(x - 3)$<br>
+                            $y = -\frac{1}{2}x + \frac{3}{2} + 5$<br>
+                            $y = -\frac{1}{2}x + \frac{13}{2}$
+                        </div>
+                    </div>
+                    <div class="answer-highlight">
+                        Cevap: <strong>$y = 2x - 1$ ve $y = -\frac{1}{2}x + \frac{13}{2}$</strong>
+                    </div>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- Key Points Summary -->
+    <section class="content-section">
+        <div class="key-points-box">
+            <div class="key-points-title">🔑 Anahtar Noktalar</div>
+            <ul class="key-points-list">
+                <li>Uzaklik: $d = \sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}$</li>
+                <li>Orta nokta: $M = \left(\frac{x_1+x_2}{2}, \frac{y_1+y_2}{2}\right)$</li>
+                <li>Egim: $m = \frac{y_2-y_1}{x_2-x_1}$</li>
+                <li>Paralel dogrular: $m_1 = m_2$</li>
+                <li>Dik dogrular: $m_1 \times m_2 = -1$</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Navigation -->
+    <div class="nav-buttons">
+        <a href="../ozel-ucgenler/" class="nav-btn nav-prev">
+            <span class="nav-arrow">←</span>
+            <span class="nav-text">Ozel Ucgenler</span>
+        </a>
+        <a href="../" class="nav-btn nav-next">
+            <span class="nav-text">Geometri Ana Sayfa</span>
+            <span class="nav-arrow">→</span>
+        </a>
+    </div>
+
+    <script>
+        // Dark mode detection
+        function checkDarkMode() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('theme') === 'dark') {
+                document.body.classList.add('dark');
+            }
+        }
+        checkDarkMode();
+
+        window.addEventListener('message', function(event) {
+            if (event.data && event.data.theme === 'dark') {
+                document.body.classList.add('dark');
+            } else if (event.data && event.data.theme === 'light') {
+                document.body.classList.remove('dark');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Uslu Sayilar - DGS Hazirlik</title>
+    <link rel="stylesheet" href="../../shared/style.css">
+    <!-- KaTeX for math formulas -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero-section hero-orange">
+        <div class="hero-icon">🔺</div>
+        <h1>Uslu Sayilar</h1>
+        <p class="hero-subtitle">Usler, Kurallar ve Islemler</p>
+        <div class="hero-meta">
+            <span class="meta-item">📚 Temel Kavramlar</span>
+            <span class="meta-item">⏱️ 18 dk okuma</span>
+        </div>
+    </div>
+
+    <!-- Quick Summary Card -->
+    <div class="summary-card">
+        <div class="summary-title">📌 Bu Konuda Ogreneceklerin</div>
+        <div class="summary-items">
+            <div class="summary-item">✓ Us kavrami ve gosterimi</div>
+            <div class="summary-item">✓ Us kurallari</div>
+            <div class="summary-item">✓ Negatif ve kesirli usler</div>
+            <div class="summary-item">✓ Uslu ifadelerle islemler</div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <section class="content-section">
+        <h2>📖 Us Nedir?</h2>
+
+        <p>
+            Bir sayinin <span class="highlight">kendisiyle tekrarli carpimi</span>ni gostermek icin
+            kullanilan gosterimdir. $a^n$ seklinde yazilir; burada $a$ <strong>taban</strong>,
+            $n$ ise <strong>us</strong>tur.
+        </p>
+
+        <div class="formula-card">
+            <div class="formula-label">Us Tanimi</div>
+            <div class="formula-content">
+                $$a^n = \underbrace{a \times a \times a \times ... \times a}_{n \text{ tane}}$$
+            </div>
+        </div>
+
+        <div class="example-grid">
+            <div class="mini-example">
+                <div class="mini-calc">$2^3 = 8$</div>
+            </div>
+            <div class="mini-example">
+                <div class="mini-calc">$5^2 = 25$</div>
+            </div>
+            <div class="mini-example">
+                <div class="mini-calc">$3^4 = 81$</div>
+            </div>
+            <div class="mini-example">
+                <div class="mini-calc">$10^3 = 1000$</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>📂 Ozel Durumlar</h2>
+
+        <div class="card-grid">
+            <div class="info-card card-blue">
+                <div class="card-icon">1️⃣</div>
+                <div class="card-title">Sifirinci Us</div>
+                <div class="card-desc">Her sayinin 0. kuvveti 1'dir</div>
+                <div class="card-example">$a^0 = 1$ (a ≠ 0)</div>
+            </div>
+
+            <div class="info-card card-green">
+                <div class="card-icon">1️⃣</div>
+                <div class="card-title">Birinci Us</div>
+                <div class="card-desc">Her sayinin 1. kuvveti kendidir</div>
+                <div class="card-example">$a^1 = a$</div>
+            </div>
+
+            <div class="info-card card-red">
+                <div class="card-icon">➖</div>
+                <div class="card-title">Negatif Us</div>
+                <div class="card-desc">Sayinin tersinin pozitif usu</div>
+                <div class="card-example">$a^{-n} = \frac{1}{a^n}$</div>
+            </div>
+
+            <div class="info-card card-purple">
+                <div class="card-icon">½</div>
+                <div class="card-title">Kesirli Us</div>
+                <div class="card-desc">Kok ifadesi olarak yazilir</div>
+                <div class="card-example">$a^{\frac{1}{n}} = \sqrt[n]{a}$</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>📐 Us Kurallari</h2>
+
+        <div class="steps-container">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <div class="step-title">Ayni Tabanli Carpma</div>
+                    <div class="step-desc">Usler toplanir, taban ayni kalir.</div>
+                    <div class="step-example">
+                        <code>$a^m \times a^n = a^{m+n}$</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <div class="step-title">Ayni Tabanli Bolme</div>
+                    <div class="step-desc">Usler cikarilir, taban ayni kalir.</div>
+                    <div class="step-example">
+                        <code>$\frac{a^m}{a^n} = a^{m-n}$</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <div class="step-title">Usun Usu</div>
+                    <div class="step-desc">Usler carpilir.</div>
+                    <div class="step-example">
+                        <code>$(a^m)^n = a^{m \times n}$</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <div class="step-title">Carpimin Usu</div>
+                    <div class="step-desc">Her carpan ayri ayri uslu yazilir.</div>
+                    <div class="step-example">
+                        <code>$(a \times b)^n = a^n \times b^n$</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                    <div class="step-title">Bolumun Usu</div>
+                    <div class="step-desc">Pay ve payda ayri ayri uslu yazilir.</div>
+                    <div class="step-example">
+                        <code>$\left(\frac{a}{b}\right)^n = \frac{a^n}{b^n}$</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="memorize-box">
+            <div class="memorize-title">🧠 Ezberle!</div>
+            <div class="memorize-content">
+                <div class="memorize-rule">
+                    <span class="rule-same">Carpma → Usleri Topla</span>
+                </div>
+                <div class="memorize-rule">
+                    <span class="rule-diff">Bolme → Usleri Cikar</span>
+                </div>
+                <div class="memorize-rule">
+                    <span class="rule-same">Usun Usu → Usleri Carp</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>🔢 Isaret Kurallari</h2>
+
+        <div class="rule-grid">
+            <div class="rule-item rule-positive">
+                <div class="rule-operation">$(+)^{cift}$</div>
+                <div class="rule-result">= +</div>
+                <div class="rule-example">$(+3)^4 = 81$</div>
+            </div>
+            <div class="rule-item rule-positive">
+                <div class="rule-operation">$(+)^{tek}$</div>
+                <div class="rule-result">= +</div>
+                <div class="rule-example">$(+2)^3 = 8$</div>
+            </div>
+            <div class="rule-item rule-positive">
+                <div class="rule-operation">$(-)^{cift}$</div>
+                <div class="rule-result">= +</div>
+                <div class="rule-example">$(-2)^4 = 16$</div>
+            </div>
+            <div class="rule-item rule-negative">
+                <div class="rule-operation">$(-)^{tek}$</div>
+                <div class="rule-result">= -</div>
+                <div class="rule-example">$(-2)^3 = -8$</div>
+            </div>
+        </div>
+
+        <div class="warning-box">
+            <div class="warning-icon">⚠️</div>
+            <div class="warning-content">
+                <strong>Dikkat!</strong> $-2^4$ ile $(-2)^4$ farklidir!
+                <br>$-2^4 = -(2^4) = -16$ iken $(-2)^4 = 16$
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>📊 Onemli Usler Tablosu</h2>
+
+        <div class="visual-box">
+            <div class="visual-title">📊 Sikca Kullanilan Degerler</div>
+            <div class="example-grid">
+                <div class="mini-example">
+                    <div class="mini-calc">$2^{10} = 1024$</div>
+                </div>
+                <div class="mini-example">
+                    <div class="mini-calc">$3^5 = 243$</div>
+                </div>
+                <div class="mini-example">
+                    <div class="mini-calc">$5^4 = 625$</div>
+                </div>
+                <div class="mini-example">
+                    <div class="mini-calc">$7^2 = 49$</div>
+                </div>
+                <div class="mini-example">
+                    <div class="mini-calc">$11^2 = 121$</div>
+                </div>
+                <div class="mini-example">
+                    <div class="mini-calc">$13^2 = 169$</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>🎯 Ornek Sorular</h2>
+
+        <!-- Example 1 -->
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Ornek 1</span>
+                <span class="example-difficulty easy">Kolay</span>
+            </div>
+            <div class="example-question">
+                $2^3 \times 2^4 \div 2^5$ isleminin sonucu kactir?
+            </div>
+
+            <details class="solution-toggle">
+                <summary>Cozumu Goster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Adim 1:</span>
+                        Ayni tabanli islemlerde usleri toplayip cikaralim:
+                        <div class="step-math">$2^3 \times 2^4 \div 2^5 = 2^{3+4-5} = 2^2$</div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Adim 2:</span>
+                        Hesaplayalim:
+                        <div class="step-math">$2^2 = 4$</div>
+                    </div>
+                    <div class="answer-highlight">
+                        Cevap: <strong>4</strong>
+                    </div>
+                </div>
+            </details>
+        </div>
+
+        <!-- Example 2 -->
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Ornek 2</span>
+                <span class="example-difficulty medium">Orta</span>
+            </div>
+            <div class="example-question">
+                $\frac{27^2 \times 9^3}{81^2}$ isleminin sonucu kactir?
+            </div>
+
+            <details class="solution-toggle">
+                <summary>Cozumu Goster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Adim 1:</span>
+                        Tum sayilari 3'un kuvveti olarak yazalim:
+                        <div class="step-math">
+                            $27 = 3^3$, $9 = 3^2$, $81 = 3^4$
+                        </div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Adim 2:</span>
+                        Yerine koyalim:
+                        <div class="step-math">$\frac{(3^3)^2 \times (3^2)^3}{(3^4)^2} = \frac{3^6 \times 3^6}{3^8}$</div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Adim 3:</span>
+                        Sadele stirelim:
+                        <div class="step-math">$= 3^{6+6-8} = 3^4 = 81$</div>
+                    </div>
+                    <div class="answer-highlight">
+                        Cevap: <strong>81</strong>
+                    </div>
+                </div>
+            </details>
+        </div>
+
+        <!-- Example 3 -->
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Ornek 3</span>
+                <span class="example-difficulty hard">Zor</span>
+            </div>
+            <div class="example-question">
+                $2^{100} + 2^{100} + 2^{100} + 2^{100}$ toplami $2^n$ seklinde yazildiginda $n$ kactir?
+            </div>
+
+            <details class="solution-toggle">
+                <summary>Cozumu Goster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Adim 1:</span>
+                        4 tane ayni terimi topluyoruz:
+                        <div class="step-math">$2^{100} + 2^{100} + 2^{100} + 2^{100} = 4 \times 2^{100}$</div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Adim 2:</span>
+                        4'u 2'nin kuvveti olarak yazalim:
+                        <div class="step-math">$4 \times 2^{100} = 2^2 \times 2^{100}$</div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Adim 3:</span>
+                        Usleri toplayalim:
+                        <div class="step-math">$= 2^{2+100} = 2^{102}$</div>
+                    </div>
+                    <div class="answer-highlight">
+                        Cevap: <strong>n = 102</strong>
+                    </div>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- Key Points Summary -->
+    <section class="content-section">
+        <div class="key-points-box">
+            <div class="key-points-title">🔑 Anahtar Noktalar</div>
+            <ul class="key-points-list">
+                <li>$a^0 = 1$ (a ≠ 0) ve $a^1 = a$</li>
+                <li>$a^m \times a^n = a^{m+n}$ (carpma → us topla)</li>
+                <li>$a^m \div a^n = a^{m-n}$ (bolme → us cikar)</li>
+                <li>$(a^m)^n = a^{m \times n}$ (usun usu → us carp)</li>
+                <li>$a^{-n} = \frac{1}{a^n}$ (negatif us → ters al)</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Navigation -->
+    <div class="nav-buttons">
+        <a href="../rasyonel-sayilar/" class="nav-btn nav-prev">
+            <span class="nav-arrow">←</span>
+            <span class="nav-text">Rasyonel Sayilar</span>
+        </a>
+        <a href="../koklu-sayilar/" class="nav-btn nav-next">
+            <span class="nav-text">Koklu Sayilar</span>
+            <span class="nav-arrow">→</span>
+        </a>
+    </div>
+
+    <script>
+        // Dark mode detection
+        function checkDarkMode() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('theme') === 'dark') {
+                document.body.classList.add('dark');
+            }
+        }
+        checkDarkMode();
+
+        window.addEventListener('message', function(event) {
+            if (event.data && event.data.theme === 'dark') {
+                document.body.classList.add('dark');
+            } else if (event.data && event.data.theme === 'light') {
+                document.body.classList.remove('dark');
+            }
+        });
+    </script>
+</body>
+</html>

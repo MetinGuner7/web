@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Ucgende Alan - DGS Hazirlik</title>
+    <link rel="stylesheet" href="../../shared/style.css">
+    <!-- KaTeX for math formulas -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero-section hero-green">
+        <div class="hero-icon">📐</div>
+        <h1>Ucgende Alan</h1>
+        <p class="hero-subtitle">Alan Formulleri ve Yukseklik</p>
+        <div class="hero-meta">
+            <span class="meta-item">📚 Geometri</span>
+            <span class="meta-item">⏱️ 15 dk okuma</span>
+        </div>
+    </div>
+
+    <!-- Quick Summary Card -->
+    <div class="summary-card">
+        <div class="summary-title">📌 Bu Konuda Ogreneceklerin</div>
+        <div class="summary-items">
+            <div class="summary-item">✓ Temel alan formulu (taban x yukseklik)</div>
+            <div class="summary-item">✓ Ozel ucgenlerde alan hesabi</div>
+            <div class="summary-item">✓ Heron formulu</div>
+            <div class="summary-item">✓ Koordinatlarda ucgen alani</div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <section class="content-section">
+        <h2>📖 Temel Alan Formulu</h2>
+
+        <p>
+            Ucgenin alani, <span class="highlight">taban</span> ile bu tabana ait
+            <span class="highlight">yuksekligin</span> carpiminin <strong>yarisidir</strong>.
+        </p>
+
+        <div class="formula-card">
+            <div class="formula-label">Ucgen Alani (Temel)</div>
+            <div class="formula-content">
+                $$A = \frac{1}{2} \times \text{taban} \times \text{yukseklik} = \frac{a \times h_a}{2}$$
+            </div>
+        </div>
+
+        <div class="visual-box">
+            <div class="visual-title">📊 Yukseklik Kavrami</div>
+            <div class="priority-list">
+                <div class="priority-item">
+                    <div class="priority-rank">h</div>
+                    <div class="priority-text">Yukseklik, koseden karsisindaki kenara (veya uzantisina) indirilen diktir</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tip-box">
+            <div class="tip-icon">💡</div>
+            <div class="tip-content">
+                <strong>Onemli!</strong> Her ucgenin 3 farkli yuksekligi vardir. Hangi kenar taban
+                secilirse secilsin alan degismez.
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>📐 Alan Formulleri</h2>
+
+        <div class="card-grid">
+            <div class="info-card card-green">
+                <div class="card-icon">△</div>
+                <div class="card-title">Temel Formul</div>
+                <div class="card-desc">Taban ve yukseklik biliniyorsa</div>
+                <div class="card-example">$A = \frac{a \cdot h}{2}$</div>
+            </div>
+
+            <div class="info-card card-blue">
+                <div class="card-icon">△</div>
+                <div class="card-title">Iki Kenar ve Ara Aci</div>
+                <div class="card-desc">Iki kenar ve arasindaki aci biliniyorsa</div>
+                <div class="card-example">$A = \frac{a \cdot b \cdot \sin C}{2}$</div>
+            </div>
+
+            <div class="info-card card-purple">
+                <div class="card-icon">△</div>
+                <div class="card-title">Heron Formulu</div>
+                <div class="card-desc">Sadece kenarlar biliniyorsa</div>
+                <div class="card-example">$A = \sqrt{u(u-a)(u-b)(u-c)}$</div>
+            </div>
+        </div>
+
+        <div class="formula-card">
+            <div class="formula-label">Heron Formulu (Detayli)</div>
+            <div class="formula-content">
+                $$A = \sqrt{u(u-a)(u-b)(u-c)} \quad \text{burada} \quad u = \frac{a+b+c}{2}$$
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>🔺 Ozel Ucgenlerde Alan</h2>
+
+        <h3>Eskenar Ucgen</h3>
+        <div class="formula-card">
+            <div class="formula-label">Eskenar Ucgen Alani</div>
+            <div class="formula-content">
+                $$A = \frac{a^2 \sqrt{3}}{4}$$
+            </div>
+        </div>
+
+        <h3>Ikizkenar Dik Ucgen (45-45-90)</h3>
+        <div class="formula-card">
+            <div class="formula-label">Ikizkenar Dik Ucgen Alani</div>
+            <div class="formula-content">
+                $$A = \frac{a^2}{2}$$
+            </div>
+        </div>
+
+        <h3>Dik Ucgen</h3>
+        <div class="formula-card">
+            <div class="formula-label">Dik Ucgen Alani</div>
+            <div class="formula-content">
+                $$A = \frac{a \times b}{2} \quad \text{(a ve b dik kenarlar)}$$
+            </div>
+        </div>
+
+        <div class="memorize-box">
+            <div class="memorize-title">🧠 Ezberle!</div>
+            <div class="memorize-content">
+                <div class="memorize-rule">
+                    <span class="rule-same">Dik ucgende</span> → <span class="result-positive">Dik kenarlarin carpimi / 2</span>
+                </div>
+                <div class="memorize-rule">
+                    <span class="rule-diff">Eskenar ucgende</span> → <span class="result-negative">$\frac{a^2\sqrt{3}}{4}$</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>📍 Koordinat Duzleminde Alan</h2>
+
+        <p>
+            Koseeleri <span class="highlight">koordinatlari</span> bilinen bir ucgenin alani,
+            determinant yontemiyle hesaplanabilir.
+        </p>
+
+        <div class="formula-card">
+            <div class="formula-label">Koordinatlarda Ucgen Alani</div>
+            <div class="formula-content">
+                $$A = \frac{1}{2}|x_1(y_2 - y_3) + x_2(y_3 - y_1) + x_3(y_1 - y_2)|$$
+            </div>
+        </div>
+
+        <div class="tip-box">
+            <div class="tip-icon">💡</div>
+            <div class="tip-content">
+                <strong>Pratik Yontem!</strong> Koordinatlari saat yonunde veya tersine siralayarak
+                carpim farkini alin. Sonucun mutlak degerini 2'ye bolun.
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>🎯 Ornek Sorular</h2>
+
+        <!-- Example 1 -->
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Ornek 1</span>
+                <span class="example-difficulty easy">Kolay</span>
+            </div>
+            <div class="example-question">
+                Tabani 10 cm ve bu tabana ait yuksekligi 6 cm olan ucgenin alani kac cm²'dir?
+            </div>
+
+            <details class="solution-toggle">
+                <summary>Cozumu Goster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Adim 1:</span>
+                        Temel alan formulunu uygulayalim:
+                        <div class="step-math">$A = \frac{a \times h}{2}$</div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Adim 2:</span>
+                        Degerleri yerine koyalim:
+                        <div class="step-math">$A = \frac{10 \times 6}{2} = \frac{60}{2} = 30$</div>
+                    </div>
+                    <div class="answer-highlight">
+                        Cevap: <strong>30 cm²</strong>
+                    </div>
+                </div>
+            </details>
+        </div>
+
+        <!-- Example 2 -->
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Ornek 2</span>
+                <span class="example-difficulty medium">Orta</span>
+            </div>
+            <div class="example-question">
+                Bir kenari 8 cm olan eskenar ucgenin alani kac cm²'dir?
+            </div>
+
+            <details class="solution-toggle">
+                <summary>Cozumu Goster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Adim 1:</span>
+                        Eskenar ucgen alan formulunu kullanalim:
+                        <div class="step-math">$A = \frac{a^2\sqrt{3}}{4}$</div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Adim 2:</span>
+                        a = 8 icin:
+                        <div class="step-math">
+                            $A = \frac{8^2 \times \sqrt{3}}{4}$<br>
+                            $A = \frac{64\sqrt{3}}{4} = 16\sqrt{3}$
+                        </div>
+                    </div>
+                    <div class="answer-highlight">
+                        Cevap: <strong>$16\sqrt{3}$ cm²</strong>
+                    </div>
+                </div>
+            </details>
+        </div>
+
+        <!-- Example 3 -->
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Ornek 3</span>
+                <span class="example-difficulty hard">Zor</span>
+            </div>
+            <div class="example-question">
+                Kenarlari 5, 12 ve 13 cm olan ucgenin alani kac cm²'dir?
+            </div>
+
+            <details class="solution-toggle">
+                <summary>Cozumu Goster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Analiz:</span>
+                        $5^2 + 12^2 = 25 + 144 = 169 = 13^2$ oldugundan bu bir dik ucgendir!
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Adim 1:</span>
+                        Dik ucgende dik kenarlar 5 ve 12 cm'dir (hipotenüs 13):
+                        <div class="step-math">$A = \frac{a \times b}{2}$</div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Adim 2:</span>
+                        Hesaplayalim:
+                        <div class="step-math">$A = \frac{5 \times 12}{2} = \frac{60}{2} = 30$</div>
+                    </div>
+                    <div class="answer-highlight">
+                        Cevap: <strong>30 cm²</strong>
+                    </div>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- Key Points Summary -->
+    <section class="content-section">
+        <div class="key-points-box">
+            <div class="key-points-title">🔑 Anahtar Noktalar</div>
+            <ul class="key-points-list">
+                <li>Temel alan: $A = \frac{taban \times yukseklik}{2}$</li>
+                <li>Iki kenar ve ara aci: $A = \frac{a \cdot b \cdot \sin C}{2}$</li>
+                <li>Heron: $A = \sqrt{u(u-a)(u-b)(u-c)}$ burada $u = \frac{a+b+c}{2}$</li>
+                <li>Eskenar ucgen: $A = \frac{a^2\sqrt{3}}{4}$</li>
+                <li>Dik ucgen: $A = \frac{dik \: kenar_1 \times dik \: kenar_2}{2}$</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Navigation -->
+    <div class="nav-buttons">
+        <a href="../ucgenler/" class="nav-btn nav-prev">
+            <span class="nav-arrow">←</span>
+            <span class="nav-text">Ucgenler</span>
+        </a>
+        <a href="../ucgen-eslik-benzerlik/" class="nav-btn nav-next">
+            <span class="nav-text">Eslik ve Benzerlik</span>
+            <span class="nav-arrow">→</span>
+        </a>
+    </div>
+
+    <script>
+        // Dark mode detection
+        function checkDarkMode() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('theme') === 'dark') {
+                document.body.classList.add('dark');
+            }
+        }
+        checkDarkMode();
+
+        window.addEventListener('message', function(event) {
+            if (event.data && event.data.theme === 'dark') {
+                document.body.classList.add('dark');
+            } else if (event.data && event.data.theme === 'light') {
+                document.body.classList.remove('dark');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Carpanlar ve Katlar - DGS Hazirlik</title>
+    <link rel="stylesheet" href="../../shared/style.css">
+    <!-- KaTeX for math formulas -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero-section hero-blue">
+        <div class="hero-icon">🔢</div>
+        <h1>Carpanlar ve Katlar</h1>
+        <p class="hero-subtitle">EBOB, EKOK ve Bolunebilme</p>
+        <div class="hero-meta">
+            <span class="meta-item">📚 Temel Kavramlar</span>
+            <span class="meta-item">⏱️ 20 dk okuma</span>
+        </div>
+    </div>
+
+    <!-- Quick Summary Card -->
+    <div class="summary-card">
+        <div class="summary-title">📌 Bu Konuda Ogreneceklerin</div>
+        <div class="summary-items">
+            <div class="summary-item">✓ Carpan ve kat kavrami</div>
+            <div class="summary-item">✓ Asal sayilar ve asal carpanlara ayirma</div>
+            <div class="summary-item">✓ EBOB (En Buyuk Ortak Bolen)</div>
+            <div class="summary-item">✓ EKOK (En Kucuk Ortak Kat)</div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <section class="content-section">
+        <h2>📖 Temel Kavramlar</h2>
+
+        <div class="card-grid">
+            <div class="info-card card-blue">
+                <div class="card-icon">📊</div>
+                <div class="card-title">Carpan (Bolen)</div>
+                <div class="card-desc">Bir sayiyi kalansiz bolen sayilar</div>
+                <div class="card-example">12'nin carpanlari: 1, 2, 3, 4, 6, 12</div>
+            </div>
+
+            <div class="info-card card-green">
+                <div class="card-icon">📈</div>
+                <div class="card-title">Kat</div>
+                <div class="card-desc">Bir sayinin dogal sayi katlari</div>
+                <div class="card-example">3'un katlari: 3, 6, 9, 12, 15, ...</div>
+            </div>
+        </div>
+
+        <div class="formula-card">
+            <div class="formula-label">Onemli Iliski</div>
+            <div class="formula-content">
+                $$a, b'nin \text{ carpaniysa} \Leftrightarrow b, a'nin \text{ katidir}$$
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>🔢 Asal Sayilar</h2>
+
+        <p>
+            <span class="highlight">Asal sayi</span>, 1'den buyuk ve sadece 1 ile kendisine
+            bolunebilen dogal sayidir.
+        </p>
+
+        <div class="visual-box">
+            <div class="visual-title">📊 Ilk 25 Asal Sayi</div>
+            <div class="number-line">
+                <div class="number-line-track" style="flex-wrap: wrap; justify-content: center;">
+                    <span class="nl-number positive" style="margin: 4px;">2</span>
+                    <span class="nl-number positive" style="margin: 4px;">3</span>
+                    <span class="nl-number positive" style="margin: 4px;">5</span>
+                    <span class="nl-number positive" style="margin: 4px;">7</span>
+                    <span class="nl-number positive" style="margin: 4px;">11</span>
+                    <span class="nl-number positive" style="margin: 4px;">13</span>
+                    <span class="nl-number positive" style="margin: 4px;">17</span>
+                    <span class="nl-number positive" style="margin: 4px;">19</span>
+                    <span class="nl-number positive" style="margin: 4px;">23</span>
+                    <span class="nl-number positive" style="margin: 4px;">29</span>
+                    <span class="nl-number positive" style="margin: 4px;">31</span>
+                    <span class="nl-number positive" style="margin: 4px;">37</span>
+                    <span class="nl-number positive" style="margin: 4px;">41</span>
+                    <span class="nl-number positive" style="margin: 4px;">43</span>
+                    <span class="nl-number positive" style="margin: 4px;">47</span>
+                    <span class="nl-number positive" style="margin: 4px;">53</span>
+                    <span class="nl-number positive" style="margin: 4px;">59</span>
+                    <span class="nl-number positive" style="margin: 4px;">61</span>
+                    <span class="nl-number positive" style="margin: 4px;">67</span>
+                    <span class="nl-number positive" style="margin: 4px;">71</span>
+                    <span class="nl-number positive" style="margin: 4px;">73</span>
+                    <span class="nl-number positive" style="margin: 4px;">79</span>
+                    <span class="nl-number positive" style="margin: 4px;">83</span>
+                    <span class="nl-number positive" style="margin: 4px;">89</span>
+                    <span class="nl-number positive" style="margin: 4px;">97</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="tip-box">
+            <div class="tip-icon">💡</div>
+            <div class="tip-content">
+                <strong>Onemli!</strong> 2 tek cift asal sayidir. 1 asal sayi degildir!
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>📐 Bolunebilme Kurallari</h2>
+
+        <div class="steps-container">
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <div class="step-title">2'ye Bolunebilme</div>
+                    <div class="step-desc">Birler basamagi cift (0, 2, 4, 6, 8) ise</div>
+                    <div class="step-example">
+                        <code>124 → 4 cift → 2'ye bolunur</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <div class="step-title">3'e Bolunebilme</div>
+                    <div class="step-desc">Rakamlar toplami 3'e bolunuyorsa</div>
+                    <div class="step-example">
+                        <code>123 → 1+2+3=6 → 3'e bolunur</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <div class="step-title">4'e Bolunebilme</div>
+                    <div class="step-desc">Son iki basamak 4'e bolunuyorsa</div>
+                    <div class="step-example">
+                        <code>1324 → 24÷4=6 → 4'e bolunur</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                    <div class="step-title">5'e Bolunebilme</div>
+                    <div class="step-desc">Birler basamagi 0 veya 5 ise</div>
+                    <div class="step-example">
+                        <code>235 → 5'e bolunur</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">6</div>
+                <div class="step-content">
+                    <div class="step-title">6'ya Bolunebilme</div>
+                    <div class="step-desc">Hem 2'ye hem 3'e bolunuyorsa</div>
+                    <div class="step-example">
+                        <code>132 → cift ve 1+3+2=6 → 6'ya bolunur</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">9</div>
+                <div class="step-content">
+                    <div class="step-title">9'a Bolunebilme</div>
+                    <div class="step-desc">Rakamlar toplami 9'a bolunuyorsa</div>
+                    <div class="step-example">
+                        <code>729 → 7+2+9=18 → 9'a bolunur</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>🔧 Asal Carpanlara Ayirma</h2>
+
+        <p>
+            Her bilesik sayi, <span class="highlight">asal sayilarin carpimi</span> olarak
+            tek sekilde yazilabilir (Aritmetigin Temel Teoremi).
+        </p>
+
+        <div class="visual-box">
+            <div class="visual-title">📊 Ornek: 60'in Asal Carpanlari</div>
+            <div class="example-grid">
+                <div class="mini-example">
+                    <div class="mini-calc">60 = 2 × 30</div>
+                </div>
+                <div class="mini-example">
+                    <div class="mini-calc">30 = 2 × 15</div>
+                </div>
+                <div class="mini-example">
+                    <div class="mini-calc">15 = 3 × 5</div>
+                </div>
+                <div class="mini-example">
+                    <div class="mini-calc">$60 = 2^2 \times 3 \times 5$</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>📊 EBOB (En Buyuk Ortak Bolen)</h2>
+
+        <p>
+            Iki veya daha fazla sayinin <span class="highlight">ortak bolenlerinin en buyugu</span>dur.
+        </p>
+
+        <div class="formula-card">
+            <div class="formula-label">EBOB Hesaplama</div>
+            <div class="formula-content">
+                $$\text{EBOB} = \text{Ortak asal carpanlarin en kucuk kuvvetlerinin carpimi}$$
+            </div>
+        </div>
+
+        <div class="steps-container">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <div class="step-title">Ornek: EBOB(24, 36)</div>
+                    <div class="step-desc">Asal carpanlara ayiralim:</div>
+                    <div class="step-example">
+                        <code>$24 = 2^3 \times 3$ ve $36 = 2^2 \times 3^2$</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <div class="step-title">Ortak Carpanlar</div>
+                    <div class="step-desc">Ortak olanlarin kucuk kuvvetini al:</div>
+                    <div class="step-example">
+                        <code>$\text{EBOB} = 2^2 \times 3^1 = 4 \times 3 = 12$</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tip-box">
+            <div class="tip-icon">💡</div>
+            <div class="tip-content">
+                <strong>Puf Noktasi!</strong> Aralarinda asal iki sayinin EBOB'u 1'dir.
+                Ornegin: EBOB(8, 15) = 1
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>📈 EKOK (En Kucuk Ortak Kat)</h2>
+
+        <p>
+            Iki veya daha fazla sayinin <span class="highlight">ortak katlarinin en kucugu</span>dur.
+        </p>
+
+        <div class="formula-card">
+            <div class="formula-label">EKOK Hesaplama</div>
+            <div class="formula-content">
+                $$\text{EKOK} = \text{Tum asal carpanlarin en buyuk kuvvetlerinin carpimi}$$
+            </div>
+        </div>
+
+        <div class="steps-container">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <div class="step-title">Ornek: EKOK(24, 36)</div>
+                    <div class="step-desc">Asal carpanlara ayiralim:</div>
+                    <div class="step-example">
+                        <code>$24 = 2^3 \times 3$ ve $36 = 2^2 \times 3^2$</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <div class="step-title">Tum Carpanlar</div>
+                    <div class="step-desc">Tum carpanlarin buyuk kuvvetini al:</div>
+                    <div class="step-example">
+                        <code>$\text{EKOK} = 2^3 \times 3^2 = 8 \times 9 = 72$</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="memorize-box">
+            <div class="memorize-title">🧠 Altin Formul!</div>
+            <div class="memorize-content">
+                <div class="memorize-rule">
+                    <span class="rule-same">$a \times b = \text{EBOB}(a,b) \times \text{EKOK}(a,b)$</span>
+                </div>
+                <div class="memorize-rule">
+                    <span class="rule-diff">Ornek: $24 \times 36 = 12 \times 72 = 864$ ✓</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>🎯 Ornek Sorular</h2>
+
+        <!-- Example 1 -->
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Ornek 1</span>
+                <span class="example-difficulty easy">Kolay</span>
+            </div>
+            <div class="example-question">
+                EBOB(48, 72) kactir?
+            </div>
+
+            <details class="solution-toggle">
+                <summary>Cozumu Goster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Adim 1:</span>
+                        Asal carpanlara ayiralim:
+                        <div class="step-math">
+                            $48 = 2^4 \times 3$<br>
+                            $72 = 2^3 \times 3^2$
+                        </div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Adim 2:</span>
+                        Ortak carpanlarin kucuk kuvvetlerini alalim:
+                        <div class="step-math">$\text{EBOB} = 2^3 \times 3^1 = 8 \times 3 = 24$</div>
+                    </div>
+                    <div class="answer-highlight">
+                        Cevap: <strong>24</strong>
+                    </div>
+                </div>
+            </details>
+        </div>
+
+        <!-- Example 2 -->
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Ornek 2</span>
+                <span class="example-difficulty medium">Orta</span>
+            </div>
+            <div class="example-question">
+                EKOK(12, 18, 24) kactir?
+            </div>
+
+            <details class="solution-toggle">
+                <summary>Cozumu Goster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Adim 1:</span>
+                        Asal carpanlara ayiralim:
+                        <div class="step-math">
+                            $12 = 2^2 \times 3$<br>
+                            $18 = 2 \times 3^2$<br>
+                            $24 = 2^3 \times 3$
+                        </div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Adim 2:</span>
+                        Tum carpanlarin buyuk kuvvetlerini alalim:
+                        <div class="step-math">$\text{EKOK} = 2^3 \times 3^2 = 8 \times 9 = 72$</div>
+                    </div>
+                    <div class="answer-highlight">
+                        Cevap: <strong>72</strong>
+                    </div>
+                </div>
+            </details>
+        </div>
+
+        <!-- Example 3 -->
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Ornek 3</span>
+                <span class="example-difficulty hard">Zor</span>
+            </div>
+            <div class="example-question">
+                Iki sayinin EBOB'u 6, EKOK'u 180'dir. Sayilardan biri 36 ise digeri kactir?
+            </div>
+
+            <details class="solution-toggle">
+                <summary>Cozumu Goster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Adim 1:</span>
+                        Altin formulu kullanalim:
+                        <div class="step-math">$a \times b = \text{EBOB} \times \text{EKOK}$</div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Adim 2:</span>
+                        Degerleri yerine koyalim:
+                        <div class="step-math">$36 \times b = 6 \times 180 = 1080$</div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Adim 3:</span>
+                        b'yi bulalim:
+                        <div class="step-math">$b = \frac{1080}{36} = 30$</div>
+                    </div>
+                    <div class="answer-highlight">
+                        Cevap: <strong>30</strong>
+                    </div>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- Key Points Summary -->
+    <section class="content-section">
+        <div class="key-points-box">
+            <div class="key-points-title">🔑 Anahtar Noktalar</div>
+            <ul class="key-points-list">
+                <li>EBOB: Ortak asal carpanlarin EN KUCUK kuvvetleri</li>
+                <li>EKOK: Tum asal carpanlarin EN BUYUK kuvvetleri</li>
+                <li>$a \times b = \text{EBOB}(a,b) \times \text{EKOK}(a,b)$</li>
+                <li>Aralarinda asal → EBOB = 1</li>
+                <li>2 tek cift asal sayidir</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Navigation -->
+    <div class="nav-buttons">
+        <a href="../koklu-sayilar/" class="nav-btn nav-prev">
+            <span class="nav-arrow">←</span>
+            <span class="nav-text">Koklu Sayilar</span>
+        </a>
+        <a href="../oran-oranti/" class="nav-btn nav-next">
+            <span class="nav-text">Oran ve Oranti</span>
+            <span class="nav-arrow">→</span>
+        </a>
+    </div>
+
+    <script>
+        // Dark mode detection
+        function checkDarkMode() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('theme') === 'dark') {
+                document.body.classList.add('dark');
+            }
+        }
+        checkDarkMode();
+
+        window.addEventListener('message', function(event) {
+            if (event.data && event.data.theme === 'dark') {
+                document.body.classList.add('dark');
+            } else if (event.data && event.data.theme === 'light') {
+                document.body.classList.remove('dark');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Sayi Problemleri - DGS Hazirlik</title>
+    <link rel="stylesheet" href="../../shared/style.css">
+    <!-- KaTeX for math formulas -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero-section hero-purple">
+        <div class="hero-icon">🧮</div>
+        <h1>Sayi Problemleri</h1>
+        <p class="hero-subtitle">Sozel Problemler ve Cozum Teknikleri</p>
+        <div class="hero-meta">
+            <span class="meta-item">📚 Uygulama Konusu</span>
+            <span class="meta-item">⏱️ 22 dk okuma</span>
+        </div>
+    </div>
+
+    <!-- Quick Summary Card -->
+    <div class="summary-card">
+        <div class="summary-title">📌 Bu Konuda Ogreneceklerin</div>
+        <div class="summary-items">
+            <div class="summary-item">✓ Art arda sayi problemleri</div>
+            <div class="summary-item">✓ Basamak degeri problemleri</div>
+            <div class="summary-item">✓ Yas problemleri</div>
+            <div class="summary-item">✓ Kesir problemleri</div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <section class="content-section">
+        <h2>📖 Problem Cozme Stratejisi</h2>
+
+        <div class="priority-list">
+            <div class="priority-item">
+                <div class="priority-rank">1</div>
+                <div class="priority-text">Problemi dikkatli oku</div>
+                <div class="priority-note">Ne veriliyor, ne soruluyor?</div>
+            </div>
+            <div class="priority-item">
+                <div class="priority-rank">2</div>
+                <div class="priority-text">Bilinmeyenleri belirle</div>
+                <div class="priority-note">x, y gibi degiskenler ata</div>
+            </div>
+            <div class="priority-item">
+                <div class="priority-rank">3</div>
+                <div class="priority-text">Iliskileri denklem olarak yaz</div>
+                <div class="priority-note">Sozel ifadeleri matematige cevir</div>
+            </div>
+            <div class="priority-item">
+                <div class="priority-rank">4</div>
+                <div class="priority-text">Denklemi coz</div>
+                <div class="priority-note">Islem sirasina dikkat et</div>
+            </div>
+            <div class="priority-item">
+                <div class="priority-rank">5</div>
+                <div class="priority-text">Sonucu kontrol et</div>
+                <div class="priority-note">Mantikli mi? Probleme uyuyor mu?</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2">🔢 Art Arda Sayi Problemleri</h2>
+
+        <p>
+            <span class="highlight">Art arda sayilar</span>, birbirini takip eden sayilardir.
+            Tur'e gore farkli bicimde ifade edilir.
+        </p>
+
+        <div class="card-grid">
+            <div class="info-card card-blue">
+                <div class="card-icon">123</div>
+                <div class="card-title">Art Arda 3 Tam Sayi</div>
+                <div class="card-desc">Aralarinda 1 fark var</div>
+                <div class="card-example">$x$, $x+1$, $x+2$</div>
+            </div>
+
+            <div class="info-card card-green">
+                <div class="card-icon">246</div>
+                <div class="card-title">Art Arda 3 Cift Sayi</div>
+                <div class="card-desc">Aralarinda 2 fark var</div>
+                <div class="card-example">$x$, $x+2$, $x+4$</div>
+            </div>
+
+            <div class="info-card card-purple">
+                <div class="card-icon">135</div>
+                <div class="card-title">Art Arda 3 Tek Sayi</div>
+                <div class="card-desc">Aralarinda 2 fark var</div>
+                <div class="card-example">$x$, $x+2$, $x+4$</div>
+            </div>
+        </div>
+
+        <div class="memorize-box">
+            <div class="memorize-title">🧠 Puf Noktasi!</div>
+            <div class="memorize-content">
+                <div class="memorize-rule">
+                    <span class="rule-same">Art arda n tane tam sayinin toplami = n × Ortanca</span>
+                </div>
+                <div class="memorize-rule">
+                    <span class="rule-diff">Ornek: 3 + 4 + 5 = 3 × 4 = 12 ✓</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2">📊 Basamak Degeri Problemleri</h2>
+
+        <p>
+            Bir sayinin <span class="highlight">basamak degeri</span>, rakamin bulundugu
+            basamaga gore carpilmis degeridir.
+        </p>
+
+        <div class="formula-card">
+            <div class="formula-label">Iki Basamakli Sayi</div>
+            <div class="formula-content">
+                $$\overline{ab} = 10a + b$$
+                <p style="text-align: center; margin-top: 10px; font-size: 14px;">
+                    a: onlar basamagi, b: birler basamagi
+                </p>
+            </div>
+        </div>
+
+        <div class="formula-card">
+            <div class="formula-label">Uc Basamakli Sayi</div>
+            <div class="formula-content">
+                $$\overline{abc} = 100a + 10b + c$$
+            </div>
+        </div>
+
+        <div class="visual-box">
+            <div class="visual-title">📊 Basamak Degeri Ornegi: 347</div>
+            <div class="example-grid">
+                <div class="mini-example">
+                    <div class="mini-calc">3 → Yuzler: $3 \times 100 = 300$</div>
+                </div>
+                <div class="mini-example">
+                    <div class="mini-calc">4 → Onlar: $4 \times 10 = 40$</div>
+                </div>
+                <div class="mini-example">
+                    <div class="mini-calc">7 → Birler: $7 \times 1 = 7$</div>
+                </div>
+                <div class="mini-example">
+                    <div class="mini-calc">Toplam: $300 + 40 + 7 = 347$</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tip-box">
+            <div class="tip-icon">💡</div>
+            <div class="tip-content">
+                <strong>Rakam Yer Degistirme:</strong> Iki basamakli $\overline{ab}$ sayisinin
+                rakamlari yer degistirirse: $\overline{ba} = 10b + a$
+                <br>Fark: $\overline{ab} - \overline{ba} = 9(a - b)$
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2">👨‍👩‍👧 Yas Problemleri</h2>
+
+        <p>
+            Yas problemlerinde <span class="highlight">simdiki yas</span>, <span class="highlight">gecmis</span>
+            ve <span class="highlight">gelecek</span> zamanlar arasindaki iliskiler kurulur.
+        </p>
+
+        <div class="steps-container">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <div class="step-title">Simdiki Yas</div>
+                    <div class="step-desc">Degisken olarak tanimla</div>
+                    <div class="step-example">
+                        <code>Ali'nin yasi: $x$</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <div class="step-title">n Yil Once</div>
+                    <div class="step-desc">Simdiki yastan cikar</div>
+                    <div class="step-example">
+                        <code>5 yil onceki yasi: $x - 5$</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <div class="step-title">n Yil Sonra</div>
+                    <div class="step-desc">Simdiki yasa ekle</div>
+                    <div class="step-example">
+                        <code>3 yil sonraki yasi: $x + 3$</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="warning-box">
+            <div class="warning-icon">⚠️</div>
+            <div class="warning-content">
+                <strong>Onemli!</strong> Yas farki her zaman sabittir. Iki kisinin yas farki
+                ne zaman olursa olsun degismez!
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2">🔢 Kesir Problemleri</h2>
+
+        <p>
+            Bir butunun <span class="highlight">parcalara bolunmesi</span> ve bu parcalarla
+            islemler yapilmasi.
+        </p>
+
+        <div class="visual-box">
+            <div class="visual-title">📊 Sikca Kullanilan Ifadeler</div>
+            <div class="example-grid">
+                <div class="mini-example">
+                    <div class="mini-calc">"Yarisi" → $\frac{x}{2}$</div>
+                </div>
+                <div class="mini-example">
+                    <div class="mini-calc">"Ucte biri" → $\frac{x}{3}$</div>
+                </div>
+                <div class="mini-example">
+                    <div class="mini-calc">"Dortte ucu" → $\frac{3x}{4}$</div>
+                </div>
+                <div class="mini-example">
+                    <div class="mini-calc">"3 kati" → $3x$</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="formula-card">
+            <div class="formula-label">Tipik Kesir Problemi Modeli</div>
+            <div class="formula-content">
+                $$\text{Kalan} = \text{Baslangic} - \text{Harcanan}$$
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2">⏰ Is-Zaman Problemleri</h2>
+
+        <p>
+            Bir isin tamamlanma suresi ve <span class="highlight">birim zamanda yapilan is</span>
+            arasindaki iliski.
+        </p>
+
+        <div class="formula-card">
+            <div class="formula-label">Temel Formul</div>
+            <div class="formula-content">
+                $$\text{Birim Zamanda Yapilan Is} = \frac{1}{\text{Toplam Sure}}$$
+            </div>
+        </div>
+
+        <div class="steps-container">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <div class="step-title">Birlikte Calisma</div>
+                    <div class="step-desc">Birim is miktarlari toplanir</div>
+                    <div class="step-example">
+                        <code>A 6 saatte, B 3 saatte bitiriyorsa: $\frac{1}{6} + \frac{1}{3} = \frac{1}{2}$</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <div class="step-title">Birlikte Sure</div>
+                    <div class="step-desc">Toplam birim isin tersi</div>
+                    <div class="step-example">
+                        <code>Birlikte: $\frac{1}{\frac{1}{2}} = 2$ saat</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2">🎯 Ornek Sorular</h2>
+
+        <!-- Example 1 -->
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Ornek 1</span>
+                <span class="example-difficulty easy">Kolay</span>
+            </div>
+            <div class="example-question">
+                Art arda 3 tek sayinin toplami 45'tir. En buyuk sayi kactir?
+            </div>
+
+            <details class="solution-toggle">
+                <summary>Cozumu Goster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Adim 1:</span>
+                        Art arda 3 tek sayiyi tanimlayalim:
+                        <div class="step-math">$x$, $x+2$, $x+4$</div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Adim 2:</span>
+                        Toplamlarini yazalim:
+                        <div class="step-math">$x + (x+2) + (x+4) = 45$</div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Adim 3:</span>
+                        Denklemi cozelim:
+                        <div class="step-math">$3x + 6 = 45$ → $3x = 39$ → $x = 13$</div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Sonuc:</span>
+                        Sayilar: 13, 15, 17. En buyugu:
+                    </div>
+                    <div class="answer-highlight">
+                        Cevap: <strong>17</strong>
+                    </div>
+                </div>
+            </details>
+        </div>
+
+        <!-- Example 2 -->
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Ornek 2</span>
+                <span class="example-difficulty medium">Orta</span>
+            </div>
+            <div class="example-question">
+                Iki basamakli bir sayinin rakamlari toplami 11'dir. Rakamlari yer degistirince elde edilen sayi, ilk sayidan 27 buyuktur. Ilk sayi kactir?
+            </div>
+
+            <details class="solution-toggle">
+                <summary>Cozumu Goster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Adim 1:</span>
+                        Onlar basamagi a, birler basamagi b olsun:
+                        <div class="step-math">Sayi: $\overline{ab} = 10a + b$</div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Adim 2:</span>
+                        Birinci kosul (rakamlar toplami):
+                        <div class="step-math">$a + b = 11$</div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Adim 3:</span>
+                        Ikinci kosul (yer degistirme):
+                        <div class="step-math">$(10b + a) - (10a + b) = 27$</div>
+                        <div class="step-math">$9b - 9a = 27$ → $b - a = 3$</div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Adim 4:</span>
+                        Denklem sistemini cozelim:
+                        <div class="step-math">$a + b = 11$ ve $b - a = 3$</div>
+                        <div class="step-math">Toplayalim: $2b = 14$ → $b = 7$, $a = 4$</div>
+                    </div>
+                    <div class="answer-highlight">
+                        Cevap: <strong>47</strong>
+                    </div>
+                </div>
+            </details>
+        </div>
+
+        <!-- Example 3 -->
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Ornek 3</span>
+                <span class="example-difficulty hard">Zor</span>
+            </div>
+            <div class="example-question">
+                Bir babanin yasi oglunun yasinin 4 katidir. 5 yil sonra babanin yasi, oglunun yasinin 3 kati olacaktir. Babanin simdiki yasi kactir?
+            </div>
+
+            <details class="solution-toggle">
+                <summary>Cozumu Goster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Adim 1:</span>
+                        Oglun simdiki yasi: $x$, Babanin yasi: $4x$
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Adim 2:</span>
+                        5 yil sonraki yaslar:
+                        <div class="step-math">Ogul: $x + 5$, Baba: $4x + 5$</div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Adim 3:</span>
+                        5 yil sonra baba = 3 × ogul:
+                        <div class="step-math">$4x + 5 = 3(x + 5)$</div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Adim 4:</span>
+                        Denklemi cozelim:
+                        <div class="step-math">$4x + 5 = 3x + 15$ → $x = 10$</div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Sonuc:</span>
+                        Babanin yasi: $4 \times 10 = 40$
+                    </div>
+                    <div class="answer-highlight">
+                        Cevap: <strong>40 yas</strong>
+                    </div>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- Key Points Summary -->
+    <section class="content-section">
+        <div class="key-points-box">
+            <div class="key-points-title">🔑 Anahtar Noktalar</div>
+            <ul class="key-points-list">
+                <li>Art arda tam sayilar: $x$, $x+1$, $x+2$, ...</li>
+                <li>Art arda cift/tek: $x$, $x+2$, $x+4$, ...</li>
+                <li>$\overline{ab} = 10a + b$ (iki basamakli sayi)</li>
+                <li>Yas farki her zaman sabittir</li>
+                <li>Birlikte calisma: $\frac{1}{t_1} + \frac{1}{t_2} = \frac{1}{t}$</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Navigation -->
+    <div class="nav-buttons">
+        <a href="../mutlak-deger/" class="nav-btn nav-prev">
+            <span class="nav-arrow">←</span>
+            <span class="nav-text">Mutlak Deger</span>
+        </a>
+        <a href="../" class="nav-btn nav-next">
+            <span class="nav-text">Matematik Ana Sayfa</span>
+            <span class="nav-arrow">→</span>
+        </a>
+    </div>
+
+    <script>
+        // Dark mode detection
+        function checkDarkMode() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('theme') === 'dark') {
+                document.body.classList.add('dark');
+            }
+        }
+        checkDarkMode();
+
+        window.addEventListener('message', function(event) {
+            if (event.data && event.data.theme === 'dark') {
+                document.body.classList.add('dark');
+            } else if (event.data && event.data.theme === 'light') {
+                document.body.classList.remove('dark');
+            }
+        });
+    </script>
+</body>
+</html>

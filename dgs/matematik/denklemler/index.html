@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Birinci Dereceden Denklemler - DGS Hazirlik</title>
+    <link rel="stylesheet" href="../../shared/style.css">
+    <!-- KaTeX for math formulas -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero-section hero-blue">
+        <div class="hero-icon">⚖️</div>
+        <h1>Birinci Dereceden Denklemler</h1>
+        <p class="hero-subtitle">Denklem Kurma ve Cozme</p>
+        <div class="hero-meta">
+            <span class="meta-item">📚 Temel Kavramlar</span>
+            <span class="meta-item">⏱️ 18 dk okuma</span>
+        </div>
+    </div>
+
+    <!-- Quick Summary Card -->
+    <div class="summary-card">
+        <div class="summary-title">📌 Bu Konuda Ogreneceklerin</div>
+        <div class="summary-items">
+            <div class="summary-item">✓ Denklem ve esitlik kavrami</div>
+            <div class="summary-item">✓ Birinci derece denklem cozumu</div>
+            <div class="summary-item">✓ Denklem kurma teknikleri</div>
+            <div class="summary-item">✓ Iki bilinmeyenli denklem sistemleri</div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <section class="content-section">
+        <h2>📖 Denklem Nedir?</h2>
+
+        <p>
+            <span class="highlight">Denklem</span>, icinde en az bir bilinmeyen iceren ve
+            esitlik isareti ile baglanan matematiksel ifadedir. Denklemi dogrulayan
+            degere <strong>kok</strong> veya <strong>cozum</strong> denir.
+        </p>
+
+        <div class="formula-card">
+            <div class="formula-label">Birinci Derece Denklem Genel Formu</div>
+            <div class="formula-content">
+                $$ax + b = 0 \quad (a \neq 0)$$
+            </div>
+        </div>
+
+        <div class="tip-box">
+            <div class="tip-icon">💡</div>
+            <div class="tip-content">
+                <strong>Amac:</strong> Bilinmeyeni (x) yalniz birakmak!
+                Esitligin her iki tarafina ayni islemi uygulayarak x'i buluruz.
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>📐 Denklem Cozme Kurallari</h2>
+
+        <div class="steps-container">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <div class="step-title">Yer Degistirme</div>
+                    <div class="step-desc">Terim taraf degistirince isareti degisir.</div>
+                    <div class="step-example">
+                        <code>$x + 5 = 12$ → $x = 12 - 5$ → $x = 7$</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <div class="step-title">Carpan Olan Sayi</div>
+                    <div class="step-desc">Diger tarafa bolme olarak gecer.</div>
+                    <div class="step-example">
+                        <code>$3x = 15$ → $x = \frac{15}{3}$ → $x = 5$</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <div class="step-title">Bolen Olan Sayi</div>
+                    <div class="step-desc">Diger tarafa carpan olarak gecer.</div>
+                    <div class="step-example">
+                        <code>$\frac{x}{4} = 3$ → $x = 3 \times 4$ → $x = 12$</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="memorize-box">
+            <div class="memorize-title">🧠 Altin Kural!</div>
+            <div class="memorize-content">
+                <div class="memorize-rule">
+                    <span class="rule-same">Toplama ↔ Cikarma (taraf degistirince)</span>
+                </div>
+                <div class="memorize-rule">
+                    <span class="rule-diff">Carpma ↔ Bolme (taraf degistirince)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>🔧 Denklem Cozme Adimlari</h2>
+
+        <div class="priority-list">
+            <div class="priority-item">
+                <div class="priority-rank">1</div>
+                <div class="priority-text">Parantezleri ac</div>
+                <div class="priority-note">Dagitma ozelligi</div>
+            </div>
+            <div class="priority-item">
+                <div class="priority-rank">2</div>
+                <div class="priority-text">Kesirleri temizle</div>
+                <div class="priority-note">Ortak payda ile carp</div>
+            </div>
+            <div class="priority-item">
+                <div class="priority-rank">3</div>
+                <div class="priority-text">Benzer terimleri topla</div>
+                <div class="priority-note">x'leri bir tarafa, sabitleri bir tarafa</div>
+            </div>
+            <div class="priority-item">
+                <div class="priority-rank">4</div>
+                <div class="priority-text">x'i yalniz birak</div>
+                <div class="priority-note">Katsayiya bol</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>📊 Iki Bilinmeyenli Denklem Sistemleri</h2>
+
+        <p>
+            Iki bilinmeyenli iki denklem iceren sistemlerde, her iki denklemi de
+            saglayan <span class="highlight">(x, y)</span> ikilisini bulmak gerekir.
+        </p>
+
+        <div class="card-grid">
+            <div class="info-card card-blue">
+                <div class="card-icon">🔄</div>
+                <div class="card-title">Yerine Koyma Yontemi</div>
+                <div class="card-desc">Bir denklemden bilinmeyeni yalniz birak, digerine koy</div>
+                <div class="card-example">$x = 5 - y$ → Yerine koy</div>
+            </div>
+
+            <div class="info-card card-green">
+                <div class="card-icon">➕</div>
+                <div class="card-title">Toplama-Cikarma Yontemi</div>
+                <div class="card-desc">Bir bilinmeyeni yok etmek icin denklemleri topla/cikar</div>
+                <div class="card-example">Katsayilari esitle, topla/cikar</div>
+            </div>
+        </div>
+
+        <div class="steps-container">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <div class="step-title">Ornek Sistem</div>
+                    <div class="step-desc">Asagidaki sistemi cozelim:</div>
+                    <div class="step-example">
+                        <code>$2x + y = 7$ ve $x - y = 2$</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <div class="step-title">Toplama Yontemi</div>
+                    <div class="step-desc">Denklemleri toplayalim (y'ler yok olur):</div>
+                    <div class="step-example">
+                        <code>$3x = 9$ → $x = 3$</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <div class="step-title">y'yi Bulma</div>
+                    <div class="step-desc">x=3'u herhangi bir denklemde yerine koyalim:</div>
+                    <div class="step-example">
+                        <code>$3 - y = 2$ → $y = 1$ → Cozum: $(3, 1)$</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>📝 Denklem Kurma</h2>
+
+        <p>
+            Sozel problemlerde <span class="highlight">bilinmeyeni x</span> olarak tanimla,
+            problemdeki iliskileri kullanarak denklemi kur.
+        </p>
+
+        <div class="visual-box">
+            <div class="visual-title">📊 Sikca Kullanilan Ifadeler</div>
+            <div class="example-grid">
+                <div class="mini-example">
+                    <div class="mini-calc">"5 fazlasi" → $x + 5$</div>
+                </div>
+                <div class="mini-example">
+                    <div class="mini-calc">"3 eksigi" → $x - 3$</div>
+                </div>
+                <div class="mini-example">
+                    <div class="mini-calc">"2 kati" → $2x$</div>
+                </div>
+                <div class="mini-example">
+                    <div class="mini-calc">"yarisi" → $\frac{x}{2}$</div>
+                </div>
+                <div class="mini-example">
+                    <div class="mini-calc">"art arda 3 sayi" → $x, x+1, x+2$</div>
+                </div>
+                <div class="mini-example">
+                    <div class="mini-calc">"art arda 3 cift" → $x, x+2, x+4$</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>🎯 Ornek Sorular</h2>
+
+        <!-- Example 1 -->
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Ornek 1</span>
+                <span class="example-difficulty easy">Kolay</span>
+            </div>
+            <div class="example-question">
+                $3x - 7 = 2x + 5$ denkleminin cozumu kactir?
+            </div>
+
+            <details class="solution-toggle">
+                <summary>Cozumu Goster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Adim 1:</span>
+                        x'li terimleri bir tarafa, sabitleri diger tarafa toplayalim:
+                        <div class="step-math">$3x - 2x = 5 + 7$</div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Adim 2:</span>
+                        Sadele stirelim:
+                        <div class="step-math">$x = 12$</div>
+                    </div>
+                    <div class="answer-highlight">
+                        Cevap: <strong>x = 12</strong>
+                    </div>
+                </div>
+            </details>
+        </div>
+
+        <!-- Example 2 -->
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Ornek 2</span>
+                <span class="example-difficulty medium">Orta</span>
+            </div>
+            <div class="example-question">
+                $\frac{x+3}{2} - \frac{x-1}{3} = 2$ denkleminin cozumu kactir?
+            </div>
+
+            <details class="solution-toggle">
+                <summary>Cozumu Goster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Adim 1:</span>
+                        Paydalarin EKOK'u 6. Her iki taraf 6 ile carpilir:
+                        <div class="step-math">$3(x+3) - 2(x-1) = 12$</div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Adim 2:</span>
+                        Parantezleri acalim:
+                        <div class="step-math">$3x + 9 - 2x + 2 = 12$</div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Adim 3:</span>
+                        Benzer terimleri toplayalim:
+                        <div class="step-math">$x + 11 = 12$ → $x = 1$</div>
+                    </div>
+                    <div class="answer-highlight">
+                        Cevap: <strong>x = 1</strong>
+                    </div>
+                </div>
+            </details>
+        </div>
+
+        <!-- Example 3 -->
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Ornek 3</span>
+                <span class="example-difficulty hard">Zor</span>
+            </div>
+            <div class="example-question">
+                Bir sayinin 3 kati ile 5'in toplami, o sayinin 2 kati ile 17'nin toplamina esittir. Bu sayi kactir?
+            </div>
+
+            <details class="solution-toggle">
+                <summary>Cozumu Goster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Adim 1:</span>
+                        Sayiyi x olarak tanimlayalim ve denklemi kuralim:
+                        <div class="step-math">$3x + 5 = 2x + 17$</div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Adim 2:</span>
+                        x'li terimleri bir tarafa toplayalim:
+                        <div class="step-math">$3x - 2x = 17 - 5$</div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Adim 3:</span>
+                        Hesaplayalim:
+                        <div class="step-math">$x = 12$</div>
+                    </div>
+                    <div class="answer-highlight">
+                        Cevap: <strong>12</strong>
+                    </div>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- Key Points Summary -->
+    <section class="content-section">
+        <div class="key-points-box">
+            <div class="key-points-title">🔑 Anahtar Noktalar</div>
+            <ul class="key-points-list">
+                <li>Denklem: Esitlik iceren ve bilinmeyen iceren ifade</li>
+                <li>Taraf degistirme: Toplama↔Cikarma, Carpma↔Bolme</li>
+                <li>Iki bilinmeyenli: Yerine koyma veya toplama yontemi</li>
+                <li>Problem kurma: Bilinmeyeni x al, iliskileri denklem yap</li>
+                <li>Cozum kontrolu: x degerini denkleme yerine koy, dogrula</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Navigation -->
+    <div class="nav-buttons">
+        <a href="../yuzde-problemleri/" class="nav-btn nav-prev">
+            <span class="nav-arrow">←</span>
+            <span class="nav-text">Yuzde Problemleri</span>
+        </a>
+        <a href="../esitsizlikler/" class="nav-btn nav-next">
+            <span class="nav-text">Esitsizlikler</span>
+            <span class="nav-arrow">→</span>
+        </a>
+    </div>
+
+    <script>
+        // Dark mode detection
+        function checkDarkMode() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('theme') === 'dark') {
+                document.body.classList.add('dark');
+            }
+        }
+        checkDarkMode();
+
+        window.addEventListener('message', function(event) {
+            if (event.data && event.data.theme === 'dark') {
+                document.body.classList.add('dark');
+            } else if (event.data && event.data.theme === 'light') {
+                document.body.classList.remove('dark');
+            }
+        });
+    </script>
+</body>
+</html>
