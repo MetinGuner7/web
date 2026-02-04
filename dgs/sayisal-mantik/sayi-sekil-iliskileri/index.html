@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Sayı-Şekil İlişkileri - DGS Hazırlık</title>
+    <link rel="stylesheet" href="../../shared/style.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero-section hero-red">
+        <div class="hero-icon">🔷</div>
+        <h1>Sayı-Şekil İlişkileri</h1>
+        <p class="hero-subtitle">Örüntü Tanıma ve İlişki Kurma</p>
+        <div class="hero-meta">
+            <span class="meta-item">📚 Sayısal Mantık</span>
+            <span class="meta-item">⏱️ 14 dk okuma</span>
+        </div>
+    </div>
+
+    <!-- Quick Summary Card -->
+    <div class="summary-card">
+        <div class="summary-title">📌 Bu Konuda Öğreneceklerin</div>
+        <div class="summary-items">
+            <div class="summary-item">✓ Sayı örüntülerini tanıma</div>
+            <div class="summary-item">✓ Şekil örüntülerini çözme</div>
+            <div class="summary-item">✓ Sayı-şekil bağlantısı kurma</div>
+            <div class="summary-item">✓ Dizi ve seri problemleri</div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <section class="content-section">
+        <h2>📖 Örüntü Nedir?</h2>
+
+        <p>
+            Örüntü, belirli bir <span class="highlight">kurala göre tekrar eden</span> dizi veya düzendir.
+            Sayısal mantık sorularında örüntüyü bulmak, dizinin devamını tahmin etmemizi sağlar.
+        </p>
+
+        <div class="card-grid">
+            <div class="info-card card-blue">
+                <div class="card-icon">🔢</div>
+                <div class="card-title">Sayı Örüntüsü</div>
+                <div class="card-desc">Belirli kuralla ilerleyen sayı dizisi</div>
+                <div class="card-example">2, 4, 6, 8, 10, ...</div>
+            </div>
+
+            <div class="info-card card-purple">
+                <div class="card-icon">🔷</div>
+                <div class="card-title">Şekil Örüntüsü</div>
+                <div class="card-desc">Belirli kuralla değişen şekiller</div>
+                <div class="card-example">○ □ △ ○ □ △ ...</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>🔢 Sayı Örüntüleri</h2>
+
+        <h3>Temel Örüntü Türleri</h3>
+
+        <div class="steps-container">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <div class="step-title">Sabit Artış/Azalış</div>
+                    <div class="step-desc">Her adımda aynı sayı eklenir veya çıkarılır.</div>
+                    <div class="step-example">
+                        <code>3, 7, 11, 15, 19 → +4 kuralı</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <div class="step-title">Sabit Çarpım/Bölüm</div>
+                    <div class="step-desc">Her adımda aynı sayı ile çarpılır veya bölünür.</div>
+                    <div class="step-example">
+                        <code>2, 6, 18, 54, 162 → ×3 kuralı</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <div class="step-title">Artan Fark</div>
+                    <div class="step-desc">Fark her adımda belirli miktarda artar.</div>
+                    <div class="step-example">
+                        <code>1, 2, 4, 7, 11 → +1, +2, +3, +4</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <div class="step-title">Fibonacci Tipi</div>
+                    <div class="step-desc">Her eleman, önceki iki elemanın toplamıdır.</div>
+                    <div class="step-example">
+                        <code>1, 1, 2, 3, 5, 8, 13 → önceki iki sayının toplamı</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                    <div class="step-title">Kare/Küp Sayılar</div>
+                    <div class="step-desc">Sayıların kareleri veya küpleri kullanılır.</div>
+                    <div class="step-example">
+                        <code>1, 4, 9, 16, 25 → 1², 2², 3², 4², 5²</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="memorize-box">
+            <div class="memorize-title">🧠 Örüntü Bulma Stratejisi</div>
+            <div class="memorize-content">
+                <div class="memorize-rule">
+                    1. Ardışık sayılar arasındaki <span class="result-positive">FARKI</span> bul
+                </div>
+                <div class="memorize-rule">
+                    2. Fark sabit değilse, <span class="result-positive">ORANI</span> kontrol et
+                </div>
+                <div class="memorize-rule">
+                    3. Oran da sabit değilse, <span class="result-positive">FARK'IN FARKINI</span> hesapla
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>🔷 Şekil Örüntüleri</h2>
+
+        <p>
+            Şekil örüntülerinde şekiller belirli bir kurala göre <span class="highlight">döner</span>,
+            <span class="highlight">renk değiştirir</span>, <span class="highlight">büyür/küçülür</span>
+            veya <span class="highlight">konum değiştirir</span>.
+        </p>
+
+        <div class="visual-box">
+            <div class="visual-title">📊 Şekil Değişim Türleri</div>
+            <div class="rule-grid">
+                <div class="rule-item rule-positive">
+                    <div class="rule-operation">Döndürme</div>
+                    <div class="rule-result">🔄</div>
+                    <div class="rule-example">90°, 180° dönüşler</div>
+                </div>
+                <div class="rule-item rule-positive">
+                    <div class="rule-operation">Yansıma</div>
+                    <div class="rule-result">↔️</div>
+                    <div class="rule-example">Ayna görüntüsü</div>
+                </div>
+                <div class="rule-item rule-negative">
+                    <div class="rule-operation">Büyüme/Küçülme</div>
+                    <div class="rule-result">📏</div>
+                    <div class="rule-example">Boyut değişimi</div>
+                </div>
+                <div class="rule-item rule-negative">
+                    <div class="rule-operation">Renk Değişimi</div>
+                    <div class="rule-result">🎨</div>
+                    <div class="rule-example">Siyah → Beyaz</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tip-box">
+            <div class="tip-icon">💡</div>
+            <div class="tip-content">
+                <strong>İpucu!</strong> Şekil sorularında önce kaç farklı şekil olduğunu say,
+                sonra her şeklin nasıl değiştiğini ayrı ayrı izle.
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>🔗 Sayı-Şekil Bağlantısı</h2>
+
+        <p>
+            Bazı sorularda şekillerin içindeki veya yanındaki sayılar arasında ilişki kurulması istenir.
+        </p>
+
+        <div class="steps-container">
+            <div class="step-card">
+                <div class="step-number">📐</div>
+                <div class="step-content">
+                    <div class="step-title">Üçgen İçindeki Sayılar</div>
+                    <div class="step-desc">
+                        Köşelerdeki sayılar işleme sokulur, sonuç ortada yazılır.
+                    </div>
+                    <div class="step-example">
+                        <code>Köşeler: 2, 3, 4 → Orta: 2×3+4 = 10</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">◻️</div>
+                <div class="step-content">
+                    <div class="step-title">Kare İçindeki Sayılar</div>
+                    <div class="step-desc">
+                        Karşılıklı köşeler veya kenarlar arasında ilişki aranır.
+                    </div>
+                    <div class="step-example">
+                        <code>Karşılıklı köşe toplamı = Diğer karşılıklı köşe toplamı</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">⭕</div>
+                <div class="step-content">
+                    <div class="step-title">Daire İçindeki Sayılar</div>
+                    <div class="step-desc">
+                        Merkez sayı genellikle çevredeki sayılarla ilişkilidir.
+                    </div>
+                    <div class="step-example">
+                        <code>Merkez = Çevredeki sayıların toplamı/ortalaması</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="warning-box">
+            <div class="warning-icon">⚠️</div>
+            <div class="warning-content">
+                <strong>Önemli!</strong> Birden fazla şekil verildiğinde, ilk şekillerdeki ilişkiyi bulup
+                son şekle uygulayın. Kural tüm şekillerde aynı olmalıdır.
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>🎯 Örnek Sorular</h2>
+
+        <!-- Example 1 -->
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Örnek 1</span>
+                <span class="example-difficulty easy">Kolay</span>
+            </div>
+            <div class="example-question">
+                <strong>2, 5, 11, 23, ?</strong>
+                <br><br>
+                Bu dizinin bir sonraki elemanı kaçtır?
+            </div>
+
+            <details class="solution-toggle">
+                <summary>Çözümü Göster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Farkları bulalım:</span>
+                        <div class="step-math">
+                            5 - 2 = 3<br>
+                            11 - 5 = 6<br>
+                            23 - 11 = 12
+                        </div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Kural:</span>
+                        <div class="step-math">Farklar: 3, 6, 12 → Her fark 2 ile çarpılıyor<br>
+                        Sonraki fark: 12 × 2 = 24</div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Sonuç:</span>
+                        <div class="step-math">23 + 24 = 47</div>
+                    </div>
+                    <div class="answer-highlight">
+                        <strong>Cevap:</strong> 47
+                    </div>
+                </div>
+            </details>
+        </div>
+
+        <!-- Example 2 -->
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Örnek 2</span>
+                <span class="example-difficulty medium">Orta</span>
+            </div>
+            <div class="example-question">
+                <strong>1, 4, 9, 16, 25, ?</strong>
+                <br><br>
+                Bu dizinin bir sonraki elemanı kaçtır?
+            </div>
+
+            <details class="solution-toggle">
+                <summary>Çözümü Göster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Analiz:</span>
+                        <div class="step-math">
+                            1 = 1²<br>
+                            4 = 2²<br>
+                            9 = 3²<br>
+                            16 = 4²<br>
+                            25 = 5²
+                        </div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Kural:</span>
+                        <div class="step-math">Dizi, ardışık sayıların karelerinden oluşuyor.</div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Sonuç:</span>
+                        <div class="step-math">6² = 36</div>
+                    </div>
+                    <div class="answer-highlight">
+                        <strong>Cevap:</strong> 36
+                    </div>
+                </div>
+            </details>
+        </div>
+
+        <!-- Example 3 -->
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Örnek 3</span>
+                <span class="example-difficulty hard">Zor</span>
+            </div>
+            <div class="example-question">
+                Bir üçgenin köşelerinde 3, 5, 7 sayıları, ortasında 29 sayısı var.
+                Başka bir üçgenin köşelerinde 2, 4, 6 sayıları varsa, ortadaki sayı kaçtır?
+            </div>
+
+            <details class="solution-toggle">
+                <summary>Çözümü Göster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">İlk üçgende kuralı bulalım:</span>
+                        <div class="step-math">
+                            Köşeler: 3, 5, 7<br>
+                            Orta: 29<br>
+                            <br>
+                            3² + 5² - 7 = 9 + 25 - 7 = 27 ≠ 29<br>
+                            3² + 5² + 7 - 12 = 9 + 25 + 7 - 12 = 29 ✗<br>
+                            3 + 5 + 7 = 15 ≠ 29<br>
+                            3 × 5 + 7 + 7 = 29 ✓<br>
+                            <strong>Kural: a × b + 2c = orta</strong>
+                        </div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">İkinci üçgene uygulayalım:</span>
+                        <div class="step-math">
+                            Köşeler: 2, 4, 6<br>
+                            2 × 4 + 2 × 6 = 8 + 12 = 20
+                        </div>
+                    </div>
+                    <div class="answer-highlight">
+                        <strong>Cevap:</strong> 20
+                    </div>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- Key Points Summary -->
+    <section class="content-section">
+        <div class="key-points-box">
+            <div class="key-points-title">🔑 Anahtar Noktalar</div>
+            <ul class="key-points-list">
+                <li>Önce ardışık sayılar arasındaki farkı hesapla</li>
+                <li>Fark sabit değilse, oranı veya fark'ın farkını kontrol et</li>
+                <li>Kare sayılar: 1, 4, 9, 16, 25, 36...</li>
+                <li>Küp sayılar: 1, 8, 27, 64, 125...</li>
+                <li>Şekil sorularında tüm şekillerde aynı kural geçerlidir</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Navigation -->
+    <div class="nav-buttons">
+        <a href="../tablo-yorumlama/" class="nav-btn nav-prev">
+            <span class="nav-arrow">←</span>
+            <span class="nav-text">Tablo Yorumlama</span>
+        </a>
+        <a href="../mantiksal-cikarim/" class="nav-btn nav-next">
+            <span class="nav-text">Mantıksal Çıkarım</span>
+            <span class="nav-arrow">→</span>
+        </a>
+    </div>
+
+    <script>
+        function checkDarkMode() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('theme') === 'dark') {
+                document.body.classList.add('dark');
+            }
+        }
+        checkDarkMode();
+
+        window.addEventListener('message', function(event) {
+            if (event.data && event.data.theme === 'dark') {
+                document.body.classList.add('dark');
+            } else if (event.data && event.data.theme === 'light') {
+                document.body.classList.remove('dark');
+            }
+        });
+    </script>
+</body>
+</html>

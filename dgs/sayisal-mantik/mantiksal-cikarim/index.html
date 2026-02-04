@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Mantıksal Çıkarım - DGS Hazırlık</title>
+    <link rel="stylesheet" href="../../shared/style.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero-section hero-red">
+        <div class="hero-icon">🧠</div>
+        <h1>Mantıksal Çıkarım</h1>
+        <p class="hero-subtitle">Verilen Bilgilerden Sonuç Çıkarma</p>
+        <div class="hero-meta">
+            <span class="meta-item">📚 Sayısal Mantık</span>
+            <span class="meta-item">⏱️ 15 dk okuma</span>
+        </div>
+    </div>
+
+    <!-- Quick Summary Card -->
+    <div class="summary-card">
+        <div class="summary-title">📌 Bu Konuda Öğreneceklerin</div>
+        <div class="summary-items">
+            <div class="summary-item">✓ Mantıksal çıkarım nedir?</div>
+            <div class="summary-item">✓ Koşullu önermeler (Eğer... ise)</div>
+            <div class="summary-item">✓ Sıralama ve ilişki problemleri</div>
+            <div class="summary-item">✓ Doğru-yanlış çıkarımları</div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <section class="content-section">
+        <h2>📖 Mantıksal Çıkarım Nedir?</h2>
+
+        <p>
+            Mantıksal çıkarım, verilen <span class="highlight">öncüllerden</span> (bilinen bilgilerden)
+            <strong>kesin sonuçlar</strong> çıkarma sürecidir. Burada önemli olan, yalnızca
+            verilen bilgilerle ulaşılabilecek sonuçları bulmaktır.
+        </p>
+
+        <div class="card-grid">
+            <div class="info-card card-green">
+                <div class="card-icon">📝</div>
+                <div class="card-title">Öncül</div>
+                <div class="card-desc">Verilen bilgi veya koşul</div>
+                <div class="card-example">"Tüm kuşlar uçar"</div>
+            </div>
+
+            <div class="info-card card-blue">
+                <div class="card-icon">🎯</div>
+                <div class="card-title">Sonuç</div>
+                <div class="card-desc">Öncüllerden çıkarılan yargı</div>
+                <div class="card-example">"Serçe kuştur, o halde uçar"</div>
+            </div>
+        </div>
+
+        <div class="tip-box">
+            <div class="tip-icon">💡</div>
+            <div class="tip-content">
+                <strong>Önemli!</strong> Mantıksal çıkarımda kendi bilgilerinizi veya varsayımlarınızı
+                eklemeyin. Sadece verilen bilgileri kullanın!
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>🔀 Koşullu Önermeler</h2>
+
+        <p>
+            "Eğer... ise" yapısındaki önermeler mantık sorularının temelini oluşturur.
+        </p>
+
+        <div class="visual-box">
+            <div class="visual-title">📊 Koşullu Önerme Yapısı</div>
+            <div class="steps-container">
+                <div class="step-card">
+                    <div class="step-number">P</div>
+                    <div class="step-content">
+                        <div class="step-title">Öncül (Koşul)</div>
+                        <div class="step-desc">"Eğer yağmur yağarsa..."</div>
+                    </div>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">→</div>
+                    <div class="step-content">
+                        <div class="step-title">Sonuç</div>
+                        <div class="step-desc">"...sokaklar ıslanır."</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="memorize-box">
+            <div class="memorize-title">🧠 Koşullu Önerme Kuralları</div>
+            <div class="memorize-content">
+                <div class="memorize-rule">
+                    P → Q ise, P doğruysa Q <span class="result-positive">KESİNLİKLE DOĞRUDUR</span>
+                </div>
+                <div class="memorize-rule">
+                    P → Q ise, Q yanlışsa P <span class="result-negative">KESİNLİKLE YANLIŞTIR</span>
+                </div>
+                <div class="memorize-rule">
+                    P → Q ise, P yanlışsa Q hakkında <span class="result-negative">BİR ŞEY SÖYLENEMEZ</span>
+                </div>
+                <div class="memorize-rule">
+                    P → Q ise, Q doğruysa P hakkında <span class="result-negative">BİR ŞEY SÖYLENEMEZ</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="example-box mini">
+            <div class="example-question">
+                "Eğer hava soğuksa mont giyerim."<br><br>
+                • Hava soğuk → Mont giyerim (Kesin)<br>
+                • Mont giymiyorum → Hava soğuk değil (Kesin)<br>
+                • Hava soğuk değil → Mont hakkında kesin yargı yok<br>
+                • Mont giyiyorum → Hava hakkında kesin yargı yok
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>📊 Sıralama Problemleri</h2>
+
+        <p>
+            Verilen ipuçlarından kişi, nesne veya olayların sırasını belirleme problemleridir.
+        </p>
+
+        <div class="steps-container">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <div class="step-title">Tüm İpuçlarını Oku</div>
+                    <div class="step-desc">
+                        Önce tüm bilgileri okuyun ve ne sorulduğunu anlayın.
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <div class="step-title">Kesin Bilgilerle Başla</div>
+                    <div class="step-desc">
+                        "X, Y'den büyüktür" gibi kesin karşılaştırmalarla başlayın.
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <div class="step-title">Şema Çiz</div>
+                    <div class="step-desc">
+                        Sıralama için çizgi veya tablo kullanın. Görselleştirme kolaylık sağlar.
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <div class="step-title">Bilgileri Birleştir</div>
+                    <div class="step-desc">
+                        Ortak nokta bulunan ipuçlarını birleştirerek tam sıralamayı oluşturun.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="warning-box">
+            <div class="warning-icon">⚠️</div>
+            <div class="warning-content">
+                <strong>Dikkat!</strong> Sıralama sorularında "hemen önce/sonra" ile
+                "önce/sonra" farklı anlamlara gelir. "Hemen" kelimesi araya başka eleman
+                girmediğini gösterir.
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>🔗 İlişki Problemleri</h2>
+
+        <p>
+            Kişiler veya nesneler arasındaki ilişkileri belirleme problemleridir.
+            (Aile ilişkileri, arkadaşlık, meslek vb.)
+        </p>
+
+        <div class="visual-box">
+            <div class="visual-title">📊 İlişki Çözme Stratejisi</div>
+            <div class="priority-list">
+                <div class="priority-item">
+                    <div class="priority-rank">1</div>
+                    <div class="priority-text">Tablo veya şema oluştur</div>
+                    <div class="priority-note">Satır: Kişi, Sütun: Özellik</div>
+                </div>
+                <div class="priority-item">
+                    <div class="priority-rank">2</div>
+                    <div class="priority-text">Kesin bilgileri işaretle</div>
+                    <div class="priority-note">✓ veya ✗ ile</div>
+                </div>
+                <div class="priority-item">
+                    <div class="priority-rank">3</div>
+                    <div class="priority-text">Eleme yap</div>
+                    <div class="priority-note">Bir seçenek bulduysan diğerlerini ele</div>
+                </div>
+                <div class="priority-item">
+                    <div class="priority-rank">4</div>
+                    <div class="priority-text">Çıkarımları kontrol et</div>
+                    <div class="priority-note">Tüm ipuçlarıyla uyumlu mu?</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>✅ Doğru-Yanlış Çıkarımları</h2>
+
+        <div class="rule-grid">
+            <div class="rule-item rule-positive">
+                <div class="rule-operation">Kesin Doğru</div>
+                <div class="rule-result">✓</div>
+                <div class="rule-example">Öncüllerden zorunlu olarak çıkan</div>
+            </div>
+            <div class="rule-item rule-negative">
+                <div class="rule-operation">Kesin Yanlış</div>
+                <div class="rule-result">✗</div>
+                <div class="rule-example">Öncüllerle çelişen</div>
+            </div>
+            <div class="rule-item rule-positive">
+                <div class="rule-operation">Belirsiz</div>
+                <div class="rule-result">?</div>
+                <div class="rule-example">Öncüllerden çıkarılamayan</div>
+            </div>
+            <div class="rule-item rule-negative">
+                <div class="rule-operation">Varsayım</div>
+                <div class="rule-result">⚠️</div>
+                <div class="rule-example">Kendi eklediğiniz bilgi</div>
+            </div>
+        </div>
+
+        <div class="tip-box">
+            <div class="tip-icon">💡</div>
+            <div class="tip-content">
+                <strong>Altın Kural:</strong> "Kesinlikle doğru" denebilmesi için, sonuç öncüllerden
+                zorunlu olarak çıkmalıdır. "Muhtemelen doğru" veya "olabilir" kesin doğru değildir!
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>🎯 Örnek Sorular</h2>
+
+        <!-- Example 1 -->
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Örnek 1</span>
+                <span class="example-difficulty easy">Kolay</span>
+            </div>
+            <div class="example-question">
+                "Tüm öğretmenler sabırlıdır. Ali bir öğretmendir."
+                <br><br>
+                <strong>Bu öncüllerden hangi sonuç kesinlikle çıkarılabilir?</strong>
+            </div>
+
+            <details class="solution-toggle">
+                <summary>Çözümü Göster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Öncül 1:</span>
+                        Tüm öğretmenler → Sabırlı
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Öncül 2:</span>
+                        Ali → Öğretmen
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Çıkarım:</span>
+                        Ali öğretmen ise ve tüm öğretmenler sabırlı ise...
+                    </div>
+                    <div class="answer-highlight">
+                        <strong>Sonuç:</strong> Ali sabırlıdır.
+                    </div>
+                </div>
+            </details>
+        </div>
+
+        <!-- Example 2 -->
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Örnek 2</span>
+                <span class="example-difficulty medium">Orta</span>
+            </div>
+            <div class="example-question">
+                Bir sınavda 5 öğrenci (A, B, C, D, E) farklı sıralarda tamamladı.
+                <br><br>
+                • A, B'den önce bitirdi<br>
+                • C, D'den sonra bitirdi<br>
+                • E, A'dan hemen sonra bitirdi<br>
+                • D, 2. sırada bitirdi<br>
+                <br>
+                <strong>Buna göre C kaçıncı sırada bitirmiştir?</strong>
+            </div>
+
+            <details class="solution-toggle">
+                <summary>Çözümü Göster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Kesin bilgi:</span>
+                        D → 2. sıra
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">İpucu 3:</span>
+                        A...E (hemen ardışık) ve A, B'den önce
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">İpucu 2:</span>
+                        C, D'den sonra → C, 2'den sonra (3, 4 veya 5. sıra)
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Sıralama:</span>
+                        <div class="step-math">
+                            1. A<br>
+                            2. D (kesin)<br>
+                            3. E (A'dan hemen sonra)<br>
+                            4. B (A'dan sonra)<br>
+                            5. C (D'den sonra, en son)
+                        </div>
+                    </div>
+                    <div class="answer-highlight">
+                        <strong>Cevap:</strong> C, 5. sırada bitirmiştir.
+                    </div>
+                </div>
+            </details>
+        </div>
+
+        <!-- Example 3 -->
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Örnek 3</span>
+                <span class="example-difficulty hard">Zor</span>
+            </div>
+            <div class="example-question">
+                "Eğer hava güneşli ise pikniğe gideriz. Eğer pikniğe gidersek mutlu oluruz.
+                Bugün mutlu değiliz."
+                <br><br>
+                <strong>Bu öncüllerden hangi sonuç kesinlikle çıkarılabilir?</strong>
+            </div>
+
+            <details class="solution-toggle">
+                <summary>Çözümü Göster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Öncüller:</span>
+                        <div class="step-math">
+                            1. Güneşli → Piknik<br>
+                            2. Piknik → Mutlu<br>
+                            3. Mutlu DEĞİL (kesin)
+                        </div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Geriye doğru çıkarım:</span>
+                        <div class="step-math">
+                            Mutlu değilsek → Pikniğe gitmemişiz (Öncül 2'nin tersi)<br>
+                            Pikniğe gitmemişsek → Hava güneşli değil (Öncül 1'in tersi)
+                        </div>
+                    </div>
+                    <div class="answer-highlight">
+                        <strong>Sonuçlar:</strong>
+                        <br>✓ Pikniğe gitmedik
+                        <br>✓ Hava güneşli değil
+                    </div>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- Key Points Summary -->
+    <section class="content-section">
+        <div class="key-points-box">
+            <div class="key-points-title">🔑 Anahtar Noktalar</div>
+            <ul class="key-points-list">
+                <li>Sadece verilen bilgileri kullanın, varsayım yapmayın</li>
+                <li>P → Q ise, Q yanlışsa P de yanlıştır</li>
+                <li>Sıralama problemlerinde şema/tablo çizin</li>
+                <li>"Hemen önce/sonra" ile "önce/sonra" farklıdır</li>
+                <li>"Kesinlikle doğru" için sonuç zorunlu olmalıdır</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Navigation -->
+    <div class="nav-buttons">
+        <a href="../sayi-sekil-iliskileri/" class="nav-btn nav-prev">
+            <span class="nav-arrow">←</span>
+            <span class="nav-text">Sayı-Şekil İlişkileri</span>
+        </a>
+        <a href="../" class="nav-btn nav-next">
+            <span class="nav-text">Sayısal Mantık</span>
+            <span class="nav-arrow">→</span>
+        </a>
+    </div>
+
+    <script>
+        function checkDarkMode() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('theme') === 'dark') {
+                document.body.classList.add('dark');
+            }
+        }
+        checkDarkMode();
+
+        window.addEventListener('message', function(event) {
+            if (event.data && event.data.theme === 'dark') {
+                document.body.classList.add('dark');
+            } else if (event.data && event.data.theme === 'light') {
+                document.body.classList.remove('dark');
+            }
+        });
+    </script>
+</body>
+</html>
