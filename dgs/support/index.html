@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destek - DGS Matik</title>
+    <link rel="stylesheet" href="../shared/style.css">
+    <style>
+        .support-container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+        .contact-card {
+            background: var(--bg-secondary);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            margin-bottom: var(--spacing-md);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+            text-decoration: none;
+            color: inherit;
+            border: 2px solid var(--border-color);
+            transition: border-color 0.2s;
+        }
+        .contact-card:active {
+            border-color: var(--accent-blue);
+        }
+        .contact-icon {
+            font-size: 32px;
+            flex-shrink: 0;
+        }
+        .contact-info h3 {
+            margin: 0 0 var(--spacing-xs) 0;
+            font-size: var(--font-size-base);
+            color: var(--text-primary);
+        }
+        .contact-info p {
+            margin: 0;
+            font-size: var(--font-size-sm);
+            color: var(--accent-blue);
+        }
+        .faq-item {
+            background: var(--bg-secondary);
+            border-radius: var(--radius-lg);
+            margin-bottom: var(--spacing-sm);
+            overflow: hidden;
+        }
+        .faq-item summary {
+            cursor: pointer;
+            padding: var(--spacing-lg);
+            font-weight: 600;
+            color: var(--text-primary);
+            font-size: var(--font-size-base);
+            list-style: none;
+        }
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+        .faq-answer {
+            padding: 0 var(--spacing-lg) var(--spacing-lg);
+            color: var(--text-secondary);
+            font-size: var(--font-size-sm);
+            line-height: 1.6;
+        }
+        .footer-note {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: var(--font-size-sm);
+            margin-top: var(--spacing-xxl);
+            padding-bottom: var(--spacing-xl);
+        }
+    </style>
+</head>
+<body>
+
+<!-- Hero Section -->
+<div class="hero-section hero-green">
+    <div class="hero-icon">💬</div>
+    <h1>Destek</h1>
+    <p class="hero-subtitle">DGS Matik - Sinav Hazirlik Platformu</p>
+</div>
+
+<div class="support-container">
+
+    <!-- Iletisim -->
+    <div class="content-section">
+        <h2>Bize Ulasin</h2>
+        <p>Soru, oneri veya sorunlariniz icin asagidaki kanallardan bize ulasabilirsiniz.</p>
+
+        <a href="mailto:dgsmatik@gmail.com" class="contact-card">
+            <span class="contact-icon">📧</span>
+            <div class="contact-info">
+                <h3>E-posta</h3>
+                <p>dgsmatik@gmail.com</p>
+            </div>
+        </a>
+    </div>
+
+    <!-- SSS -->
+    <div class="content-section">
+        <h2>Sikca Sorulan Sorular</h2>
+
+        <details class="faq-item">
+            <summary>Uygulama cevrimdisi calisiyor mu?</summary>
+            <div class="faq-answer">
+                Evet! Soru bankasi ve konu anlatimi icerikleri cihaziniza indirildikten sonra internet baglantisi olmadan da calisabilirsiniz.
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary>Premium aboneligimi nasil iptal edebilirim?</summary>
+            <div class="faq-answer">
+                iOS: Ayarlar > Apple ID > Abonelikler > DGS Matik > Aboneligi Iptal Et<br><br>
+                Android: Google Play Store > Abonelikler > DGS Matik > Aboneligi Iptal Et
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary>Hesabimi nasil silebilirim?</summary>
+            <div class="faq-answer">
+                Uygulama ici Profil > Ayarlar bolumunden hesabinizi silebilirsiniz. Ayrica dgsmatik@gmail.com adresine e-posta gondererek de hesap silme talebinde bulunabilirsiniz. Talebiniz 30 gun icinde islenecektir.
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary>Farkli bir cihazda giris yapabilir miyim?</summary>
+            <div class="faq-answer">
+                Evet! Ayni e-posta ve sifrenizle istediginiz cihazdan giris yapabilirsiniz. Ilerlemeniz ve istatistikleriniz hesabiniza baglidir.
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary>Soru veya icerik hatasi bildirmek istiyorum.</summary>
+            <div class="faq-answer">
+                dgsmatik@gmail.com adresine hatali sorunun ekran goruntusunu ve konusunu belirterek e-posta gonderebilirsiniz. En kisa surede duzeltilecektir.
+            </div>
+        </details>
+    </div>
+
+    <div class="footer-note">
+        <p>DGS Matik &copy; 2026 Tum haklari saklidir.</p>
+    </div>
+
+</div>
+
+</body>
+</html>
