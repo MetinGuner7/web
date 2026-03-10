@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Faktoriyel - DGS Hazirlik</title>
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+</head>
+<body>
+    <div class="hero-section hero-orange">
+        <div class="hero-icon">❗</div>
+        <h1>Faktoriyel</h1>
+        <p class="hero-subtitle">Faktoriyel Hesaplama ve Uygulamalari</p>
+        <div class="hero-meta">
+            <span class="meta-item">📚 Matematik</span>
+            <span class="meta-item">⏱️ 14 dk okuma</span>
+        </div>
+    </div>
+
+    <div class="summary-card">
+        <div class="summary-title">📌 Bu Konuda Ogreneceklerin</div>
+        <div class="summary-items">
+            <div class="summary-item">✓ Faktoriyel tanimi</div>
+            <div class="summary-item">✓ Faktoriyel ozellikleri</div>
+            <div class="summary-item">✓ Faktoriyelli islemler</div>
+        </div>
+    </div>
+
+    <section class="content-section">
+        <h2>📖 Faktoriyel Nedir?</h2>
+        <p>
+            Pozitif bir tam sayinin <span class="highlight">kendisi dahil 1'e kadar olan tum dogal sayilarin carpimi</span>na
+            faktoriyel denir. $n!$ seklinde gosterilir.
+        </p>
+
+        <div class="formula-card">
+            <div class="formula-label">Faktoriyel Tanimi</div>
+            <div class="formula-content">
+                $$n! = n \times (n-1) \times (n-2) \times \cdots \times 2 \times 1$$
+            </div>
+        </div>
+
+        <div class="example-grid">
+            <div class="mini-example"><div class="mini-calc">$1! = 1$</div></div>
+            <div class="mini-example"><div class="mini-calc">$2! = 2$</div></div>
+            <div class="mini-example"><div class="mini-calc">$3! = 6$</div></div>
+            <div class="mini-example"><div class="mini-calc">$4! = 24$</div></div>
+            <div class="mini-example"><div class="mini-calc">$5! = 120$</div></div>
+            <div class="mini-example"><div class="mini-calc">$6! = 720$</div></div>
+        </div>
+
+        <div class="warning-box">
+            <div class="warning-icon">⚠️</div>
+            <div class="warning-content">
+                <strong>Ozel Deger:</strong> $0! = 1$ (tanimlanan deger)
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>📐 Onemli Ozellikler</h2>
+
+        <div class="steps-container">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <div class="step-title">Basamakli Yazim</div>
+                    <div class="step-example"><code>$n! = n \times (n-1)!$</code></div>
+                </div>
+            </div>
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <div class="step-title">Bolme</div>
+                    <div class="step-example"><code>$\frac{n!}{(n-k)!} = n \times (n-1) \times \cdots \times (n-k+1)$</code></div>
+                </div>
+            </div>
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <div class="step-title">Ardisik Carpim</div>
+                    <div class="step-example"><code>$n! = n \times (n-1) \times (n-2)!$</code></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>🎯 Ornek Sorular</h2>
+
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Ornek 1</span>
+                <span class="example-difficulty easy">Kolay</span>
+            </div>
+            <div class="example-question">$\frac{8!}{6!}$ kactir?</div>
+            <details class="solution-toggle">
+                <summary>Cozumu Goster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Cozum:</span>
+                        <div class="step-math">$\frac{8!}{6!} = \frac{8 \times 7 \times 6!}{6!} = 8 \times 7 = 56$</div>
+                    </div>
+                    <div class="answer-highlight">Cevap: <strong>56</strong></div>
+                </div>
+            </details>
+        </div>
+
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Ornek 2</span>
+                <span class="example-difficulty medium">Orta</span>
+            </div>
+            <div class="example-question">
+                $\frac{(n+2)!}{n!} = 132$ ise $n$ kactir?
+            </div>
+            <details class="solution-toggle">
+                <summary>Cozumu Goster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Adim 1:</span>
+                        <div class="step-math">$\frac{(n+2)!}{n!} = (n+2)(n+1) = 132$</div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Adim 2:</span>
+                        $12 \times 11 = 132$ oldugundan: $n + 2 = 12 \Rightarrow n = 10$
+                    </div>
+                    <div class="answer-highlight">Cevap: <strong>n = 10</strong></div>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="key-points-box">
+            <div class="key-points-title">🔑 Anahtar Noktalar</div>
+            <ul class="key-points-list">
+                <li>$n! = n \times (n-1)!$ ve $0! = 1$</li>
+                <li>$\frac{n!}{(n-r)!} = P(n,r)$ (permutasyon)</li>
+                <li>Faktoriyel sadece negatif olmayan tam sayilar icin tanimli</li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="nav-buttons">
+        <a href="../olasilik/" class="nav-btn nav-prev">
+            <span class="nav-arrow">←</span>
+            <span class="nav-text">Olasilik</span>
+        </a>
+        <a href="../sayi-dizileri/" class="nav-btn nav-next">
+            <span class="nav-text">Sayi Dizileri</span>
+            <span class="nav-arrow">→</span>
+        </a>
+    </div>
+
+    <script>
+        function checkDarkMode() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('theme') === 'dark') { document.body.classList.add('dark'); }
+        }
+        checkDarkMode();
+        window.addEventListener('message', function(event) {
+            if (event.data && event.data.theme === 'dark') { document.body.classList.add('dark'); }
+            else if (event.data && event.data.theme === 'light') { document.body.classList.remove('dark'); }
+        });
+    </script>
+</body>
+</html>
