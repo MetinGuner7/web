@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Fonksiyonlar - DGS Hazirlik</title>
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+</head>
+<body>
+    <div class="hero-section hero-orange">
+        <div class="hero-icon">📈</div>
+        <h1>Fonksiyonlar</h1>
+        <p class="hero-subtitle">Fonksiyon Kavrami, Turleri ve Grafikleri</p>
+        <div class="hero-meta">
+            <span class="meta-item">📚 Matematik</span>
+            <span class="meta-item">⏱️ 22 dk okuma</span>
+        </div>
+    </div>
+
+    <div class="summary-card">
+        <div class="summary-title">📌 Bu Konuda Ogreneceklerin</div>
+        <div class="summary-items">
+            <div class="summary-item">✓ Fonksiyon tanimi ve kosullari</div>
+            <div class="summary-item">✓ Bire bir ve orten fonksiyonlar</div>
+            <div class="summary-item">✓ Bilesik ve ters fonksiyon</div>
+            <div class="summary-item">✓ Fonksiyon grafikleri</div>
+        </div>
+    </div>
+
+    <section class="content-section">
+        <h2>📖 Fonksiyon Nedir?</h2>
+        <p>
+            A kumesinin her elemanini B kumesinin <span class="highlight">tek bir elemanina</span>
+            eslestiren bagintiya fonksiyon denir.
+        </p>
+
+        <div class="formula-card">
+            <div class="formula-label">Fonksiyon Gosterimi</div>
+            <div class="formula-content">
+                $$f: A \rightarrow B, \quad f(x) = y$$
+            </div>
+        </div>
+
+        <div class="warning-box">
+            <div class="warning-icon">⚠️</div>
+            <div class="warning-content">
+                <strong>Fonksiyon Kosullari:</strong><br>
+                1. Tanim kumesindeki her eleman eslenmelidir.<br>
+                2. Bir eleman birden fazla elemana eslenmemelidir.
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>📐 Fonksiyon Turleri</h2>
+
+        <div class="card-grid">
+            <div class="info-card card-blue">
+                <div class="card-icon">1:1</div>
+                <div class="card-title">Bire Bir</div>
+                <div class="card-desc">Farkli elemanlar farkli elemanlara eslenir</div>
+                <div class="card-example">$f(a) = f(b) \Rightarrow a = b$</div>
+            </div>
+            <div class="info-card card-green">
+                <div class="card-icon">→∀</div>
+                <div class="card-title">Orten</div>
+                <div class="card-desc">Deger kumesi = Goruntu kumesi</div>
+                <div class="card-example">Her $y$ icin bir $x$ vardir</div>
+            </div>
+            <div class="info-card card-purple">
+                <div class="card-icon">↔</div>
+                <div class="card-title">Birebir Orten</div>
+                <div class="card-desc">Hem 1-1 hem orten</div>
+                <div class="card-example">Tersi alinabilir fonksiyon</div>
+            </div>
+            <div class="info-card card-red">
+                <div class="card-icon">→←</div>
+                <div class="card-title">Sabit Fonksiyon</div>
+                <div class="card-desc">Tum elemanlar ayni degere</div>
+                <div class="card-example">$f(x) = c$</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>🔗 Bilesik Fonksiyon</h2>
+
+        <div class="formula-card">
+            <div class="formula-label">Bilesik Fonksiyon</div>
+            <div class="formula-content">
+                $$(f \circ g)(x) = f(g(x))$$
+            </div>
+        </div>
+
+        <div class="tip-box">
+            <div class="tip-icon">💡</div>
+            <div class="tip-content">
+                <strong>Dikkat!</strong> $f \circ g \neq g \circ f$ (genel olarak degisme ozelligi yoktur)
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>🔄 Ters Fonksiyon</h2>
+
+        <div class="formula-card">
+            <div class="formula-label">Ters Fonksiyon</div>
+            <div class="formula-content">
+                $$f(x) = y \Rightarrow f^{-1}(y) = x$$
+            </div>
+        </div>
+
+        <div class="steps-container">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <div class="step-title">$f(x) = y$ yaz</div>
+                    <div class="step-desc">Fonksiyonu y cinsinden ifade et.</div>
+                </div>
+            </div>
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <div class="step-title">$x$'i coz</div>
+                    <div class="step-desc">$x$'i $y$ cinsinden bul.</div>
+                </div>
+            </div>
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <div class="step-title">$x$ ve $y$'yi degistir</div>
+                    <div class="step-desc">$f^{-1}(x)$ elde edilir.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>🎯 Ornek Sorular</h2>
+
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Ornek 1</span>
+                <span class="example-difficulty easy">Kolay</span>
+            </div>
+            <div class="example-question">
+                $f(x) = 3x - 1$ ise $f(4)$ kactir?
+            </div>
+            <details class="solution-toggle">
+                <summary>Cozumu Goster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Cozum:</span>
+                        <div class="step-math">$f(4) = 3(4) - 1 = 12 - 1 = 11$</div>
+                    </div>
+                    <div class="answer-highlight">Cevap: <strong>11</strong></div>
+                </div>
+            </details>
+        </div>
+
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Ornek 2</span>
+                <span class="example-difficulty medium">Orta</span>
+            </div>
+            <div class="example-question">
+                $f(x) = 2x + 3$ fonksiyonunun tersini bulunuz.
+            </div>
+            <details class="solution-toggle">
+                <summary>Cozumu Goster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Adim 1:</span>
+                        <div class="step-math">$y = 2x + 3$</div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Adim 2:</span>
+                        <div class="step-math">$x = \frac{y - 3}{2}$</div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Adim 3:</span>
+                        <div class="step-math">$f^{-1}(x) = \frac{x - 3}{2}$</div>
+                    </div>
+                    <div class="answer-highlight">Cevap: <strong>$f^{-1}(x) = \frac{x-3}{2}$</strong></div>
+                </div>
+            </details>
+        </div>
+
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Ornek 3</span>
+                <span class="example-difficulty hard">Zor</span>
+            </div>
+            <div class="example-question">
+                $f(x) = 2x + 1$ ve $g(x) = x^2 - 3$ ise $(f \circ g)(2)$ kactir?
+            </div>
+            <details class="solution-toggle">
+                <summary>Cozumu Goster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Adim 1:</span>
+                        Oncelikle $g(2)$: <div class="step-math">$g(2) = 2^2 - 3 = 4 - 3 = 1$</div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Adim 2:</span>
+                        Sonra $f(g(2)) = f(1)$: <div class="step-math">$f(1) = 2(1) + 1 = 3$</div>
+                    </div>
+                    <div class="answer-highlight">Cevap: <strong>3</strong></div>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="key-points-box">
+            <div class="key-points-title">🔑 Anahtar Noktalar</div>
+            <ul class="key-points-list">
+                <li>Fonksiyon: Tanim kumesindeki her eleman tek bir goruntue eslenir</li>
+                <li>$(f \circ g)(x) = f(g(x))$</li>
+                <li>$f \circ f^{-1} = f^{-1} \circ f = I$ (birim fonksiyon)</li>
+                <li>$s(A) = n$, $s(B) = m$ ise fonksiyon sayisi: $m^n$</li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="nav-buttons">
+        <a href="../kumeler/" class="nav-btn nav-prev">
+            <span class="nav-arrow">←</span>
+            <span class="nav-text">Kumeler</span>
+        </a>
+        <a href="../islem/" class="nav-btn nav-next">
+            <span class="nav-text">Islem</span>
+            <span class="nav-arrow">→</span>
+        </a>
+    </div>
+
+    <script>
+        function checkDarkMode() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('theme') === 'dark') { document.body.classList.add('dark'); }
+        }
+        checkDarkMode();
+        window.addEventListener('message', function(event) {
+            if (event.data && event.data.theme === 'dark') { document.body.classList.add('dark'); }
+            else if (event.data && event.data.theme === 'light') { document.body.classList.remove('dark'); }
+        });
+    </script>
+</body>
+</html>
