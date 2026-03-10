@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Bolme ve Bolunebilme - DGS Hazirlik</title>
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+</head>
+<body>
+    <div class="hero-section hero-orange">
+        <div class="hero-icon">➗</div>
+        <h1>Bolme ve Bolunebilme</h1>
+        <p class="hero-subtitle">Bolunebilme Kurallari ve Kalanli Bolme</p>
+        <div class="hero-meta">
+            <span class="meta-item">📚 Matematik</span>
+            <span class="meta-item">⏱️ 18 dk okuma</span>
+        </div>
+    </div>
+
+    <div class="summary-card">
+        <div class="summary-title">📌 Bu Konuda Ogreneceklerin</div>
+        <div class="summary-items">
+            <div class="summary-item">✓ Bolunebilme kurallari (2, 3, 4, 5, 6, 8, 9, 10, 11)</div>
+            <div class="summary-item">✓ Kalanli bolme teoremi</div>
+            <div class="summary-item">✓ Bolme isleminin ozellikleri</div>
+        </div>
+    </div>
+
+    <section class="content-section">
+        <h2>📖 Bolme Islemi</h2>
+        <p>
+            Bolme isleminde <span class="highlight">bolunen = bolen × bolum + kalan</span>
+            bagintisi her zaman gecerlidir.
+        </p>
+
+        <div class="formula-card">
+            <div class="formula-label">Kalanli Bolme Teoremi</div>
+            <div class="formula-content">
+                $$a = b \times q + r \quad (0 \leq r < b)$$
+            </div>
+        </div>
+
+        <div class="tip-box">
+            <div class="tip-icon">💡</div>
+            <div class="tip-content">
+                <strong>a:</strong> bolunen, <strong>b:</strong> bolen, <strong>q:</strong> bolum, <strong>r:</strong> kalan
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>📐 Bolunebilme Kurallari</h2>
+
+        <div class="steps-container">
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <div class="step-title">2'ye Bolunebilme</div>
+                    <div class="step-desc">Son rakami cift (0, 2, 4, 6, 8) olan sayilar 2'ye bolunur.</div>
+                    <div class="step-example"><code>$124 \Rightarrow$ son rakam 4 (cift) ✓</code></div>
+                </div>
+            </div>
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <div class="step-title">3'e Bolunebilme</div>
+                    <div class="step-desc">Rakamlar toplami 3'un kati olan sayilar 3'e bolunur.</div>
+                    <div class="step-example"><code>$123 \Rightarrow 1+2+3=6$ (3'un kati) ✓</code></div>
+                </div>
+            </div>
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <div class="step-title">4'e Bolunebilme</div>
+                    <div class="step-desc">Son iki rakami 4'e bolunuyorsa sayi da 4'e bolunur.</div>
+                    <div class="step-example"><code>$316 \Rightarrow 16 \div 4 = 4$ ✓</code></div>
+                </div>
+            </div>
+            <div class="step-card">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                    <div class="step-title">5'e Bolunebilme</div>
+                    <div class="step-desc">Son rakami 0 veya 5 olan sayilar 5'e bolunur.</div>
+                    <div class="step-example"><code>$235 \Rightarrow$ son rakam 5 ✓</code></div>
+                </div>
+            </div>
+            <div class="step-card">
+                <div class="step-number">6</div>
+                <div class="step-content">
+                    <div class="step-title">6'ya Bolunebilme</div>
+                    <div class="step-desc">Hem 2'ye hem 3'e bolunen sayilar 6'ya bolunur.</div>
+                    <div class="step-example"><code>$312 \Rightarrow$ cift ve $3+1+2=6$ ✓</code></div>
+                </div>
+            </div>
+            <div class="step-card">
+                <div class="step-number">9</div>
+                <div class="step-content">
+                    <div class="step-title">9'a Bolunebilme</div>
+                    <div class="step-desc">Rakamlar toplami 9'un kati olan sayilar 9'a bolunur.</div>
+                    <div class="step-example"><code>$729 \Rightarrow 7+2+9=18$ (9'un kati) ✓</code></div>
+                </div>
+            </div>
+            <div class="step-card">
+                <div class="step-number">11</div>
+                <div class="step-content">
+                    <div class="step-title">11'e Bolunebilme</div>
+                    <div class="step-desc">Tek ve cift basamaklardaki rakamlarin farki 0 veya 11'in kati ise bolunur.</div>
+                    <div class="step-example"><code>$1463 \Rightarrow (1+6)-(4+3)=0$ ✓</code></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>🎯 Ornek Sorular</h2>
+
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Ornek 1</span>
+                <span class="example-difficulty easy">Kolay</span>
+            </div>
+            <div class="example-question">
+                $\overline{2a4}$ sayisi 3'e tam bolunuyorsa $a$ kac olabilir?
+            </div>
+            <details class="solution-toggle">
+                <summary>Cozumu Goster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Adim 1:</span>
+                        Rakamlar toplami 3'un kati olmali: $2 + a + 4 = 6 + a$
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Adim 2:</span>
+                        $6 + a$ ifadesi 3'un kati olmalı: $a = 0, 3, 6, 9$
+                    </div>
+                    <div class="answer-highlight">
+                        Cevap: <strong>a = 0, 3, 6, 9</strong>
+                    </div>
+                </div>
+            </details>
+        </div>
+
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Ornek 2</span>
+                <span class="example-difficulty hard">Zor</span>
+            </div>
+            <div class="example-question">
+                Bir sayi 7'ye bolundugunde kalan 3'tur. Bu sayinin 2 kati 7'ye bolundugunde kalan kactir?
+            </div>
+            <details class="solution-toggle">
+                <summary>Cozumu Goster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Adim 1:</span>
+                        <div class="step-math">$a = 7k + 3$</div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Adim 2:</span>
+                        <div class="step-math">$2a = 2(7k + 3) = 14k + 6 = 7(2k) + 6$</div>
+                    </div>
+                    <div class="answer-highlight">
+                        Cevap: Kalan <strong>6</strong>
+                    </div>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="key-points-box">
+            <div class="key-points-title">🔑 Anahtar Noktalar</div>
+            <ul class="key-points-list">
+                <li>$a = b \times q + r$ (kalanli bolme)</li>
+                <li>2'ye bolunme → son rakam cift</li>
+                <li>3'e bolunme → rakamlar toplami 3'un kati</li>
+                <li>9'a bolunme → rakamlar toplami 9'un kati</li>
+                <li>11'e bolunme → tek-cift basamak farki 0 veya 11'in kati</li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="nav-buttons">
+        <a href="../sayi-basamaklari/" class="nav-btn nav-prev">
+            <span class="nav-arrow">←</span>
+            <span class="nav-text">Sayi Basamaklari</span>
+        </a>
+        <a href="../kumeler/" class="nav-btn nav-next">
+            <span class="nav-text">Kumeler</span>
+            <span class="nav-arrow">→</span>
+        </a>
+    </div>
+
+    <script>
+        function checkDarkMode() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('theme') === 'dark') { document.body.classList.add('dark'); }
+        }
+        checkDarkMode();
+        window.addEventListener('message', function(event) {
+            if (event.data && event.data.theme === 'dark') { document.body.classList.add('dark'); }
+            else if (event.data && event.data.theme === 'light') { document.body.classList.remove('dark'); }
+        });
+    </script>
+</body>
+</html>
