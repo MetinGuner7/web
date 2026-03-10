@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Permutasyon - DGS Hazirlik</title>
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+</head>
+<body>
+    <div class="hero-section hero-orange">
+        <div class="hero-icon">🔀</div>
+        <h1>Permutasyon</h1>
+        <p class="hero-subtitle">Sirali Dizilim ve Sayma</p>
+        <div class="hero-meta">
+            <span class="meta-item">📚 Matematik</span>
+            <span class="meta-item">⏱️ 18 dk okuma</span>
+        </div>
+    </div>
+
+    <div class="summary-card">
+        <div class="summary-title">📌 Bu Konuda Ogreneceklerin</div>
+        <div class="summary-items">
+            <div class="summary-item">✓ Permutasyon tanimi ve formulu</div>
+            <div class="summary-item">✓ Tekrarli ve dairesel permutasyon</div>
+            <div class="summary-item">✓ Sayma problemleri</div>
+        </div>
+    </div>
+
+    <section class="content-section">
+        <h2>📖 Permutasyon Nedir?</h2>
+        <p>
+            $n$ farkli nesneden $r$ tanesinin <span class="highlight">sira onemli olacak sekilde</span>
+            dizilme sayisina permutasyon denir.
+        </p>
+
+        <div class="formula-card">
+            <div class="formula-label">Permutasyon Formulu</div>
+            <div class="formula-content">
+                $$P(n, r) = \frac{n!}{(n-r)!}$$
+            </div>
+        </div>
+
+        <div class="tip-box">
+            <div class="tip-icon">💡</div>
+            <div class="tip-content">
+                <strong>Onemli!</strong> Permutasyonda <strong>sira onemlidir</strong>.
+                {A, B} ile {B, A} farkli dizilimlerdir.
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>📐 Permutasyon Turleri</h2>
+
+        <div class="card-grid">
+            <div class="info-card card-blue">
+                <div class="card-icon">n!</div>
+                <div class="card-title">Tam Permutasyon</div>
+                <div class="card-desc">Tum elemanlari diz</div>
+                <div class="card-example">$P(n, n) = n!$</div>
+            </div>
+            <div class="info-card card-green">
+                <div class="card-icon">r</div>
+                <div class="card-title">r'li Permutasyon</div>
+                <div class="card-desc">n'den r tane sec ve diz</div>
+                <div class="card-example">$P(n, r) = \frac{n!}{(n-r)!}$</div>
+            </div>
+            <div class="info-card card-purple">
+                <div class="card-icon">⟳</div>
+                <div class="card-title">Dairesel</div>
+                <div class="card-desc">Daire seklinde dizilim</div>
+                <div class="card-example">$(n-1)!$</div>
+            </div>
+            <div class="info-card card-red">
+                <div class="card-icon">≡</div>
+                <div class="card-title">Tekrarli</div>
+                <div class="card-desc">Ayni elemanlar var</div>
+                <div class="card-example">$\frac{n!}{n_1! \cdot n_2! \cdots}$</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>🎯 Ornek Sorular</h2>
+
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Ornek 1</span>
+                <span class="example-difficulty easy">Kolay</span>
+            </div>
+            <div class="example-question">
+                5 kisilik bir grupta baskan ve baskan yardimcisi kac farkli sekilde secilebilir?
+            </div>
+            <details class="solution-toggle">
+                <summary>Cozumu Goster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Cozum:</span>
+                        Sira onemli (baskan ≠ yardimci):
+                        <div class="step-math">$P(5, 2) = \frac{5!}{3!} = 5 \times 4 = 20$</div>
+                    </div>
+                    <div class="answer-highlight">Cevap: <strong>20</strong></div>
+                </div>
+            </details>
+        </div>
+
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Ornek 2</span>
+                <span class="example-difficulty medium">Orta</span>
+            </div>
+            <div class="example-question">
+                "KALEM" kelimesinin harfleri kac farkli sekilde dizilebilir?
+            </div>
+            <details class="solution-toggle">
+                <summary>Cozumu Goster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Cozum:</span>
+                        5 farkli harf: <div class="step-math">$5! = 120$</div>
+                    </div>
+                    <div class="answer-highlight">Cevap: <strong>120</strong></div>
+                </div>
+            </details>
+        </div>
+
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Ornek 3</span>
+                <span class="example-difficulty hard">Zor</span>
+            </div>
+            <div class="example-question">
+                "TRABZON" kelimesindeki harflerle basi ve sonu sessiz harf olan kac farkli yedi harfli kelime yazilabilir?
+            </div>
+            <details class="solution-toggle">
+                <summary>Cozumu Goster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Adim 1:</span>
+                        Sessiz harfler: T, R, B, Z, N (5 tane). Sesli harfler: A, O (2 tane).
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Adim 2:</span>
+                        Bas: 5 secim, son: 4 secim. Ortadaki 5 harf: $5!$
+                        <div class="step-math">$5 \times 4 \times 5! = 20 \times 120 = 2400$</div>
+                    </div>
+                    <div class="answer-highlight">Cevap: <strong>2400</strong></div>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="key-points-box">
+            <div class="key-points-title">🔑 Anahtar Noktalar</div>
+            <ul class="key-points-list">
+                <li>$P(n,r) = \frac{n!}{(n-r)!}$ (sira onemli)</li>
+                <li>$n$ farkli nesnenin tamaminin dizilisi: $n!$</li>
+                <li>Dairesel permutasyon: $(n-1)!$</li>
+                <li>Tekrarli: $\frac{n!}{n_1! \cdot n_2! \cdots}$</li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="nav-buttons">
+        <a href="../moduler-aritmetik/" class="nav-btn nav-prev">
+            <span class="nav-arrow">←</span>
+            <span class="nav-text">Moduler Aritmetik</span>
+        </a>
+        <a href="../kombinasyon/" class="nav-btn nav-next">
+            <span class="nav-text">Kombinasyon</span>
+            <span class="nav-arrow">→</span>
+        </a>
+    </div>
+
+    <script>
+        function checkDarkMode() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('theme') === 'dark') { document.body.classList.add('dark'); }
+        }
+        checkDarkMode();
+        window.addEventListener('message', function(event) {
+            if (event.data && event.data.theme === 'dark') { document.body.classList.add('dark'); }
+            else if (event.data && event.data.theme === 'light') { document.body.classList.remove('dark'); }
+        });
+    </script>
+</body>
+</html>
