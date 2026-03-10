@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Sayi Basamaklari - DGS Hazirlik</title>
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero-section hero-orange">
+        <div class="hero-icon">🔢</div>
+        <h1>Sayi Basamaklari</h1>
+        <p class="hero-subtitle">Basamak Kavramlari ve Islemler</p>
+        <div class="hero-meta">
+            <span class="meta-item">📚 Matematik</span>
+            <span class="meta-item">⏱️ 15 dk okuma</span>
+        </div>
+    </div>
+
+    <!-- Quick Summary Card -->
+    <div class="summary-card">
+        <div class="summary-title">📌 Bu Konuda Ogreneceklerin</div>
+        <div class="summary-items">
+            <div class="summary-item">✓ Basamak ve basamak degeri</div>
+            <div class="summary-item">✓ Sayinin acik yazilisi</div>
+            <div class="summary-item">✓ Rakamlar toplami kurali</div>
+            <div class="summary-item">✓ Basamak sayisi problemleri</div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <section class="content-section">
+        <h2>📖 Basamak Kavramlari</h2>
+
+        <p>
+            Bir sayidaki her rakam, bulundugu yere gore farkli bir deger tasir.
+            Bu degere <span class="highlight">basamak degeri</span> denir.
+        </p>
+
+        <div class="visual-box">
+            <div class="visual-title">📊 Ornek: 3527 Sayisi</div>
+            <div class="card-grid">
+                <div class="info-card card-blue">
+                    <div class="card-icon">3</div>
+                    <div class="card-title">Binler</div>
+                    <div class="card-desc">Basamak degeri</div>
+                    <div class="card-example">$3 \times 1000 = 3000$</div>
+                </div>
+                <div class="info-card card-green">
+                    <div class="card-icon">5</div>
+                    <div class="card-title">Yuzler</div>
+                    <div class="card-desc">Basamak degeri</div>
+                    <div class="card-example">$5 \times 100 = 500$</div>
+                </div>
+                <div class="info-card card-purple">
+                    <div class="card-icon">2</div>
+                    <div class="card-title">Onlar</div>
+                    <div class="card-desc">Basamak degeri</div>
+                    <div class="card-example">$2 \times 10 = 20$</div>
+                </div>
+                <div class="info-card card-red">
+                    <div class="card-icon">7</div>
+                    <div class="card-title">Birler</div>
+                    <div class="card-desc">Basamak degeri</div>
+                    <div class="card-example">$7 \times 1 = 7$</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>📐 Sayinin Acik Yazilisi</h2>
+
+        <p>
+            Bir sayi, basamak degerlerinin toplami seklinde <span class="highlight">acik yazilis</span>
+            olarak ifade edilir.
+        </p>
+
+        <div class="formula-card">
+            <div class="formula-label">n Basamakli Sayi</div>
+            <div class="formula-content">
+                $$\overline{abc} = 100a + 10b + c$$
+            </div>
+        </div>
+
+        <div class="example-grid">
+            <div class="mini-example">
+                <div class="mini-calc">$\overline{ab} = 10a + b$</div>
+            </div>
+            <div class="mini-example">
+                <div class="mini-calc">$\overline{abc} = 100a + 10b + c$</div>
+            </div>
+            <div class="mini-example">
+                <div class="mini-calc">$\overline{abcd} = 1000a + 100b + 10c + d$</div>
+            </div>
+        </div>
+
+        <div class="tip-box">
+            <div class="tip-icon">💡</div>
+            <div class="tip-content">
+                <strong>Dikkat!</strong> $\overline{abc}$ gosterimi $a \times b \times c$ anlamina gelmez!
+                Bu, $a$, $b$, $c$ rakamlarindan olusan uc basamakli sayidir.
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>🔢 Rakamlar Toplami ve Farki</h2>
+
+        <div class="steps-container">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <div class="step-title">Rakamlar Toplami</div>
+                    <div class="step-desc">Sayidaki tum rakamlarin toplami.</div>
+                    <div class="step-example">
+                        <code>$3527 \Rightarrow 3 + 5 + 2 + 7 = 17$</code>
+                    </div>
+                </div>
+            </div>
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <div class="step-title">Rakamlar Carpimi</div>
+                    <div class="step-desc">Sayidaki tum rakamlarin carpimi.</div>
+                    <div class="step-example">
+                        <code>$3527 \Rightarrow 3 \times 5 \times 2 \times 7 = 210$</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="memorize-box">
+            <div class="memorize-title">🧠 Ezberle!</div>
+            <div class="memorize-content">
+                <div class="memorize-rule">
+                    <span class="rule-same">$\overline{abc}$ uc basamakli ise $a \neq 0$</span>
+                </div>
+                <div class="memorize-rule">
+                    <span class="rule-diff">En buyuk uc basamakli sayi: 999</span>
+                </div>
+                <div class="memorize-rule">
+                    <span class="rule-same">En kucuk uc basamakli sayi: 100</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>🎯 Ornek Sorular</h2>
+
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Ornek 1</span>
+                <span class="example-difficulty easy">Kolay</span>
+            </div>
+            <div class="example-question">
+                $\overline{3a2}$ uc basamakli sayisinin rakamlar toplami 11 ise $a$ kactir?
+            </div>
+            <details class="solution-toggle">
+                <summary>Cozumu Goster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Adim 1:</span>
+                        Rakamlar toplami: $3 + a + 2 = 11$
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Adim 2:</span>
+                        <div class="step-math">$5 + a = 11 \Rightarrow a = 6$</div>
+                    </div>
+                    <div class="answer-highlight">
+                        Cevap: <strong>a = 6</strong>
+                    </div>
+                </div>
+            </details>
+        </div>
+
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Ornek 2</span>
+                <span class="example-difficulty medium">Orta</span>
+            </div>
+            <div class="example-question">
+                $\overline{ab} + \overline{ba} = 132$ ise $a + b$ kactir?
+            </div>
+            <details class="solution-toggle">
+                <summary>Cozumu Goster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Adim 1:</span>
+                        Acik yazalim:
+                        <div class="step-math">$(10a + b) + (10b + a) = 132$</div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Adim 2:</span>
+                        <div class="step-math">$11a + 11b = 132$</div>
+                        <div class="step-math">$11(a + b) = 132$</div>
+                        <div class="step-math">$a + b = 12$</div>
+                    </div>
+                    <div class="answer-highlight">
+                        Cevap: <strong>a + b = 12</strong>
+                    </div>
+                </div>
+            </details>
+        </div>
+
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Ornek 3</span>
+                <span class="example-difficulty hard">Zor</span>
+            </div>
+            <div class="example-question">
+                Uc basamakli $\overline{abc}$ sayisinda $a + c = 10$ ve $b = a - 2$ olduguna gore,
+                bu sayinin en buyuk degeri kactir?
+            </div>
+            <details class="solution-toggle">
+                <summary>Cozumu Goster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Adim 1:</span>
+                        En buyuk deger icin $a$ en buyuk olmali. $a + c = 10$ ve $c \leq 9$ oldugundan $a \geq 1$.
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Adim 2:</span>
+                        $a = 9$ ise $c = 1$, $b = 9 - 2 = 7$
+                        <div class="step-math">$\overline{abc} = 971$</div>
+                    </div>
+                    <div class="answer-highlight">
+                        Cevap: <strong>971</strong>
+                    </div>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="key-points-box">
+            <div class="key-points-title">🔑 Anahtar Noktalar</div>
+            <ul class="key-points-list">
+                <li>$\overline{abc} = 100a + 10b + c$ (acik yazilis)</li>
+                <li>Uc basamakli sayilarda $a \neq 0$ ve $1 \leq a \leq 9$</li>
+                <li>$\overline{ab} + \overline{ba} = 11(a+b)$</li>
+                <li>$\overline{ab} - \overline{ba} = 9(a-b)$ ($a > b$ ise)</li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="nav-buttons">
+        <a href="../carpanlar-katlar/" class="nav-btn nav-prev">
+            <span class="nav-arrow">←</span>
+            <span class="nav-text">Carpanlar ve Katlar</span>
+        </a>
+        <a href="../bolme-bolunebilme/" class="nav-btn nav-next">
+            <span class="nav-text">Bolme ve Bolunebilme</span>
+            <span class="nav-arrow">→</span>
+        </a>
+    </div>
+
+    <script>
+        function checkDarkMode() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('theme') === 'dark') { document.body.classList.add('dark'); }
+        }
+        checkDarkMode();
+        window.addEventListener('message', function(event) {
+            if (event.data && event.data.theme === 'dark') { document.body.classList.add('dark'); }
+            else if (event.data && event.data.theme === 'light') { document.body.classList.remove('dark'); }
+        });
+    </script>
+</body>
+</html>
