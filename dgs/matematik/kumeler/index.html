@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Kumeler - DGS Hazirlik</title>
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+</head>
+<body>
+    <div class="hero-section hero-orange">
+        <div class="hero-icon">⭕</div>
+        <h1>Kumeler</h1>
+        <p class="hero-subtitle">Kume Kavrami ve Kume Islemleri</p>
+        <div class="hero-meta">
+            <span class="meta-item">📚 Matematik</span>
+            <span class="meta-item">⏱️ 20 dk okuma</span>
+        </div>
+    </div>
+
+    <div class="summary-card">
+        <div class="summary-title">📌 Bu Konuda Ogreneceklerin</div>
+        <div class="summary-items">
+            <div class="summary-item">✓ Kume kavrami ve gosterimi</div>
+            <div class="summary-item">✓ Alt kume ve esit kume</div>
+            <div class="summary-item">✓ Birlesim, kesisim, fark islemleri</div>
+            <div class="summary-item">✓ Eleman sayisi problemleri</div>
+        </div>
+    </div>
+
+    <section class="content-section">
+        <h2>📖 Kume Nedir?</h2>
+        <p>
+            <span class="highlight">Belirli ozelliklere sahip nesnelerin olusturducu topluluga</span> kume denir.
+            Kumeler buyuk harflerle, elemanlari kume parantezi icinde gosterilir.
+        </p>
+
+        <div class="formula-card">
+            <div class="formula-label">Kume Gosterimi</div>
+            <div class="formula-content">
+                $$A = \{1, 2, 3, 4, 5\}$$
+            </div>
+        </div>
+
+        <div class="card-grid">
+            <div class="info-card card-blue">
+                <div class="card-icon">∈</div>
+                <div class="card-title">Eleman</div>
+                <div class="card-desc">Kumeye ait</div>
+                <div class="card-example">$3 \in A$</div>
+            </div>
+            <div class="info-card card-red">
+                <div class="card-icon">∉</div>
+                <div class="card-title">Eleman Degil</div>
+                <div class="card-desc">Kumeye ait degil</div>
+                <div class="card-example">$7 \notin A$</div>
+            </div>
+            <div class="info-card card-green">
+                <div class="card-icon">∅</div>
+                <div class="card-title">Bos Kume</div>
+                <div class="card-desc">Elemani olmayan kume</div>
+                <div class="card-example">$\emptyset$ veya $\{\}$</div>
+            </div>
+            <div class="info-card card-purple">
+                <div class="card-icon">⊂</div>
+                <div class="card-title">Alt Kume</div>
+                <div class="card-desc">Tum elemanlari icerir</div>
+                <div class="card-example">$\{1,2\} \subset A$</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>📐 Kume Islemleri</h2>
+
+        <div class="steps-container">
+            <div class="step-card">
+                <div class="step-number">∪</div>
+                <div class="step-content">
+                    <div class="step-title">Birlesim</div>
+                    <div class="step-desc">Her iki kumedeki tum elemanlar.</div>
+                    <div class="step-example"><code>$A \cup B = \{x \mid x \in A \text{ veya } x \in B\}$</code></div>
+                </div>
+            </div>
+            <div class="step-card">
+                <div class="step-number">∩</div>
+                <div class="step-content">
+                    <div class="step-title">Kesisim</div>
+                    <div class="step-desc">Her iki kumede de ortak olan elemanlar.</div>
+                    <div class="step-example"><code>$A \cap B = \{x \mid x \in A \text{ ve } x \in B\}$</code></div>
+                </div>
+            </div>
+            <div class="step-card">
+                <div class="step-number">\</div>
+                <div class="step-content">
+                    <div class="step-title">Fark</div>
+                    <div class="step-desc">Birinci kumede olup ikincisinde olmayan elemanlar.</div>
+                    <div class="step-example"><code>$A \setminus B = \{x \mid x \in A \text{ ve } x \notin B\}$</code></div>
+                </div>
+            </div>
+            <div class="step-card">
+                <div class="step-number">'</div>
+                <div class="step-content">
+                    <div class="step-title">Tumleyen</div>
+                    <div class="step-desc">Evrensel kumede olup A'da olmayan elemanlar.</div>
+                    <div class="step-example"><code>$A' = E \setminus A$</code></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>🔢 Eleman Sayisi Formulu</h2>
+
+        <div class="formula-card">
+            <div class="formula-label">Iki Kumenin Birlesimi</div>
+            <div class="formula-content">
+                $$s(A \cup B) = s(A) + s(B) - s(A \cap B)$$
+            </div>
+        </div>
+
+        <div class="memorize-box">
+            <div class="memorize-title">🧠 Ezberle!</div>
+            <div class="memorize-content">
+                <div class="memorize-rule">
+                    <span class="rule-same">Alt kume sayisi: $2^n$ ($n$ eleman sayisi)</span>
+                </div>
+                <div class="memorize-rule">
+                    <span class="rule-diff">Bos kume her kumenin alt kumesidir</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>🎯 Ornek Sorular</h2>
+
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Ornek 1</span>
+                <span class="example-difficulty easy">Kolay</span>
+            </div>
+            <div class="example-question">
+                $A = \{1, 2, 3, 4\}$ kumesinin kac alt kumesi vardir?
+            </div>
+            <details class="solution-toggle">
+                <summary>Cozumu Goster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Cozum:</span>
+                        <div class="step-math">$n = 4 \Rightarrow 2^4 = 16$ alt kume</div>
+                    </div>
+                    <div class="answer-highlight">Cevap: <strong>16</strong></div>
+                </div>
+            </details>
+        </div>
+
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Ornek 2</span>
+                <span class="example-difficulty medium">Orta</span>
+            </div>
+            <div class="example-question">
+                $s(A) = 15$, $s(B) = 12$, $s(A \cap B) = 5$ ise $s(A \cup B)$ kactir?
+            </div>
+            <details class="solution-toggle">
+                <summary>Cozumu Goster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Formul:</span>
+                        <div class="step-math">$s(A \cup B) = s(A) + s(B) - s(A \cap B)$</div>
+                        <div class="step-math">$= 15 + 12 - 5 = 22$</div>
+                    </div>
+                    <div class="answer-highlight">Cevap: <strong>22</strong></div>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="key-points-box">
+            <div class="key-points-title">🔑 Anahtar Noktalar</div>
+            <ul class="key-points-list">
+                <li>$s(A \cup B) = s(A) + s(B) - s(A \cap B)$</li>
+                <li>Alt kume sayisi: $2^n$</li>
+                <li>$\emptyset \subset A$ (bos kume her kumenin alt kumesi)</li>
+                <li>$A \cap A' = \emptyset$ ve $A \cup A' = E$</li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="nav-buttons">
+        <a href="../bolme-bolunebilme/" class="nav-btn nav-prev">
+            <span class="nav-arrow">←</span>
+            <span class="nav-text">Bolme ve Bolunebilme</span>
+        </a>
+        <a href="../fonksiyonlar/" class="nav-btn nav-next">
+            <span class="nav-text">Fonksiyonlar</span>
+            <span class="nav-arrow">→</span>
+        </a>
+    </div>
+
+    <script>
+        function checkDarkMode() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('theme') === 'dark') { document.body.classList.add('dark'); }
+        }
+        checkDarkMode();
+        window.addEventListener('message', function(event) {
+            if (event.data && event.data.theme === 'dark') { document.body.classList.add('dark'); }
+            else if (event.data && event.data.theme === 'light') { document.body.classList.remove('dark'); }
+        });
+    </script>
+</body>
+</html>
