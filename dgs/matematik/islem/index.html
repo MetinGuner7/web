@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Islem - DGS Hazirlik</title>
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+</head>
+<body>
+    <div class="hero-section hero-orange">
+        <div class="hero-icon">⚙️</div>
+        <h1>Islem</h1>
+        <p class="hero-subtitle">Tanimli Islemler ve Ozellikleri</p>
+        <div class="hero-meta">
+            <span class="meta-item">📚 Matematik</span>
+            <span class="meta-item">⏱️ 15 dk okuma</span>
+        </div>
+    </div>
+
+    <div class="summary-card">
+        <div class="summary-title">📌 Bu Konuda Ogreneceklerin</div>
+        <div class="summary-items">
+            <div class="summary-item">✓ Tanimli islem kavrami</div>
+            <div class="summary-item">✓ Degisme ve birlesme ozelligi</div>
+            <div class="summary-item">✓ Etkisiz eleman ve ters eleman</div>
+        </div>
+    </div>
+
+    <section class="content-section">
+        <h2>📖 Tanimli Islem Nedir?</h2>
+        <p>
+            Bir kumedeki iki eleman arasinda <span class="highlight">belirli bir kurala gore</span>
+            sonuc ureten isleme tanimli islem denir. Genellikle $*$, $\triangle$, $\square$ gibi
+            sembollerle gosterilir.
+        </p>
+
+        <div class="formula-card">
+            <div class="formula-label">Ornek Tanimli Islem</div>
+            <div class="formula-content">
+                $$a * b = 2a + 3b - 1$$
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>📐 Islem Ozellikleri</h2>
+
+        <div class="steps-container">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <div class="step-title">Degisme (Komutasyon)</div>
+                    <div class="step-desc">$a * b = b * a$ ise degisme ozelligi vardir.</div>
+                </div>
+            </div>
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <div class="step-title">Birlesme (Asosyasyon)</div>
+                    <div class="step-desc">$(a * b) * c = a * (b * c)$ ise birlesme ozelligi vardir.</div>
+                </div>
+            </div>
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <div class="step-title">Etkisiz Eleman</div>
+                    <div class="step-desc">$a * e = e * a = a$ kosulunu saglayan $e$ etkisiz elemandir.</div>
+                </div>
+            </div>
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <div class="step-title">Ters Eleman</div>
+                    <div class="step-desc">$a * a' = e$ kosulunu saglayan $a'$ elemani $a$'nin tersidir.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>🎯 Ornek Sorular</h2>
+
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Ornek 1</span>
+                <span class="example-difficulty easy">Kolay</span>
+            </div>
+            <div class="example-question">
+                $a * b = 2a + b$ ise $3 * 5$ kactir?
+            </div>
+            <details class="solution-toggle">
+                <summary>Cozumu Goster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Cozum:</span>
+                        <div class="step-math">$3 * 5 = 2(3) + 5 = 6 + 5 = 11$</div>
+                    </div>
+                    <div class="answer-highlight">Cevap: <strong>11</strong></div>
+                </div>
+            </details>
+        </div>
+
+        <div class="example-box">
+            <div class="example-header">
+                <span class="example-badge">Ornek 2</span>
+                <span class="example-difficulty medium">Orta</span>
+            </div>
+            <div class="example-question">
+                $a * b = a + b - ab$ isleminin etkisiz elemani kactir?
+            </div>
+            <details class="solution-toggle">
+                <summary>Cozumu Goster</summary>
+                <div class="solution-content">
+                    <div class="solution-step">
+                        <span class="step-label">Adim 1:</span>
+                        $a * e = a$ olmali:
+                        <div class="step-math">$a + e - ae = a$</div>
+                    </div>
+                    <div class="solution-step">
+                        <span class="step-label">Adim 2:</span>
+                        <div class="step-math">$e - ae = 0 \Rightarrow e(1 - a) = 0$</div>
+                        <div class="step-math">$e = 0$</div>
+                    </div>
+                    <div class="answer-highlight">Cevap: <strong>e = 0</strong></div>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="key-points-box">
+            <div class="key-points-title">🔑 Anahtar Noktalar</div>
+            <ul class="key-points-list">
+                <li>Degisme: $a * b = b * a$</li>
+                <li>Birlesme: $(a * b) * c = a * (b * c)$</li>
+                <li>Etkisiz eleman: $a * e = a$</li>
+                <li>Ters eleman: $a * a' = e$</li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="nav-buttons">
+        <a href="../fonksiyonlar/" class="nav-btn nav-prev">
+            <span class="nav-arrow">←</span>
+            <span class="nav-text">Fonksiyonlar</span>
+        </a>
+        <a href="../moduler-aritmetik/" class="nav-btn nav-next">
+            <span class="nav-text">Moduler Aritmetik</span>
+            <span class="nav-arrow">→</span>
+        </a>
+    </div>
+
+    <script>
+        function checkDarkMode() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('theme') === 'dark') { document.body.classList.add('dark'); }
+        }
+        checkDarkMode();
+        window.addEventListener('message', function(event) {
+            if (event.data && event.data.theme === 'dark') { document.body.classList.add('dark'); }
+            else if (event.data && event.data.theme === 'light') { document.body.classList.remove('dark'); }
+        });
+    </script>
+</body>
+</html>
