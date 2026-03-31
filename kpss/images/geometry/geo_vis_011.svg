@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" style="background:white">
+  <style>
+    text { font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; }
+    .shape { fill: none; stroke: #1a1a1a; stroke-width: 2; stroke-linejoin: round; }
+    .shape-fill { stroke: #1a1a1a; stroke-width: 2; stroke-linejoin: round; }
+    .label { fill: #1a1a1a; font-size: 15px; font-weight: 700; }
+    .value { fill: #1565C0; font-size: 13px; font-weight: 600; }
+    .dim { fill: #666; font-size: 12px; }
+    .dashed { stroke-dasharray: 6,4; stroke: #888; stroke-width: 1.5; }
+    .dotted { stroke-dasharray: 2,3; stroke: #aaa; stroke-width: 1; }
+    .hatched { fill: url(#hatch); opacity: 0.4; }
+    .angle-arc { fill: none; stroke: #E65100; stroke-width: 1.8; }
+    .angle-fill { fill: #FFF3E0; stroke: #E65100; stroke-width: 1; opacity: 0.5; }
+    .right-angle { fill: none; stroke: #333; stroke-width: 1.5; }
+    .grid { stroke: #e0e0e0; stroke-width: 0.5; }
+    .axis { stroke: #333; stroke-width: 1.5; }
+    .point { fill: #D32F2F; }
+    .arrow { fill: #333; stroke: #333; stroke-width: 1.5; }
+    @media (prefers-color-scheme: dark) {
+      svg { background: #1a1a1a; }
+      .shape { stroke: #e0e0e0; }
+      .shape-fill { stroke: #e0e0e0; }
+      .label { fill: #e0e0e0; }
+      .value { fill: #64B5F6; }
+      .dim { fill: #999; }
+      .dashed { stroke: #aaa; }
+      .dotted { stroke: #777; }
+      .right-angle { stroke: #ccc; }
+      .grid { stroke: #333; }
+      .axis { stroke: #e0e0e0; }
+      .point { fill: #EF5350; }
+      .arrow { fill: #e0e0e0; stroke: #e0e0e0; }
+      .angle-arc { stroke: #FF9800; }
+      .angle-fill { fill: #3E2723; stroke: #FF9800; }
+    }
+  </style>
+  <defs>
+    <pattern id="hatch" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#1565C0" stroke-width="1.5"/>
+    </pattern>
+    <pattern id="hatch-dark" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#64B5F6" stroke-width="1.5"/>
+    </pattern>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" class="arrow"/>
+    </marker>
+  </defs>
+  <polygon points="120.0,280 280.0,280 200,141.43593539448983" class="shape"/>
+  <text x="100.94744111674234" y="291.0" class="label" text-anchor="middle" dominant-baseline="central">K</text>
+  <text x="299.05255888325763" y="291.0" class="label" text-anchor="middle" dominant-baseline="central">L</text>
+  <text x="200.0" y="119.43593539448983" class="label" text-anchor="middle" dominant-baseline="central">M</text>
+  <text x="200.0" y="262.0" class="value" text-anchor="middle" dominant-baseline="central">7 cm</text>
+  <text x="224.4115427318801" y="219.71796769724492" class="value" text-anchor="middle" dominant-baseline="central">7 cm</text>
+  <text x="144.4115427318801" y="201.71796769724492" class="value" text-anchor="middle" dominant-baseline="central">7 cm</text>
+</svg>
