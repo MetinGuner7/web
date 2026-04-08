@@ -16,16 +16,21 @@ li { margin: 6px 0; }
 strong { color: #1A237E; }
 .meta { color: #666; font-size: 14px; margin-bottom: 24px; }
 .highlight { background: #E8EAF6; padding: 12px 16px; border-radius: 8px; margin: 14px 0; }
+.disclaimer { background: #FFF8E1; border-left: 4px solid #F9A825; padding: 14px 16px; border-radius: 8px; margin: 16px 0; font-size: 14px; }
 a { color: #1565C0; }
 </style>
 </head>
 <body>
 
 <h1>Gizlilik Politikasi</h1>
-<p class="meta">Son guncelleme: 7 Nisan 2026 | KPSS Matik (com.mghg.kpssmatik)</p>
+<p class="meta">Son guncelleme: 8 Nisan 2026 | KPSS Matik (com.mghg.kpssmatik) | Versiyon 1.0</p>
 
 <div class="highlight">
 <p>KPSS Matik olarak kullanicilarimizin gizliligine onem veriyoruz. Bu politika, uygulamamizi kullanirken hangi verilerin toplandigini, nasil kullanildigini ve nasil korundugunuzu aciklar.</p>
+</div>
+
+<div class="disclaimer">
+<p><strong>Bagimsiz Uygulama Beyani:</strong> KPSS Matik, bagimsiz olarak gelistirilmis bir egitim ve sinav hazirlik uygulamasidir. OSYM (Olcme, Secme ve Yerlestirme Merkezi) veya herhangi bir Turkiye Cumhuriyeti devlet kurulusu ile resmi bir baglantisi, ortakligi veya yetkilendirmesi bulunmamaktadir. Resmi KPSS bilgileri icin lutfen <a href="https://www.osym.gov.tr" target="_blank">osym.gov.tr</a> adresini ziyaret edin.</p>
 </div>
 
 <h2>1. Toplanan Veriler</h2>
@@ -34,9 +39,9 @@ a { color: #1565C0; }
 <ul>
 <li><strong>E-posta adresi</strong> — Hesap olusturma ve giris icin</li>
 <li><strong>Kullanici adi</strong> — Profil gosterimi icin</li>
-<li><strong>Giris yontemi</strong> — E-posta, Google veya misafir giris</li>
+<li><strong>Sifre</strong> — Guvenli kimlik dogrulama icin (sifreler Firebase Authentication tarafindan hashlenerek saklanir, asla dogrudan depolanmaz)</li>
 </ul>
-<p>Not: Misafir (anonim) giris secenegi ile hesap olusturmadan uygulamamizi kullanabilirsiniz.</p>
+<p>Bu versiyonda giris yalnizca e-posta ve sifre ile yapilir. Sosyal medya girisi veya misafir giris secenegi bulunmamaktadir.</p>
 
 <h3>1.2 Calisma Verileri</h3>
 <ul>
@@ -64,14 +69,16 @@ a { color: #1565C0; }
 <li>Rehber/kisiler</li>
 <li>Fotograf galerisi</li>
 <li>Arama gecmisi</li>
+<li>Finansal bilgiler veya odeme verileri</li>
+<li>Reklam tanimlayicilari (uygulamada reklam yoktur)</li>
 </ul>
 
 <h2>2. Verilerin Kullanim Amaci</h2>
 <ul>
 <li><strong>Kisisellestirilmis calisma plani</strong> — Zayif konularinizi tespit edip AI koc onerileri sunmak</li>
 <li><strong>Ilerleme takibi</strong> — Istatistik ekraninda performansinizi gostermek</li>
-<li><strong>Abonelik yonetimi</strong> — Premium uyelik durumunuzu dogrulamak</li>
-<li><strong>Bildirimler</strong> — Calisma hatirlayicilari ve guncellemeler gondermek</li>
+<li><strong>Cihazlar arasi senkronizasyon</strong> — Verilerinizi Firebase uzerinden guvenli sekilde cihazlar arasinda senkronize etmek</li>
+<li><strong>Bildirimler</strong> — Calisma hatirlayicilari ve uygulama guncellemeleri gondermek</li>
 <li><strong>Hata tespiti</strong> — Uygulamayi iyilestirmek icin cokme raporlarini analiz etmek</li>
 </ul>
 
@@ -80,19 +87,16 @@ a { color: #1565C0; }
 
 <h3>3.1 Google Firebase</h3>
 <ul>
-<li><strong>Firebase Authentication</strong> — Kullanici kimlik dogrulamasi</li>
+<li><strong>Firebase Authentication</strong> — Kullanici kimlik dogrulamasi (e-posta + sifre)</li>
 <li><strong>Cloud Firestore</strong> — Calisma verilerinin bulutta saklanmasi ve senkronizasyonu</li>
 <li><strong>Firebase Cloud Messaging</strong> — Push bildirimleri</li>
 <li><strong>Firebase Crashlytics</strong> — Cokme raporlari ve hata analizi</li>
 </ul>
 <p>Firebase Gizlilik Politikasi: <a href="https://firebase.google.com/support/privacy" target="_blank">firebase.google.com/support/privacy</a></p>
 
-<h3>3.2 RevenueCat</h3>
-<p>Uygulama ici satin alma islemleri ve abonelik yonetimi icin RevenueCat kullanilmaktadir. RevenueCat, satin alma durumu ve abonelik bilgilerini isler.</p>
-<p>RevenueCat Gizlilik Politikasi: <a href="https://www.revenuecat.com/privacy" target="_blank">revenuecat.com/privacy</a></p>
-
-<h3>3.3 Google Gemini AI</h3>
-<p>AI Koc ozelligi icin Google Gemini API kullanilmaktadir. Zayif konulariniz ve calisma verileriniz, kisisellestirilmis oneriler uretmek amaciyla AI modeline gonderilir. Bu veriler kalici olarak saklanmaz.</p>
+<h3>3.2 Google Gemini AI</h3>
+<p>AI Koc ozelligi icin Google Gemini API kullanilmaktadir. Zayif konulariniz ve calisma verileriniz, kisisellestirilmis oneriler uretmek amaciyla AI modeline gonderilir. Bu veriler AI servisi tarafindan kalici olarak saklanmaz. AI Koc tarafindan uretilen oneriler yapay zeka tarafindan olusturulmus icerik olup bilgilendirme amaclidir.</p>
+<p>Google Gemini Gizlilik Politikasi: <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></p>
 
 <h2>4. Veri Saklama ve Guvenlik</h2>
 
@@ -106,39 +110,39 @@ a { color: #1565C0; }
 <ul>
 <li>Firebase Firestore'da saklanan veriler Google'in guvenlik standartlarina tabidir</li>
 <li>Tum veri transferleri <strong>HTTPS ile sifrelenmistir</strong></li>
-<li>Sertifika sabitleme (certificate pinning) uygulanmaktadir</li>
+<li>API baglantilarinda sertifika sabitleme (certificate pinning) uygulanmaktadir</li>
 </ul>
 
 <h3>4.3 Erisim Kontrolu</h3>
 <ul>
 <li>Firestore kurallari ile her kullanici yalnizca kendi verilerine erisebilir</li>
-<li>Silme islemleri engellidir — veriler yalnizca guncellenir</li>
-<li>Admin erisimleri sinirlandirilmistir</li>
+<li>Sunucu taraflarinda erisim kisitlidir</li>
 </ul>
 
 <h2>5. Kullanici Haklari</h2>
 <p>Asagidaki haklara sahipsiniz:</p>
 <ul>
 <li><strong>Verilere erisim</strong> — Uygulama icindeki istatistikler sayfasindan tum verilerinizi gorebilirsiniz</li>
-<li><strong>Veri silme</strong> — Profil > Hesabi Sil secenegi ile tum verileriniz kalici olarak silinir</li>
+<li><strong>Veri silme</strong> — Profil &gt; Hesabi Sil secenegi ile tum verileriniz kalici olarak silinir</li>
 <li><strong>Veri tasima</strong> — Talep uzerine verilerinizi dijital formatta teslim edebiliriz</li>
 <li><strong>Bildirim tercihi</strong> — Push bildirimlerini cihaz ayarlarindan kapatabilirsiniz</li>
+<li><strong>Sikayet</strong> — Gizlilik ile ilgili sikayetleriniz icin destek e-postamiza yazabilirsiniz</li>
 </ul>
 
 <h2>6. Cocuk Gizliligi</h2>
-<p>KPSS Matik, KPSS sinavina hazirlanan yetiskin kullanicilar icin tasarlanmistir. 13 yasindan kucuk cocuklardan bilerek veri toplamiyoruz. Eger bir cocugun verilerini topladigimizi fark ederseniz, bizimle iletisime gecin.</p>
+<p>KPSS Matik, KPSS sinavina hazirlanan yetiskin kullanicilar icin tasarlanmistir. 13 yasindan kucuk cocuklardan bilerek veri toplamiyoruz. Eger bir cocugun verilerini topladigimizi fark ederseniz, bizimle iletisime gecin; ilgili veriler derhal silinecektir.</p>
 
 <h2>7. Cerez ve Izleme</h2>
-<p>Uygulamamiz cerez (cookie) kullanmamaktadir. Web tabanli konu anlatimlari icin yalnizca yerel icerik gosterilir, ucuncu taraf izleme pikselleri bulunmaz.</p>
+<p>Uygulamamiz cerez (cookie) kullanmamaktadir. Ucuncu taraf izleme pikselleri, reklam tanimlayicilari veya analitik izleyicileri bulunmamaktadir. Uygulamada reklam gosterilmez.</p>
 
 <h2>8. Degisiklikler</h2>
-<p>Bu gizlilik politikasini zaman zaman guncelleyebiliriz. Onemli degisikliklerde uygulama ici bildirim gonderilir. Guncel versiyonu her zaman bu sayfadan kontrol edebilirsiniz.</p>
+<p>Bu gizlilik politikasini zaman zaman guncelleyebiliriz. Onemli degisikliklerde uygulama ici bildirim gonderilir. Guncel versiyonu her zaman bu sayfadan kontrol edebilirsiniz. Gelecek versiyonlarda yeni ozellikler (abonelik, sosyal giris vb.) eklenirse bu politika da ona gore guncellenecektir.</p>
 
 <h2>9. Iletisim</h2>
 <p>Gizlilik ile ilgili sorulariniz icin:</p>
 <ul>
 <li>E-posta: <a href="mailto:destek@kpssmatik.com">destek@kpssmatik.com</a></li>
-<li>Uygulama ici: Profil > Destek</li>
+<li>Uygulama ici: Profil &gt; Destek</li>
 </ul>
 
 <p style="margin-top: 32px; color: #999; font-size: 12px; text-align: center;">KPSS Matik &copy; 2026. Tum haklari saklidir.</p>
