@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Doza · Choose language</title>
+<link rel="stylesheet" href="./styles.css" />
+<meta name="description" content="Doza — medication reminder app. Privacy, terms and support pages." />
+<script>
+  // Tarayıcı dili tr/de/ar ise otomatik yönlendir; aksi halde EN default.
+  // User aynı sayfayı tekrar açarsa ?nolang=1 ile bypass eder.
+  (function () {
+    if (location.search.indexOf('nolang') !== -1) return;
+    var lang = (navigator.language || 'en').slice(0, 2).toLowerCase();
+    var supported = { tr: 1, en: 1, de: 1, ar: 1 };
+    var target = supported[lang] ? lang : 'en';
+    location.replace('./' + target + '.html');
+  })();
+</script>
+</head>
+<body>
+<main>
+  <header class="site">
+    <div class="logo">🌿</div>
+    <div>
+      <h1>Doza</h1>
+      <p class="tagline">Medication reminder · Privacy &amp; legal</p>
+    </div>
+  </header>
+
+  <section>
+    <p class="lead">Select your language to view Doza's privacy policy, terms of use and support page.</p>
+    <ul style="list-style:none; padding:0; margin:20px 0 0;">
+      <li style="margin:10px 0;"><a href="./en.html" style="font-size:17px;">🇬🇧 English</a></li>
+      <li style="margin:10px 0;"><a href="./tr.html" style="font-size:17px;">🇹🇷 Türkçe</a></li>
+      <li style="margin:10px 0;"><a href="./de.html" style="font-size:17px;">🇩🇪 Deutsch</a></li>
+      <li style="margin:10px 0;"><a href="./ar.html" style="font-size:17px;">🇸🇦 العربية</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Doza — Medication &amp; appointment reminders, on-device, offline.</p>
+    <p>Contact: <a href="mailto:dozaaapp@gmail.com">dozaaapp@gmail.com</a></p>
+  </footer>
+</main>
+</body>
+</html>
