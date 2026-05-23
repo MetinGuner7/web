@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — Reeva</title>
+  <meta name="description" content="How Reeva collects, uses, and protects your data.">
+  <meta name="theme-color" content="#07070C">
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+  <nav class="site-nav">
+    <div class="container site-nav-inner">
+      <a class="brand" href="../">
+        <span class="brand-mark">R</span>
+        <span>Reeva</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="../support/">Support</a></li>
+        <li><a class="active" href="./">Privacy</a></li>
+        <li><a href="../terms/">Terms</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container container-narrow doc">
+    <h1>Privacy Policy</h1>
+    <p class="meta">Effective: May 23, 2026 · Last updated: May 23, 2026</p>
+
+    <p>
+      This Privacy Policy explains what data Reeva ("we", "us", "Reeva")
+      collects when you use the Reeva mobile app, why we collect it, who
+      we share it with, and the rights you have over your data.
+    </p>
+
+    <p>
+      Reeva is published by Metin Güner, an independent developer. If
+      you have any privacy questions, write to
+      <a href="mailto:mtngnr7@gmail.com">mtngnr7@gmail.com</a>.
+    </p>
+
+    <h2>1. Quick summary</h2>
+    <ul>
+      <li><strong>No tracking, no ads.</strong> Reeva does not show ads, does not use an advertising SDK, does not collect your advertising identifier (IDFA / AAID), and does not share your data with data brokers.</li>
+      <li><strong>You're in control.</strong> You can delete your account and all associated data from inside the app at any time.</li>
+      <li><strong>Minimum data, clear purpose.</strong> We collect what we need to authenticate you, render your videos, and run subscriptions — and nothing else.</li>
+    </ul>
+
+    <h2>2. Data we collect</h2>
+    <p>
+      Reeva collects the following categories of data. The "Linked to you" column means the data is associated with your account on our backend.
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Data</th>
+          <th>Linked to you?</th>
+          <th>Purpose</th>
+          <th>Where it goes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Email address</td>
+          <td>Yes</td>
+          <td>Account, sign-in, account-recovery emails</td>
+          <td>Supabase (our auth provider)</td>
+        </tr>
+        <tr>
+          <td>User ID (random UUID)</td>
+          <td>Yes</td>
+          <td>Linking your renders, subscription, credits</td>
+          <td>Supabase</td>
+        </tr>
+        <tr>
+          <td>Photos you upload</td>
+          <td>Yes</td>
+          <td>Source image for the AI video render you requested</td>
+          <td>Cloudflare R2 (storage) and fal.ai (the AI render provider)</td>
+        </tr>
+        <tr>
+          <td>Generated videos</td>
+          <td>Yes</td>
+          <td>Showing them in your gallery, letting you download them</td>
+          <td>Cloudflare R2</td>
+        </tr>
+        <tr>
+          <td>Purchase history (subscription, credit packs)</td>
+          <td>Yes</td>
+          <td>Granting subscription access and credits</td>
+          <td>RevenueCat (our IAP provider) and Supabase</td>
+        </tr>
+        <tr>
+          <td>Push notification token</td>
+          <td>Yes</td>
+          <td>Letting you know when a render finishes</td>
+          <td>Firebase Cloud Messaging</td>
+        </tr>
+        <tr>
+          <td>Crash logs and basic diagnostics</td>
+          <td>No (not linked to your user ID)</td>
+          <td>Fixing bugs and stability issues</td>
+          <td>Firebase Crashlytics</td>
+        </tr>
+        <tr>
+          <td>Approximate device locale and OS version</td>
+          <td>No</td>
+          <td>Localized UI and compatibility</td>
+          <td>On-device only (sent only as HTTP headers)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      We do <strong>not</strong> collect: your real name, your phone number, your contacts, your precise location, your browsing history, your microphone audio, or any biometric data.
+    </p>
+
+    <h2>3. Who we share data with</h2>
+
+    <p>Reeva relies on a small set of carefully chosen service providers to run the app. Each one is bound by their own privacy policy and is contractually limited to processing your data only for Reeva's benefit:</p>
+
+    <ul>
+      <li><strong>Supabase</strong> — authentication and database. Hosted in the EU (Frankfurt). <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase privacy policy</a>.</li>
+      <li><strong>fal.ai</strong> — AI render provider. Photos you upload are sent to fal.ai to produce your video. fal.ai may retain the request briefly to deliver the result and for service reliability. <a href="https://fal.ai/privacy" target="_blank" rel="noopener">fal.ai privacy policy</a>.</li>
+      <li><strong>Cloudflare R2</strong> — object storage for your uploaded photos and finished videos. <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare privacy policy</a>.</li>
+      <li><strong>RevenueCat</strong> — manages your subscription and credit-pack purchases on top of Apple App Store / Google Play. <a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener">RevenueCat privacy policy</a>.</li>
+      <li><strong>Firebase (Google)</strong> — push notifications, crash reporting. Only the three Firebase products listed above are enabled. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google privacy policy</a>.</li>
+      <li><strong>Apple App Store / Google Play</strong> — payment processing for subscriptions and credit packs. We never receive your payment-card data; only the purchase event.</li>
+    </ul>
+
+    <p>
+      We do <strong>not</strong> sell your data, and we do not share it with advertisers, marketing networks, or data brokers.
+    </p>
+
+    <h2>4. AI-generated content and prompt moderation</h2>
+
+    <p>
+      Photos and prompts you submit are passed through automated moderation to detect disallowed content (for example, sexual or violent imagery). Moderation is performed by AWS Rekognition (for images) and OpenAI Moderation (for text prompts). These providers receive only the content of the specific render request and do not retain it beyond the moderation call.
+    </p>
+
+    <p>
+      The videos Reeva produces are generated by AI models hosted by fal.ai. You own the videos you create through Reeva, subject to the <a href="../terms/">Terms of Service</a>.
+    </p>
+
+    <h2>5. How long we keep your data</h2>
+
+    <ul>
+      <li><strong>Account data</strong> (email, user ID, purchase history): kept while your account exists. Deleted on request.</li>
+      <li><strong>Uploaded photos</strong>: automatically purged from temporary storage 30 days after upload (lifecycle rule on the <code>uploads/</code> bucket). The originals are never re-used beyond completing your render.</li>
+      <li><strong>Generated videos</strong>: kept until you delete them from the app, or until you delete your account.</li>
+      <li><strong>Crash logs</strong>: retained by Firebase Crashlytics for up to 90 days by default.</li>
+      <li><strong>Push notification token</strong>: deleted when you sign out or revoke notification permission.</li>
+    </ul>
+
+    <h2>6. Your rights</h2>
+
+    <p>
+      Depending on where you live, you may have rights over your personal data under laws such as the EU GDPR, the UK GDPR, California's CCPA / CPRA, and Turkey's KVKK. Reeva grants the following to all users, regardless of jurisdiction:
+    </p>
+
+    <ul>
+      <li><strong>Right to access</strong> — request a copy of the personal data we hold about you. In the app: <em>Settings → Export my data</em>.</li>
+      <li><strong>Right to delete</strong> — permanently delete your account and all associated data. In the app: <em>Settings → Delete account</em>. This cascades through Supabase, R2, and RevenueCat.</li>
+      <li><strong>Right to correct</strong> — update your email by contacting us.</li>
+      <li><strong>Right to withdraw consent</strong> — you can revoke notification permission and disable analytics from your device settings at any time.</li>
+      <li><strong>Right to lodge a complaint</strong> — EU users may complain to their local data-protection authority; Turkish users may apply to KVKK.</li>
+    </ul>
+
+    <p>To exercise any of these rights, write to <a href="mailto:mtngnr7@gmail.com">mtngnr7@gmail.com</a>. We respond within 30 days.</p>
+
+    <h2>7. Children</h2>
+
+    <p>
+      Reeva is not directed to children under 13. In the EU, the age threshold for processing under the GDPR is 16 in some member states. If you are under the applicable age in your country, do not use Reeva. If we learn that we have collected personal data from a child below the applicable age without parental consent, we will delete it.
+    </p>
+
+    <h2>8. International transfers</h2>
+
+    <p>
+      Reeva's primary backend (Supabase) is hosted in the EU. Other providers — fal.ai, RevenueCat, Cloudflare, Firebase — operate from multiple regions including the United States. By using Reeva you acknowledge that your data may be processed in countries outside your own. We rely on the standard contractual clauses and the providers' own safeguards for international transfers.
+    </p>
+
+    <h2>9. Security</h2>
+
+    <p>
+      Data in transit is encrypted with TLS (HTTPS). Data at rest is encrypted by our providers using industry-standard algorithms. Access to the production backend is limited to the developer using strong authentication. No system is perfectly secure; if we ever experience a breach affecting your personal data, we will notify you and the relevant authorities within the timelines required by applicable law (72 hours under GDPR).
+    </p>
+
+    <h2>10. Tracking, advertising, and cookies</h2>
+
+    <p>
+      Reeva does not display ads and does not engage in cross-app tracking. On iOS, Reeva does not show the App Tracking Transparency prompt because the app does not track. On Android, no advertising identifier is collected.
+    </p>
+
+    <p>
+      This website (the one you're reading) does not set any cookies and does not run any analytics or tracking scripts. It's plain HTML.
+    </p>
+
+    <h2>11. Changes to this policy</h2>
+
+    <p>
+      We may update this Privacy Policy from time to time. When we do, we'll update the "Last updated" date at the top and, for material changes, notify you inside the app on next launch. Continued use of Reeva after a change means you accept the updated policy.
+    </p>
+
+    <h2>12. Contact</h2>
+
+    <p>
+      Privacy questions, data requests, or anything else:<br>
+      <a href="mailto:mtngnr7@gmail.com">mtngnr7@gmail.com</a>
+    </p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer-inner">
+      <div>© 2026 Reeva · Built by Metin Güner</div>
+      <ul class="footer-links">
+        <li><a href="../support/">Support</a></li>
+        <li><a href="./">Privacy Policy</a></li>
+        <li><a href="../terms/">Terms</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
