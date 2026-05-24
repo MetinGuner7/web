@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Delete Your Account — Reeva</title>
+  <meta name="description" content="How to request deletion of your Reeva account and associated data.">
+  <meta name="theme-color" content="#07070C">
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+  <nav class="site-nav">
+    <div class="container site-nav-inner">
+      <a class="brand" href="../">
+        <span class="brand-mark">R</span>
+        <span>Reeva</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="../support/">Support</a></li>
+        <li><a href="../privacy-policy/">Privacy</a></li>
+        <li><a href="../terms/">Terms</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container container-narrow doc">
+    <h1>Delete your Reeva account</h1>
+    <p class="meta">Reeva — AI Video Generator, published by Metin Güner.</p>
+
+    <p>
+      You can request deletion of your Reeva account at any time. There
+      are two ways to do this; the in-app option is the fastest.
+    </p>
+
+    <h2>Option 1 — In the Reeva app (recommended)</h2>
+
+    <ol>
+      <li>Open <strong>Reeva</strong> on your phone.</li>
+      <li>Tap <strong>Settings</strong> (bottom navigation).</li>
+      <li>Scroll to <strong>Account</strong> and tap <strong>Delete account</strong>.</li>
+      <li>Confirm. Your account is deleted immediately and the cascade runs server-side within a few seconds.</li>
+    </ol>
+
+    <div class="callout">
+      <strong>Tip:</strong> If you only signed in anonymously (skipped
+      sign-in), there's nothing tied to a personal account — just
+      uninstall the app and Reeva's anonymous session is gone.
+    </div>
+
+    <h2>Option 2 — Request by email</h2>
+
+    <p>
+      Email <a href="mailto:mtngnr7@gmail.com?subject=Reeva%20account%20deletion%20request">mtngnr7@gmail.com</a>
+      from the address you signed up with. Include:
+    </p>
+
+    <ul>
+      <li>The subject line: <strong>"Reeva account deletion request"</strong></li>
+      <li>The email address linked to your Reeva account</li>
+      <li>(Optional) Reason — we use it to improve the app, not to push back on the deletion</li>
+    </ul>
+
+    <p>
+      We process email deletion requests within <strong>30 days</strong>,
+      usually within 1–2 business days. You'll receive a confirmation
+      email once the deletion completes.
+    </p>
+
+    <h2>What gets deleted</h2>
+
+    <p>
+      The deletion is a full cascade across every system that holds
+      data about your account.
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Data</th>
+          <th>Where</th>
+          <th>Status after deletion</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Email address</td>
+          <td>Supabase Auth</td>
+          <td><strong>Deleted</strong> immediately</td>
+        </tr>
+        <tr>
+          <td>User ID + profile row</td>
+          <td>Supabase Postgres (<code>public.users</code>)</td>
+          <td><strong>Deleted</strong> immediately</td>
+        </tr>
+        <tr>
+          <td>Uploaded photos</td>
+          <td>Cloudflare R2 (<code>uploads/&lt;uid&gt;/</code>)</td>
+          <td><strong>Deleted</strong> immediately</td>
+        </tr>
+        <tr>
+          <td>Generated videos</td>
+          <td>Cloudflare R2 (<code>renders/&lt;uid&gt;/</code>)</td>
+          <td><strong>Deleted</strong> immediately</td>
+        </tr>
+        <tr>
+          <td>Render history + credit ledger</td>
+          <td>Supabase Postgres</td>
+          <td><strong>Deleted</strong> immediately (CASCADE)</td>
+        </tr>
+        <tr>
+          <td>Purchase / subscription record</td>
+          <td>RevenueCat + <code>public.users</code></td>
+          <td><strong>Deleted</strong> from our database. RevenueCat anonymizes the record per its own retention policy.</td>
+        </tr>
+        <tr>
+          <td>Push notification token</td>
+          <td><code>device_tokens</code> table</td>
+          <td><strong>Deleted</strong> immediately</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>What is <em>not</em> deleted</h2>
+
+    <p>The following are kept for the reasons noted below:</p>
+
+    <ul>
+      <li><strong>Apple App Store / Google Play purchase records</strong> — the actual receipts are held by Apple / Google under their own retention policies. We can't delete those. You can request removal directly from Apple or Google.</li>
+      <li><strong>Anonymous crash reports</strong> (Firebase Crashlytics) — kept up to <strong>90 days</strong> from the original crash event. They're not linked to your user ID, so they remain anonymous.</li>
+      <li><strong>Aggregated, non-identifying analytics counters</strong> (if any) — e.g. "total renders this week" used for system health monitoring. These contain no personal data.</li>
+    </ul>
+
+    <h2>Cancelling a subscription is separate</h2>
+
+    <div class="callout">
+      <strong>Important:</strong> Deleting your Reeva account does not
+      cancel an active Apple App Store / Google Play subscription. To
+      stop the auto-renewal, you must cancel it through the store
+      directly. Otherwise the subscription will keep charging your
+      Apple ID / Google account even after your Reeva account is
+      gone.
+    </div>
+
+    <ul>
+      <li><strong>iOS:</strong> Settings → [your name] → Subscriptions → Reeva → Cancel.</li>
+      <li><strong>Android:</strong> Google Play → Profile → Payments &amp; subscriptions → Subscriptions → Reeva → Cancel.</li>
+    </ul>
+
+    <h2>Questions?</h2>
+
+    <p>
+      Write to <a href="mailto:mtngnr7@gmail.com">mtngnr7@gmail.com</a>. We respond within 30 days; usually within 1–2 business days.
+    </p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer-inner">
+      <div>© 2026 Reeva · Built by Metin Güner</div>
+      <ul class="footer-links">
+        <li><a href="../support/">Support</a></li>
+        <li><a href="../privacy-policy/">Privacy Policy</a></li>
+        <li><a href="../terms/">Terms</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
