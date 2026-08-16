@@ -450,19 +450,20 @@
 
     <script>
         // Dark mode detection
-        function checkDarkMode() {
-            const urlParams = new URLSearchParams(window.location.search);
-            if (urlParams.get('theme') === 'dark') {
-                document.body.classList.add('dark');
-            }
+        function applyTheme() {
+            const t = new URLSearchParams(window.location.search).get('theme');
+            if (t === 'dark') { document.body.classList.add('dark'); }
+            else if (t === 'light') { document.body.classList.add('light'); }
         }
-        checkDarkMode();
+        applyTheme();
 
         window.addEventListener('message', function(event) {
             if (event.data && event.data.theme === 'dark') {
                 document.body.classList.add('dark');
+                document.body.classList.remove('light');
             } else if (event.data && event.data.theme === 'light') {
                 document.body.classList.remove('dark');
+                document.body.classList.add('light');
             }
         });
     </script>
