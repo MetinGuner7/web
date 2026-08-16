@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Olasilik - DGS Hazirlik</title>
+    <title>Olasılık - DGS Hazırlık</title>
     <link rel="stylesheet" href="../../shared/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
@@ -13,8 +13,8 @@
 <body>
     <div class="hero-section hero-orange">
         <div class="hero-icon">🎲</div>
-        <h1>Olasilik</h1>
-        <p class="hero-subtitle">Olasilik Hesaplama ve Olay Turleri</p>
+        <h1>Olasılık</h1>
+        <p class="hero-subtitle">Olasılık Hesaplama ve Olay Türleri</p>
         <div class="hero-meta">
             <span class="meta-item">📚 Matematik</span>
             <span class="meta-item">⏱️ 20 dk okuma</span>
@@ -22,70 +22,70 @@
     </div>
 
     <div class="summary-card">
-        <div class="summary-title">📌 Bu Konuda Ogreneceklerin</div>
+        <div class="summary-title">📌 Bu Konuda Öğreneceklerin</div>
         <div class="summary-items">
-            <div class="summary-item">✓ Olasilik kavrami ve hesaplama</div>
-            <div class="summary-item">✓ Bagimsiz ve bagimli olaylar</div>
-            <div class="summary-item">✓ Toplama ve carpma kurali</div>
-            <div class="summary-item">✓ Tamamlayici olay</div>
+            <div class="summary-item">✓ Olasılık kavramı ve hesaplama</div>
+            <div class="summary-item">✓ Bağımsız ve bağımlı olaylar</div>
+            <div class="summary-item">✓ Toplama ve çarpma kuralı</div>
+            <div class="summary-item">✓ Tamamlayıcı olay</div>
         </div>
     </div>
 
     <section class="content-section">
-        <h2>📖 Olasilik Nedir?</h2>
+        <h2>📖 Olasılık Nedir?</h2>
         <p>
-            Bir deneyde istenen olaylarin gerceklesme <span class="highlight">ihtimalini gosteren</span>
-            0 ile 1 arasindaki degerdir.
+            Bir deneyde istenen olayların gerçekleşme <span class="highlight">ihtimalini gösteren</span>
+            0 ile 1 arasındaki değerdir.
         </p>
 
         <div class="formula-card">
-            <div class="formula-label">Klasik Olasilik</div>
+            <div class="formula-label">Klasik Olasılık</div>
             <div class="formula-content">
-                $$P(A) = \frac{n(A)}{n(S)} = \frac{\text{Istenen olay sayisi}}{\text{Toplam olay sayisi}}$$
+                $$P(A) = \frac{n(A)}{n(S)} = \frac{\text{İstenen olay sayısı}}{\text{Toplam olay sayısı}}$$
             </div>
         </div>
 
         <div class="card-grid">
             <div class="info-card card-blue">
                 <div class="card-icon">0</div>
-                <div class="card-title">Imkansiz</div>
-                <div class="card-desc">Asla gerceklesmez</div>
+                <div class="card-title">İmkansız</div>
+                <div class="card-desc">Asla gerçekleşmez</div>
                 <div class="card-example">$P(A) = 0$</div>
             </div>
             <div class="info-card card-green">
                 <div class="card-icon">1</div>
                 <div class="card-title">Kesin</div>
-                <div class="card-desc">Mutlaka gerceklesir</div>
+                <div class="card-desc">Mutlaka gerçekleşir</div>
                 <div class="card-example">$P(A) = 1$</div>
             </div>
         </div>
     </section>
 
     <section class="content-section">
-        <h2>📐 Olasilik Kurallari</h2>
+        <h2>📐 Olasılık Kuralları</h2>
 
         <div class="steps-container">
             <div class="step-card">
                 <div class="step-number">+</div>
                 <div class="step-content">
-                    <div class="step-title">Toplama Kurali (veya)</div>
-                    <div class="step-desc">A veya B'nin gerceklesmesi:</div>
+                    <div class="step-title">Toplama Kuralı (veya)</div>
+                    <div class="step-desc">A veya B'nin gerçekleşmesi:</div>
                     <div class="step-example"><code>$P(A \cup B) = P(A) + P(B) - P(A \cap B)$</code></div>
                 </div>
             </div>
             <div class="step-card">
                 <div class="step-number">×</div>
                 <div class="step-content">
-                    <div class="step-title">Carpma Kurali (ve)</div>
-                    <div class="step-desc">A ve B'nin birlikte gerceklesmesi:</div>
-                    <div class="step-example"><code>$P(A \cap B) = P(A) \times P(B)$ (bagimsiz)</code></div>
+                    <div class="step-title">Çarpma Kuralı (ve)</div>
+                    <div class="step-desc">A ve B'nin birlikte gerçekleşmesi:</div>
+                    <div class="step-example"><code>$P(A \cap B) = P(A) \times P(B)$ (bağımsız)</code></div>
                 </div>
             </div>
             <div class="step-card">
                 <div class="step-number">'</div>
                 <div class="step-content">
-                    <div class="step-title">Tamamlayici Olay</div>
-                    <div class="step-desc">A olmama olasiligi:</div>
+                    <div class="step-title">Tamamlayıcı Olay</div>
+                    <div class="step-desc">A olmama olasılığı:</div>
                     <div class="step-example"><code>$P(A') = 1 - P(A)$</code></div>
                 </div>
             </div>
@@ -93,22 +93,22 @@
     </section>
 
     <section class="content-section">
-        <h2>🎯 Ornek Sorular</h2>
+        <h2>🎯 Örnek Sorular</h2>
 
         <div class="example-box">
             <div class="example-header">
-                <span class="example-badge">Ornek 1</span>
+                <span class="example-badge">Örnek 1</span>
                 <span class="example-difficulty easy">Kolay</span>
             </div>
             <div class="example-question">
-                Bir zarla atista 3'ten buyuk sayi gelme olasiligi kactir?
+                Bir zarla atışta 3'ten büyük sayı gelme olasılığı kaçtır?
             </div>
             <details class="solution-toggle">
-                <summary>Cozumu Goster</summary>
+                <summary>Çözümü Göster</summary>
                 <div class="solution-content">
                     <div class="solution-step">
-                        <span class="step-label">Cozum:</span>
-                        3'ten buyuk: {4, 5, 6} → 3 sonuc. Toplam: 6
+                        <span class="step-label">Çözüm:</span>
+                        3'ten büyük: {4, 5, 6} → 3 sonuç. Toplam: 6
                         <div class="step-math">$P = \frac{3}{6} = \frac{1}{2}$</div>
                     </div>
                     <div class="answer-highlight">Cevap: <strong>$\frac{1}{2}$</strong></div>
@@ -118,18 +118,18 @@
 
         <div class="example-box">
             <div class="example-header">
-                <span class="example-badge">Ornek 2</span>
+                <span class="example-badge">Örnek 2</span>
                 <span class="example-difficulty medium">Orta</span>
             </div>
             <div class="example-question">
-                Bir torbada 4 kirmizi, 3 mavi, 2 yesil top vardir. Rastgele cekilen bir topun kirmizi veya yesil olma olasiligi kactir?
+                Bir torbada 4 kırmızı, 3 mavi, 2 yeşil top vardır. Rastgele çekilen bir topun kırmızı veya yeşil olma olasılığı kaçtır?
             </div>
             <details class="solution-toggle">
-                <summary>Cozumu Goster</summary>
+                <summary>Çözümü Göster</summary>
                 <div class="solution-content">
                     <div class="solution-step">
-                        <span class="step-label">Cozum:</span>
-                        Toplam: $4 + 3 + 2 = 9$. Kirmizi veya yesil: $4 + 2 = 6$
+                        <span class="step-label">Çözüm:</span>
+                        Toplam: $4 + 3 + 2 = 9$. Kırmızı veya yeşil: $4 + 2 = 6$
                         <div class="step-math">$P = \frac{6}{9} = \frac{2}{3}$</div>
                     </div>
                     <div class="answer-highlight">Cevap: <strong>$\frac{2}{3}$</strong></div>
@@ -139,25 +139,25 @@
 
         <div class="example-box">
             <div class="example-header">
-                <span class="example-badge">Ornek 3</span>
+                <span class="example-badge">Örnek 3</span>
                 <span class="example-difficulty hard">Zor</span>
             </div>
             <div class="example-question">
-                Iki zar ayni anda atildiginda toplamin 7 gelme olasiligi kactir?
+                İki zar aynı anda atıldığında toplamın 7 gelme olasılığı kaçtır?
             </div>
             <details class="solution-toggle">
-                <summary>Cozumu Goster</summary>
+                <summary>Çözümü Göster</summary>
                 <div class="solution-content">
                     <div class="solution-step">
-                        <span class="step-label">Adim 1:</span>
-                        Toplam sonuc: $6 \times 6 = 36$
+                        <span class="step-label">Adım 1:</span>
+                        Toplam sonuç: $6 \times 6 = 36$
                     </div>
                     <div class="solution-step">
-                        <span class="step-label">Adim 2:</span>
-                        Toplami 7 olanlar: (1,6), (2,5), (3,4), (4,3), (5,2), (6,1) → 6 tane
+                        <span class="step-label">Adım 2:</span>
+                        Toplamı 7 olanlar: (1,6), (2,5), (3,4), (4,3), (5,2), (6,1) → 6 tane
                     </div>
                     <div class="solution-step">
-                        <span class="step-label">Cozum:</span>
+                        <span class="step-label">Çözüm:</span>
                         <div class="step-math">$P = \frac{6}{36} = \frac{1}{6}$</div>
                     </div>
                     <div class="answer-highlight">Cevap: <strong>$\frac{1}{6}$</strong></div>
@@ -171,9 +171,9 @@
             <div class="key-points-title">🔑 Anahtar Noktalar</div>
             <ul class="key-points-list">
                 <li>$P(A) = \frac{n(A)}{n(S)}$ ve $0 \leq P(A) \leq 1$</li>
-                <li>$P(A') = 1 - P(A)$ (tamamlayici)</li>
-                <li>Bagimsiz: $P(A \cap B) = P(A) \times P(B)$</li>
-                <li>Ayrik: $P(A \cup B) = P(A) + P(B)$</li>
+                <li>$P(A') = 1 - P(A)$ (tamamlayıcı)</li>
+                <li>Bağımsız: $P(A \cap B) = P(A) \times P(B)$</li>
+                <li>Ayrık: $P(A \cup B) = P(A) + P(B)$</li>
             </ul>
         </div>
     </section>
@@ -184,7 +184,7 @@
             <span class="nav-text">Kombinasyon</span>
         </a>
         <a href="../faktoriyel/" class="nav-btn nav-next">
-            <span class="nav-text">Faktoriyel</span>
+            <span class="nav-text">Faktöriyel</span>
             <span class="nav-arrow">→</span>
         </a>
     </div>
