@@ -186,7 +186,7 @@
             <!-- English Content -->
             <div id="lang-en" class="lang-content active">
                 <div class="highlight">
-                    <p><strong>Summary:</strong> Focusito does not collect any personal information. Your focus sessions and preferences are stored locally on your device.</p>
+                    <p><strong>Summary:</strong> Your focus sessions and preferences are stored on your device. Focusito does not collect your name, contacts, location or media. When an AI insight is generated, the numeric metrics of that session are sent to our server and to Google Gemini — see section 4.4.</p>
                 </div>
 
                 <h2>1. Introduction</h2>
@@ -195,21 +195,21 @@
                 <h2>2. Information We Do NOT Collect</h2>
                 <p>Focusito is designed with privacy in mind. We do not collect:</p>
                 <ul>
-                    <li>Personal identification information (name, email, phone number)</li>
-                    <li>Account or login information</li>
+                    <li>Your name, phone number, or postal address</li>
                     <li>Location data</li>
                     <li>Contacts or address book information</li>
                     <li>Photos, videos, or media files</li>
+                    <li>The written notes and feedback you add to a session — these never leave your device</li>
                 </ul>
 
-                <h2>3. Information Stored Locally</h2>
-                <p>The following data is stored only on your device and is not transmitted to our servers:</p>
+                <h2>3. Information Stored on Your Device</h2>
+                <p>The following data is written to your device and stays there:</p>
                 <ul>
                     <li><strong>Focus Sessions:</strong> Duration, completion status, and feedback you provide</li>
                     <li><strong>App Preferences:</strong> Timer settings, theme preferences, language selection</li>
                     <li><strong>Statistics:</strong> Your focus history and progress data</li>
                 </ul>
-                <p>This data remains on your device and is deleted when you uninstall the app.</p>
+                <p>This data remains on your device and is deleted when you uninstall the app. The one exception is described in section 4.4: to produce an AI insight, the numeric metrics of a session are sent to our server and on to Google Gemini. Your written feedback is not part of that request.</p>
 
                 <h2>4. Third-Party Services</h2>
                 <p>We use the following third-party services to improve app functionality:</p>
@@ -217,11 +217,13 @@
                 <h3>4.1 Firebase Analytics (Google)</h3>
                 <p>We use Firebase Analytics to understand general app usage patterns. This service collects:</p>
                 <ul>
-                    <li>Anonymous usage statistics (screens viewed, features used)</li>
+                    <li>Usage statistics (screens viewed, features used)</li>
                     <li>Device information (model, operating system version)</li>
                     <li>App performance metrics</li>
+                    <li>Summary figures for a finished session: its duration, whether it was completed, the touch and background-switch counts, and the category you selected</li>
+                    <li>Properties describing your account state: subscription status, trial phase, app language, theme, and current streak length</li>
                 </ul>
-                <p>This data is anonymized and cannot be used to identify you personally.</p>
+                <p>These events are associated with your Focusito account identifier (see 4.5) so that usage can be followed across your own devices. They do not contain your name, your e-mail address, or anything you typed into the app.</p>
 
                 <h3>4.2 Firebase Crashlytics (Google)</h3>
                 <p>We use Crashlytics to identify and fix app crashes. When a crash occurs, it collects:</p>
@@ -239,15 +241,32 @@
                     <li>Does not have access to your payment details (handled by Apple/Google)</li>
                 </ul>
 
+                <h3>4.4 AI Insights (Google Gemini via our Firebase server)</h3>
+                <p>Focusito can generate written feedback about a focus session, your week, your month, and your streak. To do this, the app sends the metrics of the relevant session(s) to our own Firebase Cloud Function, which forwards them to Google Gemini and returns the generated text. What is sent:</p>
+                <ul>
+                    <li>Planned and actual session duration</li>
+                    <li>Whether the session was completed</li>
+                    <li>Screen touch count and app background-switch count during the session</li>
+                    <li>The times (in milliseconds from the start of the session) at which distractions occurred</li>
+                    <li>Focus score</li>
+                    <li>The session category, if you selected one (e.g. Work, Study)</li>
+                    <li>Your app language, so the response comes back in that language</li>
+                </ul>
+                <p>What is <strong>not</strong> sent: your name, your email address, the written feedback or notes you typed, your location, and your device identifiers.</p>
+                <p>The request is authenticated, so it is associated with your Focusito account identifier (see 4.5) for the purpose of enforcing daily usage limits. A request is made when you finish a focus session — whether you completed it or stopped it early — and when you open a weekly, monthly or streak report, and only while you have remaining daily quota. When you are offline or out of quota, nothing is sent.</p>
+
+                <h3>4.5 Firebase Authentication (Google)</h3>
+                <p>Focusito requires you to sign in with Google or Apple. We use Firebase Authentication for this, which means the e-mail address associated with the account you choose becomes visible to us. This identifier is what lets us apply your subscription status and your daily AI usage limits, and lets your data follow you to a new device. We do not receive your password — sign-in is handled entirely by Google or Apple.</p>
+
                 <h2>5. Data Security</h2>
-                <p>Since your personal data is stored locally on your device, its security depends on your device's security measures. We recommend:</p>
+                <p>Your sessions and statistics live on your device, so their security depends largely on your device's security measures. The requests described in section 4 travel over encrypted connections. We recommend:</p>
                 <ul>
                     <li>Using a device passcode or biometric lock</li>
                     <li>Keeping your device's operating system updated</li>
                 </ul>
 
                 <h2>6. Children's Privacy</h2>
-                <p>Focusito does not knowingly collect information from children under 13. The app is suitable for all ages as it does not collect personal information.</p>
+                <p>Focusito does not knowingly collect information from children under 13. Because signing in is required, a child under 13 should only use the app with the involvement of a parent or guardian. If you believe a child has signed in without consent, contact us and we will delete the account.</p>
 
                 <h2>7. Changes to This Policy</h2>
                 <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page and updating the "Last Updated" date.</p>
@@ -255,7 +274,8 @@
                 <h2>8. Your Rights</h2>
                 <p>You have the right to:</p>
                 <ul>
-                    <li><strong>Delete your data:</strong> Simply uninstall the app to remove all locally stored data</li>
+                    <li><strong>Delete your local data:</strong> Uninstalling the app removes everything stored on the device — your sessions, statistics and preferences</li>
+                    <li><strong>Delete your account:</strong> Uninstalling does not remove your account identifier or your usage counters from our server. Contact us at the address below and we will delete them</li>
                     <li><strong>Opt-out of analytics:</strong> You can limit ad tracking in your device settings</li>
                     <li><strong>Request information:</strong> Contact us with any privacy-related questions</li>
                 </ul>
@@ -270,7 +290,7 @@
             <!-- Turkish Content -->
             <div id="lang-tr" class="lang-content">
                 <div class="highlight">
-                    <p><strong>Özet:</strong> Focusito hiçbir kişisel bilgi toplamaz. Odak seanslarınız ve tercihleriniz yalnızca cihazınızda yerel olarak saklanır.</p>
+                    <p><strong>Özet:</strong> Odak seanslarınız ve tercihleriniz cihazınızda saklanır. Focusito adınızı, kişilerinizi, konumunuzu veya medya dosyalarınızı toplamaz. Bir yapay zekâ yorumu üretildiğinde ise o seansın sayısal verileri sunucumuza ve Google Gemini'ye gönderilir — bkz. bölüm 4.4.</p>
                 </div>
 
                 <h2>1. Giriş</h2>
@@ -279,21 +299,21 @@
                 <h2>2. Toplamadığımız Bilgiler</h2>
                 <p>Focusito gizlilik odaklı tasarlanmıştır. Şunları toplamıyoruz:</p>
                 <ul>
-                    <li>Kişisel kimlik bilgileri (ad, e-posta, telefon numarası)</li>
-                    <li>Hesap veya giriş bilgileri</li>
+                    <li>Adınız, telefon numaranız veya posta adresiniz</li>
                     <li>Konum verileri</li>
                     <li>Kişiler veya adres defteri bilgileri</li>
                     <li>Fotoğraf, video veya medya dosyaları</li>
+                    <li>Seanslara yazdığınız notlar ve geri bildirimler — bunlar cihazınızdan hiç çıkmaz</li>
                 </ul>
 
-                <h2>3. Yerel Olarak Saklanan Bilgiler</h2>
-                <p>Aşağıdaki veriler yalnızca cihazınızda saklanır ve sunucularımıza iletilmez:</p>
+                <h2>3. Cihazınızda Saklanan Bilgiler</h2>
+                <p>Aşağıdaki veriler cihazınıza yazılır ve orada kalır:</p>
                 <ul>
                     <li><strong>Odak Seansları:</strong> Süre, tamamlanma durumu ve sağladığınız geri bildirim</li>
                     <li><strong>Uygulama Tercihleri:</strong> Zamanlayıcı ayarları, tema tercihleri, dil seçimi</li>
                     <li><strong>İstatistikler:</strong> Odak geçmişiniz ve ilerleme verileriniz</li>
                 </ul>
-                <p>Bu veriler cihazınızda kalır ve uygulamayı kaldırdığınızda silinir.</p>
+                <p>Bu veriler cihazınızda kalır ve uygulamayı kaldırdığınızda silinir. Tek istisna bölüm 4.4'te anlatılmıştır: bir yapay zekâ yorumu üretmek için seansın sayısal verileri sunucumuza ve oradan Google Gemini'ye gönderilir. Yazdığınız geri bildirim bu isteğin parçası değildir.</p>
 
                 <h2>4. Üçüncü Taraf Hizmetleri</h2>
                 <p>Uygulama işlevselliğini geliştirmek için aşağıdaki üçüncü taraf hizmetlerini kullanıyoruz:</p>
@@ -301,11 +321,13 @@
                 <h3>4.1 Firebase Analytics (Google)</h3>
                 <p>Genel uygulama kullanım kalıplarını anlamak için Firebase Analytics kullanıyoruz. Bu hizmet şunları toplar:</p>
                 <ul>
-                    <li>Anonim kullanım istatistikleri (görüntülenen ekranlar, kullanılan özellikler)</li>
+                    <li>Kullanım istatistikleri (görüntülenen ekranlar, kullanılan özellikler)</li>
                     <li>Cihaz bilgileri (model, işletim sistemi sürümü)</li>
                     <li>Uygulama performans metrikleri</li>
+                    <li>Biten bir seansın özet verileri: süresi, tamamlanıp tamamlanmadığı, dokunuş ve arka plana geçiş sayıları, seçtiğiniz kategori</li>
+                    <li>Hesap durumunuzu tanımlayan özellikler: abonelik durumu, deneme aşaması, uygulama dili, tema ve güncel seri uzunluğunuz</li>
                 </ul>
-                <p>Bu veriler anonimleştirilmiştir ve sizi kişisel olarak tanımlamak için kullanılamaz.</p>
+                <p>Bu olaylar, kullanımın kendi cihazlarınız arasında izlenebilmesi için Focusito hesap tanımlayıcınızla ilişkilendirilir (bkz. 4.5). Adınızı, e-posta adresinizi veya uygulamaya yazdığınız hiçbir metni içermezler.</p>
 
                 <h3>4.2 Firebase Crashlytics (Google)</h3>
                 <p>Uygulama çökmelerini tespit etmek ve düzeltmek için Crashlytics kullanıyoruz. Bir çökme oluştuğunda şunları toplar:</p>
@@ -323,15 +345,32 @@
                     <li>Ödeme bilgilerinize erişimi yoktur (Apple/Google tarafından işlenir)</li>
                 </ul>
 
+                <h3>4.4 Yapay Zekâ Yorumları (Firebase sunucumuz üzerinden Google Gemini)</h3>
+                <p>Focusito; bir odak seansınız, haftanız, ayınız ve seriniz hakkında yazılı yorum üretebilir. Bunun için uygulama, ilgili seans(lar)ın verilerini kendi Firebase Cloud Function sunucumuza gönderir; sunucu bunları Google Gemini'ye iletir ve üretilen metni geri döndürür. Gönderilenler:</p>
+                <ul>
+                    <li>Planlanan ve gerçekleşen seans süresi</li>
+                    <li>Seansın tamamlanıp tamamlanmadığı</li>
+                    <li>Seans sırasındaki ekran dokunuş sayısı ve uygulamadan çıkış (arka plana geçiş) sayısı</li>
+                    <li>Dikkat dağınıklıklarının gerçekleştiği anlar (seans başlangıcından itibaren milisaniye)</li>
+                    <li>Odak puanı</li>
+                    <li>Seçtiyseniz seans kategorisi (örneğin İş, Ders)</li>
+                    <li>Yanıtın aynı dilde dönmesi için uygulama diliniz</li>
+                </ul>
+                <p><strong>Gönderilmeyenler:</strong> adınız, e-posta adresiniz, yazdığınız geri bildirim ve notlar, konumunuz ve cihaz tanımlayıcılarınız.</p>
+                <p>İstek kimlik doğrulamalı olduğu için, günlük kullanım sınırlarının uygulanabilmesi amacıyla Focusito hesap tanımlayıcınızla ilişkilendirilir (bkz. 4.5). Bir odak seansını bitirdiğinizde — tamamlasanız da erken durdursanız da — ve haftalık, aylık veya seri raporunu açtığınızda, yalnızca günlük hakkınız kaldıysa istek gönderilir. Çevrimdışıyken veya hakkınız bittiğinde hiçbir şey gönderilmez.</p>
+
+                <h3>4.5 Firebase Authentication (Google)</h3>
+                <p>Focusito, Google veya Apple ile giriş yapmanızı gerektirir. Bunun için Firebase Authentication kullanıyoruz; bu da seçtiğiniz hesaba ait e-posta adresinin bizim tarafımızdan görülebildiği anlamına gelir. Bu tanımlayıcı, abonelik durumunuzun ve günlük yapay zekâ kullanım sınırlarınızın uygulanmasını ve verilerinizin yeni bir cihaza taşınmasını sağlar. Şifrenizi almıyoruz — giriş işlemi tamamen Google veya Apple tarafından yürütülür.</p>
+
                 <h2>5. Veri Güvenliği</h2>
-                <p>Kişisel verileriniz cihazınızda yerel olarak saklandığından, güvenliği cihazınızın güvenlik önlemlerine bağlıdır. Şunları öneriyoruz:</p>
+                <p>Seanslarınız ve istatistikleriniz cihazınızda durduğundan, güvenlikleri büyük ölçüde cihazınızın güvenlik önlemlerine bağlıdır. Bölüm 4'te anlatılan istekler şifreli bağlantılar üzerinden iletilir. Şunları öneriyoruz:</p>
                 <ul>
                     <li>Cihaz şifresi veya biyometrik kilit kullanma</li>
                     <li>Cihazınızın işletim sistemini güncel tutma</li>
                 </ul>
 
                 <h2>6. Çocukların Gizliliği</h2>
-                <p>Focusito, 13 yaşın altındaki çocuklardan bilerek bilgi toplamaz. Uygulama kişisel bilgi toplamadığı için tüm yaşlara uygundur.</p>
+                <p>Focusito, 13 yaşın altındaki çocuklardan bilerek bilgi toplamaz. Giriş yapmak zorunlu olduğundan, 13 yaşın altındaki bir çocuk uygulamayı yalnızca ebeveyn veya vasisinin bilgisi dahilinde kullanmalıdır. Bir çocuğun izinsiz giriş yaptığını düşünüyorsanız bizimle iletişime geçin, hesabı silelim.</p>
 
                 <h2>7. Bu Politikadaki Değişiklikler</h2>
                 <p>Bu Gizlilik Politikasını zaman zaman güncelleyebiliriz. Yeni politikayı bu sayfada yayınlayarak ve "Son Güncelleme" tarihini güncelleyerek sizi değişikliklerden haberdar edeceğiz.</p>
@@ -339,7 +378,8 @@
                 <h2>8. Haklarınız</h2>
                 <p>Şu haklara sahipsiniz:</p>
                 <ul>
-                    <li><strong>Verilerinizi silme:</strong> Yerel olarak saklanan tüm verileri kaldırmak için uygulamayı kaldırmanız yeterlidir</li>
+                    <li><strong>Cihazdaki verilerinizi silme:</strong> Uygulamayı kaldırmak cihazda saklanan her şeyi — seanslarınızı, istatistiklerinizi ve tercihlerinizi — kaldırır</li>
+                    <li><strong>Hesabınızı silme:</strong> Uygulamayı kaldırmak, hesap tanımlayıcınızı ve kullanım sayaçlarınızı sunucumuzdan silmez. Aşağıdaki adresten bize yazın, silelim</li>
                     <li><strong>Analitiklerden çıkma:</strong> Cihaz ayarlarınızda reklam izlemeyi sınırlayabilirsiniz</li>
                     <li><strong>Bilgi talep etme:</strong> Gizlilikle ilgili sorularınız için bizimle iletişime geçin</li>
                 </ul>
@@ -351,7 +391,7 @@
                 </div>
             </div>
 
-            <p class="date">Last Updated / Son Güncelleme: January 2025</p>
+            <p class="date">Last Updated / Son Güncelleme: August 2026</p>
         </div>
     </div>
 
