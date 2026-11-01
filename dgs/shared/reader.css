@@ -1,0 +1,194 @@
+/* DGS lesson reader. Scoped so support/privacy pages keep their own layout. */
+@font-face { font-family: 'DGS Inter'; src: url('./fonts/inter_regular.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'DGS Inter'; src: url('./fonts/inter_medium.ttf') format('truetype'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'DGS Inter'; src: url('./fonts/inter_semibold.ttf') format('truetype'); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: 'DGS Inter'; src: url('./fonts/inter_bold.ttf') format('truetype'); font-weight: 700 900; font-style: normal; font-display: swap; }
+
+body.lesson-reader {
+  --bg-primary: #f7f8fa;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f0f4f9;
+  --text-primary: #18283a;
+  --text-secondary: #40516a;
+  --text-muted: #62718a;
+  --border-color: #e5eaf0;
+  --accent-blue: #1768c5;
+  --accent-blue-light: #eaf4ff;
+  --accent-purple: #1768c5;
+  --accent-purple-light: #eaf4ff;
+  --accent-green: #1768c5;
+  --accent-green-light: #eaf4ff;
+  --accent-orange: #986000;
+  --accent-orange-light: #fff8e9;
+  --accent-red: #b42335;
+  --accent-red-light: #fff0f1;
+  --reader-shadow: 0 2px 10px rgba(24, 40, 58, .025);
+  --reader-inset: clamp(16px, 5.5vw, 24px);
+  font-family: 'DGS Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px var(--reader-inset) 32px;
+  overflow-wrap: anywhere;
+  overflow-x: visible;
+  counter-reset: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Explicit application theme always wins over device theme. */
+@media (prefers-color-scheme: dark) {
+  body.lesson-reader:not(.light) {
+    --bg-primary: #101a28; --bg-secondary: #182638; --bg-tertiary: #203149;
+    --text-primary: #f0f5fc; --text-secondary: #c9d6e8; --text-muted: #a5b7cd;
+    --border-color: #31445d; --accent-blue: #8ec3ff; --accent-blue-light: #203a58;
+    --accent-purple: #8ec3ff; --accent-purple-light: #203a58;
+    --accent-green: #8ec3ff; --accent-green-light: #203a58;
+    --accent-orange: #f4c66c; --accent-orange-light: #352d20;
+    --accent-red: #ffb1b9; --accent-red-light: #3a2531;
+  }
+}
+body.lesson-reader.dark {
+  --bg-primary: #101a28; --bg-secondary: #182638; --bg-tertiary: #203149;
+  --text-primary: #f0f5fc; --text-secondary: #c9d6e8; --text-muted: #a5b7cd;
+  --border-color: #31445d; --accent-blue: #8ec3ff; --accent-blue-light: #203a58;
+  --accent-purple: #8ec3ff; --accent-purple-light: #203a58;
+  --accent-green: #8ec3ff; --accent-green-light: #203a58;
+  --accent-orange: #f4c66c; --accent-orange-light: #352d20;
+  --accent-red: #ffb1b9; --accent-red-light: #3a2531;
+}
+
+.lesson-reader .reader-decoration,
+.lesson-reader .hero-icon,
+.lesson-reader .card-icon,
+.lesson-reader .tip-icon,
+.lesson-reader .warning-icon { display: none; }
+.lesson-reader .hero-section {
+  padding: 0; margin: 0 0 24px; text-align: left;
+  border-radius: 0; background: transparent;
+}
+.lesson-reader .reader-subject {
+  color: var(--accent-blue); font-size: 12px; line-height: 18px;
+  font-weight: 700; letter-spacing: 1px; margin-bottom: 6px;
+}
+.lesson-reader .hero-section h1 {
+  color: var(--text-primary); font-size: 28px; line-height: 1.2;
+  font-weight: 700; letter-spacing: -.6px; margin: 0 0 8px;
+}
+.lesson-reader .hero-subtitle {
+  color: var(--text-secondary); font-size: 16px; line-height: 1.5; margin: 0 0 8px;
+}
+.lesson-reader .hero-meta { justify-content: flex-start; gap: 4px 12px; }
+.lesson-reader .meta-item {
+  padding: 0; background: none; color: var(--text-muted); font-size: 14px; border-radius: 0;
+}
+.lesson-reader .meta-item + .meta-item::before { content: '·'; margin-right: 12px; }
+.lesson-reader .summary-card,
+.lesson-reader .reader-section-body {
+  background: var(--bg-secondary); border: 1px solid var(--border-color);
+  border-radius: 16px; padding: 20px; box-shadow: var(--reader-shadow); min-width: 0;
+}
+.lesson-reader .summary-card { margin: 0 0 28px; }
+.lesson-reader .summary-title { font-size: 18px; line-height: 1.4; font-weight: 700; margin-bottom: 16px; }
+.lesson-reader .summary-items { gap: 12px; }
+.lesson-reader .summary-item {
+  display: flex; align-items: flex-start; gap: 12px; padding: 0;
+  font-size: 15px; line-height: 1.6; color: var(--text-secondary);
+}
+.lesson-reader .summary-item::before {
+  content: '✓'; color: var(--accent-blue); background: var(--accent-blue-light);
+  border-radius: 50%; flex: 0 0 26px; height: 26px; text-align: center; font-weight: 700;
+}
+.lesson-reader .content-section { padding: 0; margin: 0 0 28px; min-width: 0; }
+.lesson-reader h2 {
+  display: flex; gap: 14px; align-items: baseline; border: 0; padding: 0;
+  font-size: 20px; line-height: 1.4; margin: 0 0 14px; font-weight: 700; letter-spacing: -.3px;
+}
+.lesson-reader .reader-section-index { color: var(--accent-blue); font-size: 18px; flex-shrink: 0; }
+.lesson-reader h3 { font-size: 18px; line-height: 1.45; margin: 24px 0 12px; }
+.lesson-reader p { color: var(--text-secondary); font-size: 16px; line-height: 1.65; margin-bottom: 16px; }
+.lesson-reader strong, .lesson-reader .highlight { color: var(--text-primary); font-weight: 700; }
+.lesson-reader .reader-section-body > :last-child { margin-bottom: 0; }
+.lesson-reader .reader-section-body > :first-child { margin-top: 0; }
+.lesson-reader :is(.formula-card, .formula, .info-box) {
+  background: var(--accent-blue-light); border: 0; border-radius: 12px; padding: 16px; margin: 16px 0;
+}
+.lesson-reader .formula-label { color: var(--accent-blue); font-size: 15px; text-transform: none; letter-spacing: 0; font-weight: 700; }
+.lesson-reader .formula-content { font-size: 18px; color: var(--text-primary); }
+.lesson-reader :is(.tip-box, .warning-box) {
+  background: var(--accent-orange-light); border: 1px solid #edd8a7;
+  border-radius: 12px; padding: 16px; margin: 16px 0; display: block;
+}
+.lesson-reader :is(.tip-content, .warning-content) { font-size: 15px; line-height: 1.65; color: var(--text-secondary); }
+.lesson-reader :is(.tip-content, .warning-content) > strong:first-child { display: block; color: var(--accent-orange); margin-bottom: 4px; }
+.lesson-reader :is(.card-grid, .rule-grid, .example-grid) {
+  grid-template-columns: minmax(0, 1fr); gap: 12px; margin: 16px 0;
+}
+.lesson-reader :is(.info-card, .rule-item, .mini-example, .bullet-item) {
+  background: var(--bg-secondary); border: 1px solid var(--border-color);
+  border-radius: 12px; padding: 16px; text-align: left; min-width: 0;
+}
+.lesson-reader .info-card:active { transform: none; }
+.lesson-reader :is(.card-title, .rule-operation, .step-title, .bullet-item-title) { font-size: 18px; line-height: 1.45; font-weight: 700; margin-bottom: 6px; }
+.lesson-reader :is(.card-desc, .step-desc, .bullet-item-desc) { font-size: 15px; line-height: 1.65; color: var(--text-secondary); }
+.lesson-reader :is(.card-example, .rule-example, .mini-calc, .step-example code) {
+  font-family: inherit; font-size: 16px; line-height: 1.7; color: var(--text-primary);
+  background: transparent; padding: 0; display: block; white-space: normal;
+}
+.lesson-reader .rule-result { font-size: 20px; color: var(--accent-blue); }
+.lesson-reader :is(.memorize-box, .key-points-box) {
+  background: var(--accent-blue-light); border: 1px solid var(--border-color);
+  border-radius: 12px; padding: 20px; margin: 16px 0; text-align: left;
+}
+.lesson-reader :is(.memorize-title, .key-points-title) { color: var(--accent-blue); font-size: 18px; }
+.lesson-reader :is(.memorize-rule, .key-points-list li) {
+  background: none; color: var(--text-primary); font-size: 15px;
+  padding: 10px 0; border-bottom: 1px solid var(--border-color); border-radius: 0;
+}
+.lesson-reader .memorize-rule:last-child { border-bottom: 0; }
+.lesson-reader .result-positive { color: var(--accent-blue); }
+.lesson-reader .result-negative { color: var(--accent-red); }
+.lesson-reader .step-card { background: var(--bg-tertiary); padding: 16px; gap: 12px; border-radius: 12px; min-width: 0; }
+.lesson-reader .step-content { min-width: 0; }
+.lesson-reader .step-number, .lesson-reader .priority-rank {
+  width: 28px; height: 28px; background: var(--accent-blue-light); color: var(--accent-blue); font-size: 14px;
+}
+.lesson-reader .example-box { background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 12px; padding: 16px; margin: 16px 0; }
+.lesson-reader .example-header { gap: 12px; flex-wrap: wrap; }
+.lesson-reader .example-badge { background: none; color: var(--accent-blue); padding: 0; font-size: 13px; }
+.lesson-reader .example-difficulty { background: var(--bg-tertiary); color: var(--text-secondary); font-size: 12px; }
+.lesson-reader .example-question { background: none; padding: 0 0 16px; border-bottom: 1px solid var(--border-color); border-radius: 0; }
+.lesson-reader .solution-toggle summary {
+  min-height: 44px; display: flex; align-items: center; justify-content: space-between;
+  text-align: left; background: none; color: var(--accent-blue); font-size: 15px; padding: 8px 0; gap: 16px;
+}
+.lesson-reader .solution-toggle summary::after { content: '⌄'; font-size: 22px; }
+.lesson-reader .solution-toggle[open] summary::after { content: '⌃'; }
+.lesson-reader .solution-content { border: 0; background: none; padding: 0; }
+.lesson-reader .solution-step { font-size: 15px; line-height: 1.65; }
+.lesson-reader .step-math { background: var(--bg-tertiary); margin-top: 8px; padding: 12px; }
+.lesson-reader .answer-highlight { background: var(--accent-blue-light); color: var(--accent-blue); font-size: 18px; font-weight: 600; }
+.lesson-reader .answer-highlight strong { color: inherit; }
+.lesson-reader .priority-item { padding: 12px; background: var(--bg-tertiary); gap: 12px; flex-wrap: wrap; }
+.lesson-reader .priority-note { font-size: 13px; color: var(--text-muted); }
+.lesson-reader .visual-box { background: var(--bg-tertiary); padding: 16px; overflow-x: auto; }
+.lesson-reader .visual-box svg { max-width: 100%; height: auto; }
+.lesson-reader img { max-width: 100%; height: auto; }
+.lesson-reader .reader-table-frame { max-width: 100%; overflow-x: auto; margin: 16px 0; border-radius: 12px; }
+.lesson-reader table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 0; }
+.lesson-reader th, .lesson-reader td { padding: 12px; border: 1px solid var(--border-color); text-align: left; }
+.lesson-reader th { background: var(--accent-blue-light); color: var(--text-primary); }
+.lesson-reader td { background: var(--bg-secondary); color: var(--text-secondary); }
+.lesson-reader .katex-display { overflow-x: auto; overflow-y: hidden; padding: 6px 0; margin: 12px 0; }
+.lesson-reader .katex { position: relative; font-size: 1.12em; color: var(--text-primary); overflow-wrap: normal; display: inline-block; vertical-align: middle; max-width: 100%; overflow-x: auto; overflow-y: hidden; padding: 4px 0; }
+.lesson-reader .katex-display > .katex { display: block; }
+.lesson-reader .nav-buttons { padding: 0; gap: 12px; margin-top: 28px; }
+.lesson-reader .nav-btn { border: 1px solid var(--border-color); background: var(--bg-secondary); padding: 14px; min-width: 0; min-height: 48px; }
+.lesson-reader :is(summary, a):focus-visible, .lesson-reader .reader-table-frame:focus-visible { outline: 3px solid var(--accent-blue); outline-offset: 3px; }
+@media (min-width: 600px) {
+  .lesson-reader :is(.card-grid, .rule-grid, .example-grid) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .lesson-reader .reader-section-body, .lesson-reader .summary-card { padding: 24px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
